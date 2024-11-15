@@ -1,5 +1,6 @@
 // pages/index.js
 import { FaFileDownload } from "react-icons/fa";
+import Link from 'next/link';
 export default function Index() {
     return (
       <div>  
@@ -262,9 +263,9 @@ export default function Index() {
           </div>
           <div className="pt-20 text-center">
           <h2 className="text-2xl mb-4">Mon CV :</h2>
-          <a href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="inline-block text-white">
+          <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="inline-block text-white">
             <FaFileDownload className="text-2xl m-auto text-black"/>
-          </a>
+          </Link>
 
         </div>
         </section>

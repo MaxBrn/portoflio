@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Real() {
     return (
       <div className="pb-10">
@@ -17,9 +18,9 @@ export default function Real() {
               <h2 className="text-3xl">Les Stages</h2>
             </div>
             <div className="w-3/5 flex justify-center">
-              <a href="/stageLoca">
+              <Link href="/stageLoca">
                 <img src="/image/logoLS.png" alt="Stage Loca" className="w-52" />
-              </a>
+              </Link>
             </div>
           </div>
   
@@ -29,9 +30,9 @@ export default function Real() {
               <h2 className="text-3xl">Les réalisations en AP</h2>
             </div>
             <div className="w-3/5 flex justify-center">
-              <a href="mdj.html">
+              <Link href="mdj.html">
                 <img src="/image/logoMDJ.png" alt="MDJ" className="w-40" />
-              </a>
+              </Link>
             </div>
           </div>
         </section>

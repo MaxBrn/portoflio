@@ -3,7 +3,7 @@
 export default function VeilleTechno() {
   return (
     <div>
-      <div className="header flex flex-col items-center bg-cover bg-center text-white py-48" style={{ backgroundImage: "url('/image/sliderv2.jpg')" }}>
+      <div className="flex flex-col items-center bg-cover text-white py-64" style={{ backgroundImage: "url('/image/sliderv2.jpg')" }}>
         <h1 className="text-5xl font-bold">Veille Technologique</h1>
         <p className="text-3xl mt-4">Ma veille sur l'IA dans le dév</p>
       </div>

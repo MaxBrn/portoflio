@@ -5,10 +5,19 @@ export default function Index() {
     return (
       <div>  
         {/* Header */}
-        <header className="flex flex-col items-center bg-cover text-white py-64" style={{ backgroundImage: 'url("/image/sliderv2.jpg")' }}>
-          <h1 className="text-5xl mb-4">Brunin Maxime</h1>
-          <p className="text-3xl">Étudiant en BTS SIO SLAM</p>
+        <header
+          className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative"
+          style={{ backgroundImage: 'url("/image/fond.jpg")' }}
+        >
+          {/* Ajout d'un dégradé */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+
+          <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">Maxime Brunin</h1>
+          <p className="text-3xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
+            Etudiant en BTS SIO
+          </p>
         </header>
+
   
         {/* Section A propos */}
         <section className="py-24">
@@ -18,9 +27,15 @@ export default function Index() {
             </div>
             <div className="w-3/5">
               <p className="text-lg">
-                Actuellement en BTS SIO SLAM (développement), je projette de devenir un développeur, avec pour secteur de rêve le développement de jeux vidéo. Je suis passionné de jeux vidéo depuis l'enfance et rêve d'en faire mon métier. J'aime également les travaux rédactionnels et les langues, ce qui m'a donné envie de devenir journaliste ou professeur d'informatique.
+                Actuellement en BTS SIO SLAM (développement), je projette de devenir développeur, avec pour secteur de rêve le développement de jeux vidéo. 
+                Je suis passionné de jeux vidéo depuis l'enfance et rêve d'en faire mon métier. Je projete aussi de potentiellement devenir professeur de développement informatique.
               </p>
             </div>
+          </div>
+          <div className="pt-20 text-center">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-black text-white p-3 rounded-xl">
+              Télécharger mon CV
+            </Link>
           </div>
         </section>
   
@@ -92,21 +107,6 @@ export default function Index() {
             <h2 className="text-2xl mb-10">Mon parcours</h2>
             {/* Ajoute ici chaque étape du parcours comme div */}
             <div className="flex flex-col gap-10 mb-10">
-              <div className="flex">
-                <div className="w-2/5 text-center border-r-4 border-black items-center justify-center">
-                  <h3 className="text-xl">Classe de 3ème</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  En classe de 3ème j'avais déjà une grande appétence pour le milieu 
-                              de l'informatique. J'aimais les jeux vidéo et je voulais par la 
-                              suite en créer. J'ai donc voulu faire un stage en développement 
-                              informatique, mais en observation je n'ai rien trouvé. J'ai donc 
-                              par défaut fait un stage en chauffeur routier avec mon père, ce 
-                              qui je l'accorde n'a pas été très enrichissant.
-                  </p>
-                </div>
-              </div>
 
               <div className='flex'>
                 <div className="w-2/5 text-center border-r-4 border-black items-center justify-center">
@@ -262,12 +262,10 @@ export default function Index() {
             </div>
           </div>
           <div className="pt-20 text-center">
-          <h2 className="text-2xl mb-4">Mon CV :</h2>
-          <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="inline-block text-white">
-            <FaFileDownload className="text-2xl m-auto text-black"/>
-          </Link>
-
-        </div>
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-black text-white p-3 rounded-xl">
+              Télécharger mon CV
+            </Link>
+          </div>
         </section>
         
       </div>

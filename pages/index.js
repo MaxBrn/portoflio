@@ -109,8 +109,8 @@ export default function Index() {
             <div className="flex flex-col gap-10 mb-10">
 
               <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black items-center justify-center">
-                  <h3 className="text-xl">Classe de 3ème</h3>
+                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
+                  <p className="text-xl">Classe de 3ème</p>
                 </div>
                 <div className="w-3/5 ml-10">
                   <p>
@@ -187,7 +187,7 @@ export default function Index() {
                               pendant cette période et j'ai perdu toute la motivation avec le 
                               confinement. Après cette année je décide donc de prendre une pause 
                               d'un an pour tenter de trouver une formation pro et un emploi
-                  </p>
+                    </p>
                 </div>
               </div>
               
@@ -244,7 +244,7 @@ export default function Index() {
              
               <div className='flex'>
                 <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Et après </h3>
+                  <h3 className="text-xl">Et après ?</h3>
                 </div>
                 <div className="w-3/5 ml-10">
                   <p>

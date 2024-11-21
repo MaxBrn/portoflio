@@ -1,5 +1,5 @@
 import { MdMail, MdPhoneIphone, MdMap, MdGroup } from 'react-icons/md';
-
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <div>
@@ -23,9 +23,14 @@ export default function Footer() {
               <p>62138 Douvrin, France</p>
             </div>
             <div>
-              <MdGroup className="text-2xl mx-auto" />
+              <FaLinkedin className="text-2xl mx-auto" />
               <p>Linkedin</p>
               <p><a href="https://www.linkedin.com/in/maxime-brunin-860094216/" className="text-white underline">Maxime Brunin</a></p>
+            </div>
+            <div>
+              <FaGithub className='text-2xl mx-auto'/>
+              <p>GitHub</p>
+              <p><a href="https://github.com/MaxBrn" className="text-white underline">MaxBrn</a></p>
             </div>
           </div>
         </div>

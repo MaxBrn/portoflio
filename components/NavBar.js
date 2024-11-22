@@ -1,19 +1,60 @@
-import Link from 'next/link';
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useState } from "react";
+import Link from "next/link";
+import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
 
 export default function NavBar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleLinkClick = () => {
+        setIsOpen(false); // Ferme le menu lorsqu'un lien est cliqué
+    };
+
     return (
-        <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 w-1/2 flex justify-center items-center bg-black text-white py-4 z-50 rounded-xl mt-2 bg-opacity-50 flex gap-20">
-          <div className="flex gap-8">
-            <Link href="/" className="font-bold text-lg hover:text-gray-300">Présentation</Link>
-            <Link href="/btsSio" className="font-bold text-lg hover:text-gray-300">BTS SIO</Link>
-            <Link href="/veilleTechno" className="font-bold text-lg hover:text-gray-300">Veille technologique</Link>
-            <Link href="/real" className="font-bold text-lg hover:text-gray-300">Réalisation</Link>
-          </div>
-          <div className="flex gap-6">
-            <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/" ><FaLinkedin className='text-xl' /></Link>
-            <Link href="https://github.com/MaxBrn"><FaGithub className='text-xl' /></Link>
-          </div>
+        <nav
+            className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[800px] bg-black text-white py-3 px-4 z-50 rounded-xl mt-2 bg-opacity-50"
+        >
+            {/* Desktop Menu */}
+            <div className="hidden md:flex justify-between items-center">
+                <div className="flex gap-8 m-auto">
+                    <Link href="/" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Présentation</Link>
+                    <Link href="/btsSio" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>BTS SIO</Link>
+                    <Link href="/veilleTechno" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Veille technologique</Link>
+                    <Link href="/real" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Réalisation</Link>
+                </div>
+                <div className="flex gap-6">
+                    <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/" target="_blank">
+                        <FaLinkedin className="text-[20px] hover:text-gray-300" />
+                    </Link>
+                    <Link href="https://github.com/MaxBrn" target="_blank">
+                        <FaGithub className="text-[20px] hover:text-gray-300" />
+                    </Link>
+                </div>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="flex justify-between items-center md:hidden">
+                <button onClick={() => setIsOpen(!isOpen)} className="text-[20px] focus:outline-none">
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </button>
+                <div className="flex gap-4">
+                    <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/" target="_blank">
+                        <FaLinkedin className="text-[20px] hover:text-gray-300" />
+                    </Link>
+                    <Link href="https://github.com/MaxBrn" target="_blank">
+                        <FaGithub className="text-[20px] hover:text-gray-300" />
+                    </Link>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            {isOpen && (
+                <div className="flex flex-col items-center gap-4 mt-4 md:hidden">
+                    <Link href="/" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Présentation</Link>
+                    <Link href="/btsSio" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>BTS SIO</Link>
+                    <Link href="/veilleTechno" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Veille technologique</Link>
+                    <Link href="/real" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Réalisation</Link>
+                </div>
+            )}
         </nav>
     );
 }

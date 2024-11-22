@@ -1,41 +1,67 @@
-import { MdMail, MdPhoneIphone, MdMap, MdGroup } from 'react-icons/md';
+import { MdMail, MdPhoneIphone, MdMap } from "react-icons/md";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <div>
+      {/* Section "Me Contacter" */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
-          <div className="flex justify-center gap-20">
-            <div>
-              <MdMail className="text-2xl mx-auto" />
-              <p>E-mail</p>
+          <div className="flex flex-wrap justify-center gap-10 md:gap-20">
+            {/* Contact par email */}
+            <div className="text-center">
+              <MdMail className="text-4xl mx-auto mb-2" />
+              <p className="font-semibold">E-mail</p>
               <p>maxime_brn@outlook.fr</p>
             </div>
-            <div>
-              <MdPhoneIphone className="text-2xl mx-auto" />
-              <p>Téléphone</p>
+            {/* Contact par téléphone */}
+            <div className="text-center">
+              <MdPhoneIphone className="text-4xl mx-auto mb-2" />
+              <p className="font-semibold">Téléphone</p>
               <p>07 67 44 95 08</p>
             </div>
-            <div>
-              <MdMap className="text-2xl mx-auto" />
-              <p>Localisation</p>
+            {/* Localisation */}
+            <div className="text-center">
+              <MdMap className="text-4xl mx-auto mb-2" />
+              <p className="font-semibold">Localisation</p>
               <p>62138 Douvrin, France</p>
             </div>
-            <div>
-              <FaLinkedin className="text-2xl mx-auto" />
-              <p>Linkedin</p>
-              <p><a href="https://www.linkedin.com/in/maxime-brunin-860094216/" className="text-white underline">Maxime Brunin</a></p>
+            {/* Lien LinkedIn */}
+            <div className="text-center">
+              <FaLinkedin className="text-4xl mx-auto mb-2" />
+              <p className="font-semibold">LinkedIn</p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/maxime-brunin-860094216/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline"
+                >
+                  Maxime Brunin
+                </a>
+              </p>
             </div>
-            <div>
-              <FaGithub className='text-2xl mx-auto'/>
-              <p>GitHub</p>
-              <p><a href="https://github.com/MaxBrn" className="text-white underline">MaxBrn</a></p>
+            {/* Lien GitHub */}
+            <div className="text-center">
+              <FaGithub className="text-4xl mx-auto mb-2" />
+              <p className="font-semibold">GitHub</p>
+              <p>
+                <a
+                  href="https://github.com/MaxBrn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline"
+                >
+                  MaxBrn
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="text-center py-4 bg-black text-gray-500">
         <p>Réalisé par Maxime Brunin</p>
       </footer>

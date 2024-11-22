@@ -6,8 +6,7 @@ export default function Index() {
       <div>  
         {/* Header */}
         <header
-          className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative"
-          style={{ backgroundImage: 'url("/image/fond.jpg")' }}
+          className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative bg-[url('/image/bgLight.jpg')]"
         >
           {/* Ajout d'un dégradé */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>

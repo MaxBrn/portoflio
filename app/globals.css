@@ -12,6 +12,11 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Consolas',monospace;
+  
+}
+body.dark {
+  background-color: black;
+  color: white;
 }
 ::-webkit-scrollbar {
   width: 10px; /* Augmentation de la largeur de la scrollbar */

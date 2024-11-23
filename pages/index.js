@@ -4,20 +4,6 @@ import Link from 'next/link';
 export default function Index() {
     return (
       <div>  
-        {/* Header */}
-        <header
-          className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative bg-[url('/image/bgLight.jpg')]"
-        >
-          {/* Ajout d'un dégradé */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-
-          <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">Maxime Brunin</h1>
-          <p className="text-3xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
-            Etudiant en BTS SIO
-          </p>
-        </header>
-
-  
         {/* Section A propos */}
         <section className="py-24">
           <div className="max-w-5xl mx-auto flex gap-10">
@@ -32,14 +18,14 @@ export default function Index() {
             </div>
           </div>
           <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-black text-white p-3 rounded-xl">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-white p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>
         </section>
   
         {/* Section Compétences */}
-        <section className="py-24 bg-black text-white">
+        <section className="py-24 bg-custom-cream2 dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl mb-10">Les langages étudiés</h2>
             <div className="flex flex-wrap justify-center gap-10">
@@ -261,7 +247,7 @@ export default function Index() {
             </div>
           </div>
           <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-black text-white p-3 rounded-xl">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-white p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>

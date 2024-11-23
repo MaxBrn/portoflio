@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useTheme } from "next-themes"; // Importation du hook pour gérer les thèmes
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { theme, setTheme, systemTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    // S'assurer que le thème est monté
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
     const handleLinkClick = () => {
         setIsOpen(false); // Ferme le menu lorsqu'un lien est cliqué
@@ -28,6 +39,18 @@ export default function NavBar() {
                     <Link href="https://github.com/MaxBrn" target="_blank">
                         <FaGithub className="text-[20px] hover:text-gray-300" />
                     </Link>
+
+                    {/* Dark Mode Button */}
+                    {mounted && (
+                        <button
+                            onClick={() =>
+                                setTheme(currentTheme === "dark" ? "light" : "dark")
+                            }
+                            className="text-[20px] hover:text-gray-300"
+                        >
+                            {currentTheme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+                        </button>
+                    )}
                 </div>
             </div>
 

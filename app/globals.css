@@ -8,16 +8,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Consolas',monospace;
+  font-family: 'Consolas', monospace;
+}
+
+html {
+  @apply bg-custom-cream text-custom-text; /* Styles par défaut */
+  transition: background-color 1s ease-in-out, color 0.3s ease-in-out;
+}
+header {
+  transition: background-image 1s ease-in-out;
+}
+
+
+html.dark {
+  @apply bg-custom-night text-white; /* Styles en mode sombre */
   
 }
-body.dark {
-  background-color: black;
-  color: white;
-}
+
 ::-webkit-scrollbar {
   width: 10px; /* Augmentation de la largeur de la scrollbar */
   border-radius: 9999px; /* Arrondir le conteneur de la scrollbar */
@@ -34,4 +43,3 @@ body.dark {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #777; /* Couleur du pouce au survol */
 }
-

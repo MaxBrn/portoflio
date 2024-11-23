@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +12,12 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-cream':'rgb(242 222 181)',
+        'custom-cream2':'rgb(223 198 146)',
+        'custom-text':'rgb(51 51 51)',
+        'custom-button':'rgb(218 120 74)',
+        'custom-night':'rgb(21 32 43)',
+        'custom-night2':'rgb(14 25 36)',
       },
       screens: {
         sm: "640px",

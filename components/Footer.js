@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div>
       {/* Section "Me Contacter" */}
-      <section className="py-24 bg-black text-white">
+      <section className="py-24 bg-custom-cream2 text-custom dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
           <div className="flex flex-wrap justify-center gap-10 md:gap-20">
@@ -36,7 +36,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/maxime-brunin-860094216/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white underline"
+                  className="underline"
                 >
                   Maxime Brunin
                 </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                   href="https://github.com/MaxBrn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white underline"
+                  className="underline"
                 >
                   MaxBrn
                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-4 bg-black text-gray-500">
+      <footer className="text-center py-4 bg-custom-cream2 text-custom dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
         <p>Réalisé par Maxime Brunin</p>
       </footer>
     </div>

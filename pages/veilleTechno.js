@@ -1,20 +1,6 @@
 export default function VeilleTechno() {
   return (
     <div>
-      <header
-        className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative"
-        style={{ backgroundImage: 'url("/image/fond.jpg")' }}
-      >
-        {/* Ajout d'un dégradé */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-
-        <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s text-center">
-          Veille technologique
-        </h1>
-        <p className="text-3xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
-          Ma veille sur les moteurs de jeux vidéo
-        </p>
-      </header>
 
       {/* Section Principale */}
       <section className="py-12 px-4 max-w-5xl mx-auto">
@@ -64,29 +50,29 @@ export default function VeilleTechno() {
 
         {/* Section Rapports */}
         <h2 className="text-2xl font-bold text-center pt-10 pb-6">Mes Rapports</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 border border-black p-6 rounded-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Exemple de rapports */}
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 1</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 2</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 3</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 4</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 5</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border border-black rounded-2xl">
+          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
             <p className="font-bold">Rapport 6</p>
             <p>Date du rapport</p>
           </div>

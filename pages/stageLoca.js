@@ -1,10 +1,6 @@
 export default function StageLoca() {
     return (
         <div>
-            <header className="flex flex-col items-center bg-cover bg-center text-white py-48" style={{ backgroundImage: "url('/image/sliderv2.jpg')" }}>
-                <h1 className="text-5xl font-bold">Stage Loca Service</h1>
-                <p className="text-3xl mt-4">Mon stage de première année</p>
-            </header>
 
             <section className="py-24 px-6 text-center">
                 <h1 className="text-3xl font-semibold mb-6">Qui sont Loca Service ?</h1>

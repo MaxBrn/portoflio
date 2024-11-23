@@ -19,9 +19,12 @@ export default function Real() {
         </div>
 
         <p className='text-center mt-20 text-xl'>Les réalisations en cours</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10">
           <div className='p-6'>
             <img src="/image/logoMDJ.png" alt="MDJ" className="w-40 m-auto" />
+          </div>
+          <div className='p-6'>
+            <Link href="https://mariteam.vercel.app/"><img src="/image/logoMarieTeam.png"  alt="MDJ" className="w-40 m-auto" /></Link>
           </div>
         </div>
 

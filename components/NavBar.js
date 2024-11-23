@@ -66,6 +66,17 @@ export default function NavBar() {
                     <Link href="https://github.com/MaxBrn" target="_blank">
                         <FaGithub className="text-[20px] hover:text-gray-300" />
                     </Link>
+                    {/* Dark Mode Button */}
+                    {mounted && (
+                        <button
+                            onClick={() =>
+                                setTheme(currentTheme === "dark" ? "light" : "dark")
+                            }
+                            className="text-[20px] hover:text-gray-300"
+                        >
+                            {currentTheme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+                        </button>
+                    )}
                 </div>
             </div>
 

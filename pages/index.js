@@ -26,232 +26,154 @@ export default function Index() {
   
         {/* Section Compétences */}
         <section className="py-24 bg-custom-cream2 dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl mb-10">Les langages étudiés</h2>
-            <div className="flex flex-wrap justify-center gap-10">
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeHTML.png" alt="HTML" className="w-40 mx-auto" />
-                <h3 className="mt-2">HTML</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeCSS.png" alt="CSS" className="w-40 mx-auto" />
-                <h3 className="mt-2">CSS</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeJS.png" alt="JavaScript" className="w-40 mx-auto rounded-2xl" />
-                <h3 className="mt-2">JavaScript</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeTS.png" alt="TypeScript" className="w-40 mx-auto" />
-                <h3 className="mt-2">TypeScript</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconePHP.png" alt="PHP" className="w-40 mx-auto" />
-                <h3 className="mt-2">PHP</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeSQL.png" alt="SQL" className="w-40 mx-auto" />
-                <h3 className="mt-2">SQL</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeJava.png" alt="Java" className="w-40 mx-auto" />
-                <h3 className="mt-2">PHP</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconePython.png" alt="Python" className="w-40 mx-auto" />
-                <h3 className="mt-2">Python</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeCSharp.png" alt="C#" className="w-40 mx-auto" />
-                <h3 className="mt-2">C#</h3>
-              </div>
-              
-            </div>
-            <h2 className="text-2xl mb-10 pt-10">Les Technos étudiés</h2>
-            <div className="flex flex-wrap justify-center gap-10">
-              
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeNext.png" alt="Next.JS" className="w-40 mx-auto" />
-                <h3 className="mt-2">Next.JS</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeReact.png" alt="React" className="w-40 mx-auto" />
-                <h3 className="mt-2">React</h3>
-              </div>
-              <div className="w-40 bg-gray-100 text-black rounded-lg p-4">
-                <img src="image/iconeTW.png" alt="Tailwind" className="w-40 mx-auto" />
-                <h3 className="mt-2">Tailwind</h3>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="max-w-5xl mx-auto text-center">
+    {/* Langages étudiés */}
+    <h2 className="text-2xl mb-10">Les langages étudiés</h2>
+    <div className="flex flex-wrap justify-center gap-10">
+      {[
+        { src: "image/iconeHTML.png", alt: "HTML", title: "HTML" },
+        { src: "image/iconeCSS.png", alt: "CSS", title: "CSS" },
+        { src: "image/iconeJS.png", alt: "JavaScript", title: "JavaScript" },
+        { src: "image/iconeTS.png", alt: "TypeScript", title: "TypeScript" },
+        { src: "image/iconePHP.png", alt: "PHP", title: "PHP" },
+        { src: "image/logoSQL.png", alt: "SQL", title: "SQL" },
+        { src: "image/iconeJava.png", alt: "Java", title: "Java" },
+        { src: "image/iconePython.png", alt: "Python", title: "Python" },
+        { src: "image/iconeCSharp.png", alt: "C#", title: "C#" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="w-20 h-20 object-contain"
+          />
+          <h3 className="mt-2">{item.title}</h3>
+        </div>
+      ))}
+    </div>
+
+    {/* Technologies étudiées */}
+    <h2 className="text-2xl mb-10 pt-10">Les technologies étudiées</h2>
+    <div className="flex flex-wrap justify-center gap-10">
+      {[
+        { src: "image/iconeNext.png", alt: "Next.JS", title: "Next.JS" },
+        { src: "image/iconeReact.png", alt: "React", title: "React" },
+        { src: "image/iconeTW.png", alt: "Tailwind", title: "Tailwind" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="w-20 h-20 object-contain"
+          />
+          <h3 className="mt-2">{item.title}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
   
         {/* Section Parcours */}
-        <section className="py-24">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl mb-10">Mon parcours</h2>
-            {/* Ajoute ici chaque étape du parcours comme div */}
-            <div className="flex flex-col gap-10 mb-10">
+        {/* Section Parcours */}
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">Mon Parcours</h2>
 
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <p className="text-xl">Classe de 3ème</p>
-                </div>
-                <div className="w-3/5 ml-10">
+          {/* Timeline */}
+          <div className="relative">
+            <div className="absolute left-1/2 w-1 bg-custom-button h-full transform -translate-x-1/2 bg-opacity-50"></div>
+            
+            <div className="space-y-12">
+              
+              {/* Étape */}
+              <div className="flex items-center justify-between relative">
+                <div className="w-2/5 text-right pr-6">
+                  <h3 className="text-xl font-semibold">Avant</h3>
                   <p>
-                  En classe de 3ème j'avais déjà une grande appétence pour le milieu 
-                              de l'informatique. J'aimais les jeux vidéo et je voulais par la 
-                              suite en créer. J'ai donc voulu faire un stage en développement 
-                              informatique, mais en observation je n'ai rien trouvé. J'ai donc 
-                              par défaut fait un stage en chauffeur routier avec mon père, ce 
-                              qui je l'accorde n'a pas été très enrichissant.
+                    Depuis toujours passionné par les jeux vidéo, j'ai toujours rêvé d'un jour créer mes propres jeux vidéo.
+                  </p>
+                </div>
+                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                  <span>1</span>
+                </div>
+                <div className="w-2/5 pl-6"></div>
+              </div>
+
+              {/* Étape */}
+              <div className="flex items-center justify-between relative">
+                <div className="w-2/5"></div>
+                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                  <span>2</span>
+                </div>
+                <div className="w-2/5 text-left pl-6">
+                  <h3 className="text-xl font-semibold">Terminale S option ISN</h3>
+                  <p>
+                    La spécialité ISN m'a amené mon premier contact avec le développement informatique.
+                    Apprentissage des bases du développement web en HTML, JavaScript et CSS. Réalisation d’un projet inspiré du Projet Voltaire mais en anglais en HTML, JavaScript et CSS, noté 19/20.
                   </p>
                 </div>
               </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Classe de seconde générale</h3>
-                </div>
-                <div className="w-3/5 ml-10">
+
+              {/* Étape */}
+              <div className="flex items-center justify-between relative">
+                <div className="w-2/5 text-right pr-6">
+                  <h3 className="text-xl font-semibold">Exploration universitaire</h3>
                   <p>
-                  En seconde j'avais déjà décidé de poursuivre en Bac Scientifique 
-                              option ISN (informatique et science du numérique), pour poursuivre 
-                              mon envie de devenir développeur
+                    Du fait de mes meilleurs notes et facilités en langues j'ai décidé de m'orienter vers un cursus universitaire dans les langues.
+                    Une année en LLCER Anglais lv2 Japonais, une année en LLCER Japonais lv2 Anglais et une année en licence d'histoire.
+                  </p>
+                </div>
+                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                  <span>3</span>
+                </div>
+                <div className="w-2/5 pl-6"></div>
+              </div>
+
+              {/* Étape */}
+              <div className="flex items-center justify-between relative">
+                <div className="w-2/5"></div>
+                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                  <span>4</span>
+                </div>
+                <div className="w-2/5 text-left pl-6">
+                  <h3 className="text-xl font-semibold">BTS SIO option SLAM</h3>
+                  <p>
+                    Me décidant d'enfin me tourner vers le secteur qui m'a toujours attiré, j'ai décidé de rejoindre le BTS SIO en spécialité de développement. 
+                    J'y apprends diverses langages de programmation et technologies afin de développer des solutions webs ou logiciels, avec des bases de données.
                   </p>
                 </div>
               </div>
-              
-            <div className='flex'>
-              <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Classe de terminale S option ISN</h3>
-                </div>
-                <div className="w-3/5 ml-10">
+
+              {/* Étape */}
+              <div className="flex items-center justify-between relative">
+                <div className="w-2/5 text-right pr-6">
+                  <h3 className="text-xl font-semibold">Et après ?</h3>
                   <p>
-                  Pendant cette année j'ai appris à développer un site web avec du 
-                              HTML, CSS et JavaScript, j'ai réalisé un projet de fin d'année qui 
-                              consistait en un Projet Voltaire mais pour la langue anglaise. 
-                              J'avais choisi ce thème car j'aime aussi beaucoup les langues 
-                              vivantes. J'ai obtenu la note de 19/20 pour ce projet. Mais dans 
-                              les autres matières scientifiques je ne parvenais pas à suivre. 
-                              De plus cette année est née mon envie de devenir professeur ou 
-                              journaliste. J'ai obtenu mon bac S quand même mais j'ai décidé de 
-                              poursuivre en étude de langue sous les conseils, car j'étais 
-                              meilleur dans les matières littéraires. J'ai aussi commencé 
-                              l'apprentissage en autodidacte du japonais.
+                    Je prévois de continuer mes études en licence d'informatique. Pour ce qui est du projet professionnel, je vise en particulier soit à réaliser mon rêve de devenir développeur de jeux vidéo ou alors me tourner vers le métier d'enseignant
+                    en informatique.
                   </p>
                 </div>
-            </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Première année LLCER Anglais</h3>
+                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                  <span>5</span>
                 </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  J'avais en tête de devenir professeur d'anglais avec ces études. 
-                              J'ai approfondi mes connaissances dans la langue anglaise et 
-                              j'ai aussi suivi des cours de Japonais en deuxième langue vivante. 
-                              J'ai décidé de me réorienter car je ne me sentais pas à l'aise dans 
-                              ce cursus universitaire.
-                  </p>
-                </div>
-              </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Première année LLCER Japonais</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  Comme j'ai toujours aimé le Japon et que la langue et la culture 
-                              m'attire depuis que j'ai commencé son apprentissage en terminale 
-                              en autodidacte, je me suis dit que je pourrais devenir professeur
-                              ou traducteur en japonais. Je voulais même par la suite m'installer 
-                              dans ce pays. J'aimais beaucoup ce cursus mais le covid est arrivé 
-                              pendant cette période et j'ai perdu toute la motivation avec le 
-                              confinement. Après cette année je décide donc de prendre une pause 
-                              d'un an pour tenter de trouver une formation pro et un emploi
-                    </p>
-                </div>
-              </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Année de trou</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  J'ai donc cherché une formation, informatique de préférence, avec 
-                              l'aide de la Mission Locale, mais je n'ai rien trouvé. J'ai trouvé
-                              un emploi en juin dans un Leclerc en tant qu'employé libre service
-                              à temps partiel pour reprendre les études l'année prochaine. Avoir 
-                              un emploi m'a donné l'occasion de découvrir bien mieux le monde du 
-                              travail. Je pars avec en tête de devenir soit professeur encore ou 
-                              journaliste, car une formation en informatique impliquerait 
-                              reprendre les sciences et je me pense plus à l'aise dans les 
-                              langues.
-                  </p>
-                </div>
-              </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Première année LLCER Histoire</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  Je retourne donc à la fac pour un parcours en histoire pour poursuivre
-                              certains de mes métiers voulus. Je suis encore l'apprentissage de 
-                              l'anglais et du japonais. J'ai encore aussi mon emploi étudiant à 
-                              Leclerc Mais encore une fois l'université me déplait et j'ai de plus 
-                              en plus envie de revenir au développement, je décide donc je quitter 
-                              la formation et de rejoindre un BTS SIO.
-                  </p>
-                </div>
-              </div>
-              
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">BTS SIO option SLAM</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  Je suis donc actuellement en BTS SIO spécialité développement. J'ai 
-                              pour projet de devenir développeur logiciel de préférence, de jeux 
-                              vidéo encore plus. Je me sens très bien dans la formation et suis 
-                              convaincu de ma réussite. J'aimerais aussi devenir pourquoi pas 
-                              professeur d'informatique ou journaliste spécialisé car je n'ai pas 
-                              oublié ces deux envies malgré les échecs universitaires. 
-                  </p>
-                </div>
-              </div>
-             
-              <div className='flex'>
-                <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-                  <h3 className="text-xl">Et après ?</h3>
-                </div>
-                <div className="w-3/5 ml-10">
-                  <p>
-                  Je prévois par la suite de continuer très certainement mes études avec
-                              une licence en informatique probablement. Vu les métiers que je vise 
-                              (jeux vidéo, enseignement) je ne peux pas exercer avec que le BTS en 
-                              poche. J'ai aussi pour projet de réaliser un PVT au Japon pour
-                              réaliser mon rêve et potentiellement aussi tenter de trouver un 
-                              emploi de développeur là-bas. En somme j'ai beaucoup de projets en 
-                              tête, mais contrairement aux années précédentes, je me plais dans ma 
-                              formation et la motivation est de mise.
-                  </p>
-                </div>
+                <div className="w-2/5 pl-6"></div>
               </div>
             </div>
           </div>
-          <div className="pt-20 text-center">
+        </div>
+        <div className="pt-20 text-center">
             <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-white p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>
-        </section>
+      </section>
         
       </div>
     );

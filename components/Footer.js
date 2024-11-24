@@ -5,7 +5,8 @@ export default function Footer() {
   return (
     <div>
       {/* Section "Me Contacter" */}
-      <section className="py-24 bg-custom-cream2 text-custom dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
+      <section className="py-24 text-custom">
+        <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[70%] mx-auto mb-10"></div>
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
           <div className="flex flex-wrap justify-center gap-10 md:gap-20">
@@ -62,7 +63,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-4 bg-custom-cream2 text-custom dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
+      <footer className="text-center py-4 text-custom transition-bg duration-1000 ease-in-out">
         <p>Réalisé par Maxime Brunin</p>
       </footer>
     </div>

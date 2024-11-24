@@ -24,7 +24,7 @@ export default function Real() {
             <img src="/image/logoMDJ.png" alt="MDJ" className="w-40 m-auto" />
           </div>
           <div className='p-6'>
-            <Link href="https://mariteam.vercel.app/"><img src="/image/logoMarieTeam.png"  alt="Marieteam" className="w-40 m-auto" /></Link>
+            <Link href="https://mariteam.vercel.app/"><img src="/image/logoMarieteam.png"  alt="Marieteam" className="w-40 m-auto" /></Link>
           </div>
         </div>
 

@@ -38,8 +38,8 @@ export default function Header() {
 
     return (
         <header
-            className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center relative 
-            bg-[url('/image/bgLight.jpg')] dark:bg-[url('/image/bgDark.jpg')] 
+            className="flex flex-col items-center justify-center text-white h-screen bg-cover relative 
+            bg-[url('/image/background.jpg')] dark:bg-[url('/image/backgroundDark.jpg')] 
             bg-scroll md:bg-fixed"
         >
             <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">

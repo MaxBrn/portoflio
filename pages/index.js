@@ -1,6 +1,11 @@
 // pages/index.js
 import { FaFileDownload } from "react-icons/fa";
 import Link from 'next/link';
+import { MdOutlineChildFriendly, MdOutlineQuestionMark } from "react-icons/md";
+import { FaSchool } from "react-icons/fa";
+import { IoSchool } from "react-icons/io5";
+import { FaC, FaCode } from "react-icons/fa6";
+
 export default function Index() {
     return (
       <div>  
@@ -97,11 +102,11 @@ export default function Index() {
                 <div className="w-2/5 text-right pr-6">
                   <h3 className="text-xl font-semibold">Avant</h3>
                   <p>
-                    Depuis toujours passionné par les jeux vidéo, j'ai toujours rêvé d'un jour créer mes propres jeux vidéo.
+                    Depuis toujours passionné par les jeux vidéo, j'ai toujours rêvé d'un jour en faire mon domaine profesionnel.
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span>1</span>
+                  <span className="text-3xl"><MdOutlineChildFriendly/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>
@@ -110,7 +115,7 @@ export default function Index() {
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span>2</span>
+                  <span className="text-3xl"><FaSchool/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
                   <h3 className="text-xl font-semibold">Terminale S option ISN</h3>
@@ -131,7 +136,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span>3</span>
+                  <span className="text-3xl"><IoSchool/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>
@@ -140,7 +145,7 @@ export default function Index() {
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span>4</span>
+                  <span className="text-3xl"><FaCode/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
                   <h3 className="text-xl font-semibold">BTS SIO option SLAM</h3>
@@ -161,7 +166,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span>5</span>
+                  <span className="text-3xl"><MdOutlineQuestionMark/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>

@@ -38,14 +38,14 @@ export default function Header() {
 
     return (
         <header
-            className="flex flex-col items-center justify-center text-white h-screen bg-cover relative 
+            className="flex flex-col items-center justify-center text-custom-white h-screen bg-cover relative text-stroke text-center
             bg-[url('/image/background.jpg')] dark:bg-[url('/image/backgroundDark.jpg')] 
             bg-scroll md:bg-fixed"
         >
-            <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">
+            <h1 className="text-6xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">
             {title}
             </h1>
-            <p className="text-3xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
+            <p className="text-4xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
             {subtitle}
             </p>
       </header>

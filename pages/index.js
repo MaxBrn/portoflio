@@ -23,7 +23,7 @@ export default function Index() {
             </div>
           </div>
           <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-white p-3 rounded-xl">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-custom-white p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>
@@ -106,7 +106,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span className="text-3xl"><MdOutlineChildFriendly/></span>
+                  <span className="text-3xl text-custom-white"><MdOutlineChildFriendly/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>
@@ -115,7 +115,7 @@ export default function Index() {
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span className="text-3xl"><FaSchool/></span>
+                  <span className="text-3xl text-custom-white"><FaSchool/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
                   <h3 className="text-xl font-semibold">Terminale S option ISN</h3>
@@ -136,7 +136,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span className="text-3xl"><IoSchool/></span>
+                  <span className="text-3xl text-custom-white"><IoSchool/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>
@@ -145,7 +145,7 @@ export default function Index() {
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span className="text-3xl"><FaCode/></span>
+                  <span className="text-3xl text-custom-white"><FaCode/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
                   <h3 className="text-xl font-semibold">BTS SIO option SLAM</h3>
@@ -166,7 +166,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <span className="text-3xl"><MdOutlineQuestionMark/></span>
+                  <span className="text-3xl text-custom-white"><MdOutlineQuestionMark/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
               </div>
@@ -174,7 +174,7 @@ export default function Index() {
           </div>
         </div>
         <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-white p-3 rounded-xl">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-custom-white p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>

@@ -18,6 +18,8 @@ module.exports = {
         'custom-button':'rgb(218 120 74)',
         'custom-night':'rgb(21 32 43)',
         'custom-night2':'rgb(14 25 36)',
+        'custom-nightLite':'rgb(50, 77, 103)',
+        'custom-creamLite':'rgb(231, 194, 126)',
       },
       screens: {
         sm: "640px",

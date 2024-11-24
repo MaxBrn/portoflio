@@ -12,6 +12,7 @@ export default function MyApp({ Component, pageProps }) {
         <Head>
           <title>Portfolio - Maxime Brunin</title>
           <meta name="description" content="Bienvenue sur mon portfolio. Découvrez mes compétences et projets en développement web." />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
         <Header/>
         <NavBar/>

@@ -52,27 +52,27 @@ export default function VeilleTechno() {
         <h2 className="text-2xl font-bold text-center pt-10 pb-6">Mes Rapports</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Exemple de rapports */}
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 1</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 2</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 3</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 4</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 5</p>
             <p>Date du rapport</p>
           </div>
-          <div className="p-4 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className="font-bold">Rapport 6</p>
             <p>Date du rapport</p>
           </div>

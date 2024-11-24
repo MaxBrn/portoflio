@@ -30,27 +30,27 @@ export default function Real() {
 
         <p className='mt-20 text-center text-xl'>Les compétences du cursus</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.1</p>
             <p className='pt-2'>Gestion du patrimoine informatique</p>
           </div>
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.2</p>
             <p className='pt-2'>Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
           </div>
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.3</p>
             <p className='pt-2'>Développer la présence en ligne de l'organisation</p>
           </div>
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.4</p>
             <p className='pt-2'>Travailler en mode projet</p>
           </div>
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.5</p>
             <p className='pt-2'>Mettre à disposition des utilisateurs un service informatique</p>
           </div>
-          <div className="p-6 border-2 border-custom-cream2 dark:border-custom-night2 rounded-2xl">
+          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
             <p className='font-bold'>Competence 1.6</p>
             <p className='pt-2'>Organiser son développement personnel</p>
           </div>

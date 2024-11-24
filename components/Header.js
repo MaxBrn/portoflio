@@ -38,17 +38,18 @@ export default function Header() {
 
     return (
         <header
-            className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center bg-fixed relative bg-[url('/image/bgLight.jpg')] dark:bg-[url('/image/bgDark.jpg')]"
+            className="flex flex-col items-center justify-center text-white h-screen bg-cover bg-center relative 
+            bg-[url('/image/bgLight.jpg')] dark:bg-[url('/image/bgDark.jpg')] 
+            bg-scroll md:bg-fixed"
         >
-            {/* Ajout d'un dégradé */}
-            {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div> */}
-
             <h1 className="text-5xl mb-4 relative z-10 animate__animated animate__fadeIn animate__delay-1s">
-                {title}
+            {title}
             </h1>
             <p className="text-3xl text-center px-4 relative z-10 animate__animated animate__fadeIn animate__delay-2s">
-                {subtitle}
+            {subtitle}
             </p>
-        </header>
+      </header>
+      
+
     );
 }

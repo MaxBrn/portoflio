@@ -1,6 +1,35 @@
 import Link from 'next/link';
+import CompetenceModal from '@/components/Competence';
+import { useState, useEffect } from "react";
+import { IoMdClose } from "react-icons/io";
 
 export default function Real() {
+  const [isOpen, setIsOpen] = useState(false);
+  let folder;
+  let description;
+    const closeModal = () => {
+        setIsOpen(false); // Ferme la modale
+    };
+
+    const [files, setFiles] = useState([]);
+
+    // Fonction pour récupérer les fichiers
+    const fetchFiles = async () => {
+        try {
+            const response = await fetch(`/api/getFiles?folder=${folder}`);
+            const data = await response.json();
+            setFiles(data); // Mettre à jour l'état avec les fichiers récupérés
+        } catch (error) {
+            console.error("Erreur lors de la récupération des fichiers:", error);
+        }
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            fetchFiles(); // Récupère les fichiers à chaque ouverture de la modale
+        }
+    }, [isOpen, folder]);
+
   return (
     <div className="pb-10">
 
@@ -30,30 +59,14 @@ export default function Real() {
 
         <p className='mt-20 text-center text-xl'>Les compétences du cursus</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.1</p>
-            <p className='pt-2'>Gestion du patrimoine informatique</p>
-          </div>
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.2</p>
-            <p className='pt-2'>Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
-          </div>
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.3</p>
-            <p className='pt-2'>Développer la présence en ligne de l'organisation</p>
-          </div>
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.4</p>
-            <p className='pt-2'>Travailler en mode projet</p>
-          </div>
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.5</p>
-            <p className='pt-2'>Mettre à disposition des utilisateurs un service informatique</p>
-          </div>
-          <div className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
-            <p className='font-bold'>Competence 1.6</p>
-            <p className='pt-2'>Organiser son développement personnel</p>
-          </div>
+          
+        <CompetenceModal folder="1.1" description='Gestion du patrimoine informatique'/>
+        <CompetenceModal folder="1.2" description="Répondre aux incidents et aux demandes d'assistance et d'évolution"/>
+        <CompetenceModal folder="1.3" description="Développer la présence en ligne de l'organisation"/>
+        <CompetenceModal folder="1.4" description="Travailler en mode projet"/>
+        <CompetenceModal folder="1.5" description="Mettre à disposition des utilisateurs un service informatique"/>
+        <CompetenceModal folder="1.6" description="Organiser son développement personnel"/>
+         
         </div>
 
       </section>

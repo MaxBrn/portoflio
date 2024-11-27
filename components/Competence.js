@@ -19,7 +19,7 @@ export default function CompetenceModal({ folder, description}) { // <-- Assurez
 
     useEffect(() => {
         if (isOpen) {
-            fetchFiles(); // Récupère les fichiers à chaque ouverture de la modale
+            fetchFiles();
         }
     }, [isOpen, folder]);
 

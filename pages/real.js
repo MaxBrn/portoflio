@@ -2,16 +2,17 @@ import Link from 'next/link';
 import CompetenceModal from '@/components/Competence';
 import { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
-if (process.env.NODE_ENV === 'production') {
-  return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-2xl font-bold text-center">
-        Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement, merci de votre compréhension.
-      </h1>
-    </div>
-  );
-}
+
 export default function Real() {
+  if (process.env.NODE_ENV === 'production') {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <h1 className="text-2xl font-bold text-center">
+          Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement, merci de votre compréhension.
+        </h1>
+      </div>
+    );
+  }
   const [isOpen, setIsOpen] = useState(false);
   let folder;
   let description;

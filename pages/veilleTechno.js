@@ -18,17 +18,17 @@ export default function VeilleTechno() {
       {/* Pop-up affiché en mode production */}
       {isPopupVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md text-center">
+          <div className="bg-custom-night2 rounded-lg shadow-lg p-8 w-full max-w-md text-center text-custom-white">
             <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
             <p className="mb-6">
               Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
             </p>
-            <button
-              onClick={handleClosePopup}
-              className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
+            <Link
+              href="/index"
+              className="bg-custom-button text-custom-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
             >
               Retourner à l'accueil
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -1,7 +1,18 @@
+// pages/veille.js
 export default function VeilleTechno() {
+  // Vérifie l'environnement d'exécution
+  if (process.env.NODE_ENV === 'production') {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <h1 className="text-2xl font-bold text-center">
+          Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement, merci de votre compréhension.
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <div>
-
       {/* Section Principale */}
       <section className="py-12 px-4 max-w-5xl mx-auto">
         <div className="flex flex-col gap-10 mb-10">

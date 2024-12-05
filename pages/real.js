@@ -4,17 +4,7 @@ import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
 export default function Real() {
-  // Vérifie si l'environnement est en production
-  if (process.env.NODE_ENV === 'production') {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-2xl font-bold text-center">
-          Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement.
-          Merci de votre compréhension.
-        </h1>
-      </div>
-    );
-  }
+  
 
   // État pour la gestion des fichiers et la modale
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +34,17 @@ export default function Real() {
       fetchFiles();
     }
   }, [isOpen, folder]);
-
+// Vérifie si l'environnement est en production
+if (process.env.NODE_ENV === 'production') {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <h1 className="text-2xl font-bold text-center">
+        Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement.
+        Merci de votre compréhension.
+      </h1>
+    </div>
+  );
+}
   return (
     <div className="pb-10">
       {/* Section des réalisations */}

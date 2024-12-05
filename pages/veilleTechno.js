@@ -1,11 +1,14 @@
 // pages/veille.js
 export default function VeilleTechno() {
   // Vérifie l'environnement d'exécution
-  if (process.env.NODE_ENV === 'production') {
+  const isProduction = process.env.NODE_ENV === 'production';
+
+  // Si en production, affiche une page d'attente
+  if (isProduction) {
     return (
       <div className="flex items-center justify-center h-screen">
         <h1 className="text-2xl font-bold text-center">
-          Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement, merci de votre compréhension.
+          Le site étant en développement, cette section n'est pas encore finalisée. Merci de votre compréhension.
         </h1>
       </div>
     );

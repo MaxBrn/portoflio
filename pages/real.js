@@ -50,11 +50,12 @@ export default function Real() {
             <p className="mb-6">
               Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
             </p>
-            <Link
+            <button
+              onClick={handleClosePopup}
               className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
             >
               Retourner à l'accueil
-            </Link>
+            </button>
           </div>
         </div>
       )}

@@ -1,21 +1,32 @@
 // pages/veille.js
+import { useState, useEffect } from 'react';
 export default function VeilleTechno() {
-  // Vérifie l'environnement d'exécution
-  const isProduction = process.env.NODE_ENV === 'production';
-
-  // Si en production, affiche une page d'attente
-  if (isProduction) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-2xl font-bold text-center">
-          Le site étant en développement, cette section n'est pas encore finalisée. Merci de votre compréhension.
-        </h1>
-      </div>
-    );
-  }
-
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  // Affiche le pop-up si en production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      setIsPopupVisible(true);
+    }
+  }, []);
   return (
+    
     <div>
+      {/* Pop-up affiché en mode production */}
+      {isPopupVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md text-center">
+            <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
+            <p className="mb-6">
+              Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
+            </p>
+            <Link
+              className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
+            >
+              Retourner à l'accueil
+            </Link>
+          </div>
+        </div>
+      )}
       {/* Section Principale */}
       <section className="py-12 px-4 max-w-5xl mx-auto">
         <div className="flex flex-col gap-10 mb-10">

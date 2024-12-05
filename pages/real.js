@@ -1,56 +1,67 @@
 import Link from 'next/link';
 import CompetenceModal from '@/components/Competence';
 import { useState, useEffect } from 'react';
-import { IoMdClose } from 'react-icons/io';
 
 export default function Real() {
-  
-
-  // État pour la gestion des fichiers et la modale
+  // Hooks d'état
+  const [isPopupVisible, setIsPopupVisible] = useState(false); // Gère l'affichage de la modale
   const [isOpen, setIsOpen] = useState(false);
   const [files, setFiles] = useState([]);
-  const [folder, setFolder] = useState(null); // Définir un état pour le folder sélectionné
+  const [folder, setFolder] = useState(null);
 
-  // Fonction pour fermer la modale
-  const closeModal = () => {
-    setIsOpen(false);
+  // Affiche le pop-up si en production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      setIsPopupVisible(true);
+    }
+  }, []);
+
+  // Fonction pour masquer le pop-up
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
   };
 
   // Fonction pour récupérer les fichiers
   const fetchFiles = async () => {
-    if (!folder) return; // Si aucun dossier n'est sélectionné, ne pas effectuer de requête
+    if (!folder) return;
     try {
       const response = await fetch(`/api/getFiles?folder=${folder}`);
       const data = await response.json();
-      setFiles(data); // Met à jour l'état avec les fichiers récupérés
+      setFiles(data);
     } catch (error) {
       console.error('Erreur lors de la récupération des fichiers:', error);
     }
   };
 
-  // Récupérer les fichiers lorsque la modale est ouverte ou que le dossier change
   useEffect(() => {
     if (isOpen) {
       fetchFiles();
     }
   }, [isOpen, folder]);
-// Vérifie si l'environnement est en production
-if (process.env.NODE_ENV === 'production') {
-  return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-2xl font-bold text-center">
-        Le site étant en développement, cette section n'est pas encore finalisée et est en cours de développement.
-        Merci de votre compréhension.
-      </h1>
-    </div>
-  );
-}
+
+  // Contenu principal
   return (
     <div className="pb-10">
+      {/* Pop-up affiché en mode production */}
+      {isPopupVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md text-center">
+            <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
+            <p className="mb-6">
+              Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
+            </p>
+            <Link
+              className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
+            >
+              Retourner à l'accueil
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Section des réalisations */}
       <section className="py-24 max-w-7xl mx-auto px-4">
-
-        {/* Les réalisations en stage */}
+        {/* Réalisations en stage */}
         <p className="text-center text-xl">Les réalisations en stage</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10">
           <div className="p-6">
@@ -61,7 +72,7 @@ if (process.env.NODE_ENV === 'production') {
           </div>
         </div>
 
-        {/* Les réalisations en cours */}
+        {/* Réalisations en cours */}
         <p className="text-center mt-20 text-xl">Les réalisations en cours</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10">
           <div className="p-6">
@@ -74,7 +85,7 @@ if (process.env.NODE_ENV === 'production') {
           </div>
         </div>
 
-        {/* Les compétences du cursus */}
+        {/* Compétences */}
         <p className="mt-20 text-center text-xl">Les compétences du cursus</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           <CompetenceModal

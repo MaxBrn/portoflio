@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import Header from '@/components/Header';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function MyApp({ Component, pageProps }) {
     return (
@@ -22,6 +23,7 @@ export default function MyApp({ Component, pageProps }) {
         <NavBar/>        
         <Component {...pageProps} />
         <SpeedInsights/>
+        <Analytics/>
         <Footer />
         </ThemeProvider>
       </>

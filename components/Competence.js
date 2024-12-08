@@ -71,6 +71,7 @@ export default function CompetenceModal({ folder, description }) {
                                 <Link
                                     key={file.name}
                                     href={file.path}
+                                    target="_blank"
                                     className="text-blue-500 hover:underline"
                                 >
                                     {file.name}

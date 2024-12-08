@@ -83,6 +83,7 @@ export default function VeilleTechno() {
             <Link
               key={index}
               href={file.path}
+              target="_blank"
             >
 
             <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">

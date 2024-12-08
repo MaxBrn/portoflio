@@ -3,7 +3,7 @@ export default function BtsSio() {
     <div>
 
       {/* Section Présentation */}
-      <section className="py-12 px-4 max-w-5xl mx-auto text-center">
+      <section className="py-24 px-4 max-w-5xl mx-auto text-center">
         <h1 className="text-4xl mb-6">Qu'est-ce que le BTS SIO ?</h1>
         <p className="text-lg max-w-2xl mx-auto">
           Le BTS SIO est une formation sur deux ans qui permet de se former au métier d'administrateur réseau ou celui

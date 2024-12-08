@@ -2,16 +2,20 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 
-export default function CompetenceModal({ folder, description}) { // <-- Assurez-vous que folder est bien récupéré ici
+export default function CompetenceModal({ folder, description }) {
     const [isOpen, setIsOpen] = useState(false);
     const [files, setFiles] = useState([]);
 
-    // Fonction pour récupérer les fichiers
     const fetchFiles = async () => {
         try {
             const response = await fetch(`/api/getFiles?folder=${folder}`);
             const data = await response.json();
-            setFiles(data); // Mettre à jour l'état avec les fichiers récupérés
+            if (Array.isArray(data)) {
+                setFiles(data);
+            } else {
+                console.error("La réponse de l'API n'est pas un tableau :", data);
+                setFiles([]);
+            }
         } catch (error) {
             console.error("Erreur lors de la récupération des fichiers:", error);
         }
@@ -32,7 +36,7 @@ export default function CompetenceModal({ folder, description}) { // <-- Assurez
             {/* Bouton principal */}
             <button
                 onClick={() => setIsOpen(true)}
-                className="p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl"
+                className="w-full h-full p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl"
             >
                 <div>
                     <p className="font-bold">Compétence {folder}</p>
@@ -50,14 +54,19 @@ export default function CompetenceModal({ folder, description}) { // <-- Assurez
                         className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg relative"
                         onClick={(e) => e.stopPropagation()} // Empêche de fermer si on clique à l'intérieur
                     >
-                        
+                        {/* Bouton pour fermer */}
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
+                        >
+                            <IoMdClose size={24} />
+                        </button>
 
                         {/* Contenu de la modale */}
                         <h2 className="text-lg font-bold mb-4">
                             Fichiers pour la compétence {folder}
                         </h2>
                         <div className="flex flex-col gap-2">
-                            {/* Liste des fichiers récupérés */}
                             {files.map((file) => (
                                 <Link
                                     key={file.name}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import CompetenceModal from '@/components/Competence';
 import { useState, useEffect } from 'react';
+import Router from 'next/router';
 
 export default function Real() {
   // Hooks d'état
@@ -13,12 +14,15 @@ export default function Real() {
   useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
       setIsPopupVisible(true);
+      document.body.style.overflow = "hidden";
     }
   }, []);
 
   // Fonction pour masquer le pop-up
   const handleClosePopup = () => {
+    document.body.style.overflow = "";
     setIsPopupVisible(false);
+    Router.push('/');
   };
 
   // Fonction pour récupérer les fichiers
@@ -50,12 +54,13 @@ export default function Real() {
             <p className="mb-6">
               Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
             </p>
-            <Link
-              href="/index"
+            <button
+              onClick={handleClosePopup}
               className="bg-custom-button text-custom-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
+              
             >
               Retourner à l'accueil
-            </Link>
+            </button>
           </div>
         </div>
       )}
@@ -76,9 +81,6 @@ export default function Real() {
         {/* Réalisations en cours */}
         <p className="text-center mt-20 text-xl">Les réalisations en cours</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10">
-          <div className="p-6">
-            <img src="/image/logoMDJ.png" alt="MDJ" className="w-40 m-auto" />
-          </div>
           <div className="p-6">
             <Link href="https://mariteam.vercel.app/">
               <img src="/image/logoMarieteam.png" alt="Marieteam" className="w-40 m-auto" />

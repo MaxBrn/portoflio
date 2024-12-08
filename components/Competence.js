@@ -36,7 +36,7 @@ export default function CompetenceModal({ folder, description }) {
             {/* Bouton principal */}
             <button
                 onClick={() => setIsOpen(true)}
-                className="w-full h-full p-6 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl"
+                className="w-full h-full p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite"
             >
                 <div>
                     <p className="font-bold">Compétence {folder}</p>
@@ -51,7 +51,7 @@ export default function CompetenceModal({ folder, description }) {
                     onClick={closeModal} // Fermer la modale si on clique en dehors
                 >
                     <div
-                        className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg relative"
+                        className="bg-custom-cream2 dark:bg-gray-800 p-6 rounded-2xl shadow-lg relative"
                         onClick={(e) => e.stopPropagation()} // Empêche de fermer si on clique à l'intérieur
                     >
                         {/* Bouton pour fermer */}
@@ -63,16 +63,16 @@ export default function CompetenceModal({ folder, description }) {
                         </button>
 
                         {/* Contenu de la modale */}
-                        <h2 className="text-lg font-bold mb-4">
+                        <h2 className="text-lg font-bold mb-10 text-center">
                             Fichiers pour la compétence {folder}
                         </h2>
-                        <div className="flex flex-col gap-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
                             {files.map((file) => (
                                 <Link
                                     key={file.name}
                                     href={file.path}
                                     target="_blank"
-                                    className="text-blue-500 hover:underline"
+                                    className="w-full h-full p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite"
                                 >
                                     {file.name}
                                 </Link>

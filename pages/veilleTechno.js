@@ -78,7 +78,7 @@ export default function VeilleTechno() {
         <h2 className="text-2xl font-bold text-center pt-10 pb-6">Mes Rapports</h2>
 
         {/* Grille des fichiers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {files.map((file, index) => (
             <Link
               key={index}
@@ -86,7 +86,7 @@ export default function VeilleTechno() {
               target="_blank"
             >
 
-            <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl">
+            <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite">
               <p className="font-bold">{`Rapport ${file.name}`}</p>
             </div>
             </Link>

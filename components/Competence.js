@@ -51,13 +51,13 @@ export default function CompetenceModal({ folder, description }) {
                     onClick={closeModal} // Fermer la modale si on clique en dehors
                 >
                     <div
-                        className="bg-custom-cream2 dark:bg-gray-800 p-6 rounded-2xl shadow-lg relative"
+                        className="bg-custom-cream2 dark:bg-custom-night2 p-6 rounded-2xl shadow-lg relative border-2 border-custom-creamLite dark:border-custom-nightLite"
                         onClick={(e) => e.stopPropagation()} // Empêche de fermer si on clique à l'intérieur
                     >
                         {/* Bouton pour fermer */}
                         <button
                             onClick={closeModal}
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
+                            className="absolute top-2 right-2"
                         >
                             <IoMdClose size={24} />
                         </button>

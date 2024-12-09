@@ -14,7 +14,7 @@ export default function handler(req, res) {
         
         // Retourner les fichiers sous forme de tableau
         const filePaths = files.map(file => ({
-            name: file,
+            name: file.replace(/\.[^/.]+$/, ''),
             path: `/competence/${folder}/${file}` // Chemin relatif vers le fichier
         }));
 

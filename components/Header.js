@@ -19,7 +19,7 @@ export default function Header() {
             case "/veilleTechno":
                 return {
                     title: "Veille Technologique",
-                    subtitle: "Ma veille sur les moteurs de jeux vidéo\n(En developpement)",
+                    subtitle: "Ma veille sur les moteurs de jeux vidéo",
                 };
             case "/real":
                 return {

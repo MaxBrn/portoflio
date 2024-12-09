@@ -22,7 +22,6 @@ export default function Real() {
   const handleClosePopup = () => {
     document.body.style.overflow = "";
     setIsPopupVisible(false);
-    Router.push('/');
   };
 
   // Fonction pour récupérer les fichiers
@@ -52,7 +51,8 @@ export default function Real() {
           <div className="bg-custom-night2 rounded-lg shadow-lg p-8 w-full max-w-md text-center text-custom-white">
             <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
             <p className="mb-6">
-              Cette section n'est pas encore finalisée et est en cours de développement. Merci de votre compréhension.
+              Cette section n'est pas encore finalisée et est en cours de développement, certains éléments sont encore incomplets
+              et peuvent être dysfonctionnels. Merci de votre compréhension.
             </p>
             <button
               onClick={handleClosePopup}

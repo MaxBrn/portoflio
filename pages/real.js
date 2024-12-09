@@ -59,7 +59,7 @@ export default function Real() {
               className="bg-custom-button text-custom-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
               
             >
-              Retourner à l'accueil
+              Compris
             </button>
           </div>
         </div>

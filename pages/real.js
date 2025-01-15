@@ -1,48 +1,43 @@
 import Link from 'next/link';
 import CompetenceModal from '@/components/Competence';
 import { useState, useEffect } from 'react';
-import Router from 'next/router';
 
 export default function Real() {
-  // Hooks d'état
-  const [isPopupVisible, setIsPopupVisible] = useState(false); // Gère l'affichage de la modale
-  const [isOpen, setIsOpen] = useState(false);
-  const [files, setFiles] = useState([]);
-  const [folder, setFolder] = useState(null);
+  const [isOpen, setIsOpen] = useState(false); // Gère l'ouverture d'une compétence
+  const [files, setFiles] = useState([]); // Fichiers à afficher
+  const [folder, setFolder] = useState(null); // Dossier sélectionné
+  const [preloadedFiles, setPreloadedFiles] = useState({}); // Fichiers préchargés pour chaque dossier
 
-  // Affiche le pop-up si en production
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      setIsPopupVisible(true);
-      document.body.style.overflow = "hidden";
+  // Fonction pour précharger les fichiers au démarrage
+  const preloadFiles = async () => {
+    const folders = ['1.1', '1.2', '1.3', '1.4', '1.5', '1.6']; // Liste des dossiers à précharger
+    const preloaded = {};
+
+    for (const folder of folders) {
+      try {
+        const response = await fetch(`/api/getFiles?folder=${folder}`);
+        const data = await response.json();
+        preloaded[folder] = data;
+      } catch (error) {
+        console.error(`Erreur lors du préchargement des fichiers pour le dossier ${folder}:`, error);
+      }
     }
+
+    setPreloadedFiles(preloaded);
+  };
+
+  // Précharge les fichiers au chargement de la page
+  useEffect(() => {
+    preloadFiles();
   }, []);
 
-  // Fonction pour masquer le pop-up
-  const handleClosePopup = () => {
-    document.body.style.overflow = "";
-    setIsPopupVisible(false);
+  // Fonction pour afficher les fichiers d'une compétence
+  const handleOpenCompetence = (selectedFolder) => {
+    setFolder(selectedFolder);
+    setFiles(preloadedFiles[selectedFolder] || []); // Charge les fichiers préchargés
+    setIsOpen(true);
   };
 
-  // Fonction pour récupérer les fichiers
-  const fetchFiles = async () => {
-    if (!folder) return;
-    try {
-      const response = await fetch(`/api/getFiles?folder=${folder}`);
-      const data = await response.json();
-      setFiles(data);
-    } catch (error) {
-      console.error('Erreur lors de la récupération des fichiers:', error);
-    }
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      fetchFiles();
-    }
-  }, [isOpen, folder]);
-
-  // Contenu principal
   return (
     <div className="pb-10">
       {/* Pop-up affiché en mode production */}
@@ -51,13 +46,12 @@ export default function Real() {
           <div className="bg-custom-night2 rounded-lg shadow-lg p-8 w-full max-w-md text-center text-custom-white">
             <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
             <p className="mb-6">
-              Cette section n'est pas encore finalisée et est en cours de développement, certains éléments sont encore incomplets
-              et peuvent être dysfonctionnels. Merci de votre compréhension.
+              Cette section n'est pas encore finalisée et est en cours de développement. Certains éléments sont encore
+              incomplets et peuvent être dysfonctionnels. Merci de votre compréhension.
             </p>
             <button
               onClick={handleClosePopup}
               className="bg-custom-button text-custom-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
-              
             >
               Compris
             </button>
@@ -91,54 +85,21 @@ export default function Real() {
         {/* Compétences */}
         <p className="mt-20 text-center text-xl">Les compétences du cursus</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-          <CompetenceModal
-            folder="1.1"
-            description="Gestion du patrimoine informatique"
-            onClick={() => {
-              setFolder('1.1');
-              setIsOpen(true);
-            }}
-          />
-          <CompetenceModal
-            folder="1.2"
-            description="Répondre aux incidents et aux demandes d'assistance et d'évolution"
-            onClick={() => {
-              setFolder('1.2');
-              setIsOpen(true);
-            }}
-          />
-          <CompetenceModal
-            folder="1.3"
-            description="Développer la présence en ligne de l'organisation"
-            onClick={() => {
-              setFolder('1.3');
-              setIsOpen(true);
-            }}
-          />
-          <CompetenceModal
-            folder="1.4"
-            description="Travailler en mode projet"
-            onClick={() => {
-              setFolder('1.4');
-              setIsOpen(true);
-            }}
-          />
-          <CompetenceModal
-            folder="1.5"
-            description="Mettre à disposition des utilisateurs un service informatique"
-            onClick={() => {
-              setFolder('1.5');
-              setIsOpen(true);
-            }}
-          />
-          <CompetenceModal
-            folder="1.6"
-            description="Organiser son développement personnel"
-            onClick={() => {
-              setFolder('1.6');
-              setIsOpen(true);
-            }}
-          />
+          {[
+            { folder: '1.1', description: 'Gestion du patrimoine informatique' },
+            { folder: '1.2', description: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution' },
+            { folder: '1.3', description: 'Développer la présence en ligne de l\'organisation' },
+            { folder: '1.4', description: 'Travailler en mode projet' },
+            { folder: '1.5', description: 'Mettre à disposition des utilisateurs un service informatique' },
+            { folder: '1.6', description: 'Organiser son développement personnel' },
+          ].map(({ folder, description }) => (
+            <CompetenceModal
+              key={folder}
+              folder={folder}
+              description={description}
+              onClick={() => handleOpenCompetence(folder)}
+            />
+          ))}
         </div>
       </section>
     </div>

@@ -10,7 +10,7 @@ export default function Index() {
     return (
       <div>  
         {/* Section A propos */}
-        <section className="py-24">
+        <section id="index" className="py-24">
           <div className="max-w-5xl mx-auto flex gap-10">
             <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
               <h2 className="text-2xl">À propos de moi</h2>
@@ -30,7 +30,7 @@ export default function Index() {
         </section>
   
         {/* Section Compétences */}
-        <section className="py-24 bg-custom-cream2 dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
+        <section className="py-14 bg-custom-cream2 dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
   <div className="max-w-5xl mx-auto text-center">
     {/* Langages étudiés */}
     <h2 className="text-2xl mb-10">Les langages étudiés</h2>

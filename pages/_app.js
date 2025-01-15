@@ -7,7 +7,12 @@ import Header from '@/components/Header';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
-export default function MyApp({ Component, pageProps }) {
+import Index from '.';
+import BtsSio from './btsSio';
+import Real from './real';
+import VeilleTechno from './veilleTechno';
+
+export default function MyApp() {
     return (
       <>
       <ThemeProvider attribute="class" defaultTheme="system">
@@ -21,7 +26,10 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         <Header/>
         <NavBar/>        
-        <Component {...pageProps} />
+        <Index/>
+        <BtsSio/>
+        <VeilleTechno/>
+        <Real/>
         <SpeedInsights/>
         <Analytics/>
         <Footer />

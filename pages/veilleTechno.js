@@ -24,7 +24,8 @@ export default function VeilleTechno() {
   return (
     <div>
       {/* Section Principale */}
-      <section className="py-24 px-4 max-w-5xl mx-auto">
+      <section id="veille" className="py-14 px-4 max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold mb-12 text-center">Veille technologique</h2>
       <div className="flex flex-col gap-20 mb-10">
           {/* Bloc 1 */}
           <div className="flex flex-col md:flex-row">
@@ -68,7 +69,7 @@ export default function VeilleTechno() {
             </div>
           </div>
         </div>
-        <h2 className="text-2xl font-bold text-center pt-10 pb-6">Mes Rapports</h2>
+        <h2 className="text-2xl text-center pt-10 pb-10">Mes rapports</h2>
 
         {/* Grille des fichiers */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">

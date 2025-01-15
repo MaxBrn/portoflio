@@ -5,13 +5,6 @@ import Router from 'next/router';
 export default function VeilleTechno() {
   const [files, setFiles] = useState([]);
 
-  // Fonction pour masquer le pop-up
-  const handleClosePopup = () => {
-    document.body.style.overflow = '';
-    setIsPopupVisible(false);
-    Router.push('/');
-  };
-
   // Fonction pour récupérer les fichiers
   const fetchFiles = async () => {
     try {

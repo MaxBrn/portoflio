@@ -7,23 +7,27 @@ export default function Real() {
   const [files, setFiles] = useState([]); // Fichiers à afficher
   const [folder, setFolder] = useState(null); // Dossier sélectionné
   const [preloadedFiles, setPreloadedFiles] = useState({}); // Fichiers préchargés pour chaque dossier
+  const [loading, setLoading] = useState(false); // État de chargement pour l'utilisateur
 
-  // Fonction pour précharger les fichiers au démarrage
+  // Fonction pour précharger les fichiers au démarrage (avec Promise.all)
   const preloadFiles = async () => {
     const folders = ['1.1', '1.2', '1.3', '1.4', '1.5', '1.6']; // Liste des dossiers à précharger
-    const preloaded = {};
+    try {
+      const responses = await Promise.all(
+        folders.map((folder) =>
+          fetch(`/api/getFiles?folder=${folder}`).then((res) => res.json())
+        )
+      );
 
-    for (const folder of folders) {
-      try {
-        const response = await fetch(`/api/getFiles?folder=${folder}`);
-        const data = await response.json();
-        preloaded[folder] = data;
-      } catch (error) {
-        console.error(`Erreur lors du préchargement des fichiers pour le dossier ${folder}:`, error);
-      }
+      const preloaded = {};
+      folders.forEach((folder, index) => {
+        preloaded[folder] = responses[index];
+      });
+
+      setPreloadedFiles(preloaded);
+    } catch (error) {
+      console.error('Erreur lors du préchargement des fichiers:', error);
     }
-
-    setPreloadedFiles(preloaded);
   };
 
   // Précharge les fichiers au chargement de la page
@@ -34,8 +38,14 @@ export default function Real() {
   // Fonction pour afficher les fichiers d'une compétence
   const handleOpenCompetence = (selectedFolder) => {
     setFolder(selectedFolder);
-    setFiles(preloadedFiles[selectedFolder] || []); // Charge les fichiers préchargés
+    setLoading(true); // Démarre l'indicateur de chargement
     setIsOpen(true);
+
+    // Charge les fichiers préchargés immédiatement
+    setTimeout(() => {
+      setFiles(preloadedFiles[selectedFolder] || []);
+      setLoading(false); // Arrête l'indicateur une fois les fichiers prêts
+    }, 0);
   };
 
   return (
@@ -83,6 +93,40 @@ export default function Real() {
           ))}
         </div>
       </section>
+
+      {/* Modale pour afficher les fichiers */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+            {loading ? (
+              <p>Chargement...</p>
+            ) : (
+              <div>
+                <h2 className="text-xl font-bold mb-4">{`Compétence ${folder}`}</h2>
+                <ul>
+                  {files.length > 0 ? (
+                    files.map((file, index) => (
+                      <li key={index} className="mb-2">
+                        <a href={file.url} target="_blank" rel="noopener noreferrer">
+                          {file.name}
+                        </a>
+                      </li>
+                    ))
+                  ) : (
+                    <p>Aucun fichier disponible pour cette compétence.</p>
+                  )}
+                </ul>
+              </div>
+            )}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

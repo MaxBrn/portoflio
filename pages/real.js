@@ -40,25 +40,6 @@ export default function Real() {
 
   return (
     <div className="pb-10">
-      {/* Pop-up affiché en mode production */}
-      {isPopupVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-custom-night2 rounded-lg shadow-lg p-8 w-full max-w-md text-center text-custom-white">
-            <h2 className="text-2xl font-bold mb-4">Section en développement</h2>
-            <p className="mb-6">
-              Cette section n'est pas encore finalisée et est en cours de développement. Certains éléments sont encore
-              incomplets et peuvent être dysfonctionnels. Merci de votre compréhension.
-            </p>
-            <button
-              onClick={handleClosePopup}
-              className="bg-custom-button text-custom-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
-            >
-              Compris
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Section des réalisations */}
       <section className="py-24 max-w-7xl mx-auto px-4">
         {/* Réalisations en stage */}

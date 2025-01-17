@@ -85,10 +85,12 @@ export default function NavBar() {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="flex flex-col items-center gap-4 mt-4 md:hidden">
-                    <Link href="/" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Présentation</Link>
-                    <Link href="/btsSio" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>BTS SIO</Link>
-                    <Link href="/veilleTechno" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Veille technologique</Link>
-                    <Link href="/real" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Réalisation</Link>
+                    <Link href="#header" className="font-bold text-[20px] hover:text-gray-300" onClick={handleLinkClick}><FaHome/></Link>
+                    <Link href="#index" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Présentation</Link>
+                    <Link href="#bts" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>BTS SIO</Link>
+                    <Link href="#veille" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Veille technologique</Link>
+                    <Link href="#real" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Réalisation</Link>
+                    <Link href="#contact" className="font-bold text-[16px] hover:text-gray-300" onClick={handleLinkClick}>Contact</Link>
                 </div>
             )}
         </nav>

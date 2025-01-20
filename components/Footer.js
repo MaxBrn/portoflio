@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[80%] mx-auto mb-10"></div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
-          <div className="flex flex-wrap justify-center gap-20 md:gap-20">
+          <div className="flex flex-wrap justify-center gap-20 md:gap-30">
             {/* Contact par email */}
             <div className="text-center">
               <MdMail className="text-4xl mx-auto mb-2" />

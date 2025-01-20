@@ -6,10 +6,10 @@ export default function Footer() {
     <div>
       {/* Section "Me Contacter" */}
       <section id="contact" className="py-24 text-custom">
-        <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[70%] mx-auto mb-10"></div>
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[80%] mx-auto mb-10"></div>
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
-          <div className="flex flex-wrap justify-center gap-10 md:gap-15">
+          <div className="flex flex-wrap justify-center gap-20 md:gap-20">
             {/* Contact par email */}
             <div className="text-center">
               <MdMail className="text-4xl mx-auto mb-2" />

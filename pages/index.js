@@ -18,7 +18,7 @@ export default function Index() {
             <div className="w-3/5">
               <p className="text-lg">
                 Actuellement en BTS SIO SLAM (développement), je projette de devenir développeur, avec pour secteur de rêve le développement de jeux vidéo. 
-                Je suis passionné de jeux vidéo depuis l'enfance et rêve d'en faire mon métier. Je projete aussi de potentiellement devenir professeur de développement informatique.
+                Je suis passionné de jeux vidéo depuis l'enfance et rêve d'en faire mon métier. Bien que je considère aussi potentiellement le métier de professeur de développement informatique.
               </p>
             </div>
           </div>

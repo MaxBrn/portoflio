@@ -10,7 +10,7 @@ export default function Index() {
     return (
       <div>  
         {/* Section A propos */}
-        <section id="index" className="py-24">
+        <section className="py-24">
           <div className="max-w-5xl mx-auto flex gap-10">
             <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
               <h2 className="text-2xl">À propos de moi</h2>

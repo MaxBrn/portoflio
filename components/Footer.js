@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div>
       {/* Section "Me Contacter" */}
-      <section id="contact" className="py-24 text-custom">
+      <section className="py-24 text-custom">
         <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[75%] mx-auto mb-10"></div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>

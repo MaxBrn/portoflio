@@ -24,8 +24,7 @@ export default function VeilleTechno() {
   return (
     <div>
       {/* Section Principale */}
-      <section id="veille" className="py-14 px-4 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold mb-12 text-center">Veille technologique</h2>
+      <section className="py-24 px-4 max-w-5xl mx-auto">
       <div className="flex flex-col gap-20 mb-10">
           {/* Bloc 1 */}
           <div className="flex flex-col md:flex-row">

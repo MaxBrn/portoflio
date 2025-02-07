@@ -17,7 +17,6 @@ body {
 html {
   @apply bg-custom-cream text-custom-text; /* Styles par défaut */
   transition: background-color 1s ease-in-out, color 0.3s ease-in-out;
-  scroll-behavior: smooth;
 }
 header {
   transition: background-image 1s ease-in-out;

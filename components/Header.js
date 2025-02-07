@@ -37,7 +37,7 @@ export default function Header() {
     const { title, subtitle } = getPageHeader();
 
     return (
-        <header id="header"
+        <header
             className="flex flex-col items-center justify-center text-custom-white h-screen bg-cover relative text-stroke text-center
             bg-[url('/image/background.jpg')] dark:bg-[url('/image/backgroundDark.jpg')] 
             bg-scroll md:bg-fixed"

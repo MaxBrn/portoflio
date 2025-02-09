@@ -15,11 +15,11 @@ export default function Index() {
       <div>  
         <header className="flex flex-col items-center justify-center h-screen bg-cover relative text-center bg-[url('/image/background.jpg')] bg-scroll md:bg-fixed px-4">
 
-          <div className="w-full sm:pt-5 sm:w-3/4 md:w-2/4 flex flex-col bg-gradient-to-b from-bgColor/70 to-button/70 rounded-3xl p-6 mx-auto items-center shadow-2xl shadow-border">
+          <div className="w-full sm:pt-5 sm:w-3/4 md:w-2/4 flex flex-col bg-gradient-to-b from-bgColor/70 to-button/70 rounded-3xl p-4 mx-auto items-center shadow-2xl shadow-border">
 
 
             <div className="w-full">
-              <h1 className="text-4xl sm:text-5xl">Maxime Brunin</h1>
+              <h1 className="text-3xl sm:text-5xl">Maxime Brunin</h1>
             </div>
             <div className="flex flex-col md:flex-row gap-10 items-center">
               <div className="w-full md:w-3/4 mt-6 md:mt-10 text-center">
@@ -55,7 +55,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-5 animate-bounce text-white text-6xl">
+          <div className="absolute bottom-0 animate-bounce text-white text-6xl">
             <FaChevronDown/>
           </div>
 

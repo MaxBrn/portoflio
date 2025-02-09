@@ -12,7 +12,7 @@ export default function Index() {
     return (
       <div>  
         <header
-          className="flex flex-col items-center justify-center text-custom-white h-screen bg-cover relative text-center
+          className="flex flex-col items-center justify-center h-screen bg-cover relative text-center 
           bg-[url('/image/backgroundNew.jpg')]
           bg-scroll md:bg-fixed px-4"
         >

@@ -11,7 +11,6 @@ import { Analytics } from "@vercel/analytics/react"
 export default function MyApp({ Component, pageProps }) {
     return (
       <>
-      <ThemeProvider attribute="class">
         <Head>
           <title>Portfolio - Maxime Brunin</title>
           <link rel="icon" href="/icon.ico" />
@@ -24,7 +23,6 @@ export default function MyApp({ Component, pageProps }) {
         <SpeedInsights/>
         <Analytics/>
         <Footer />
-        </ThemeProvider>
       </>
     );
   }

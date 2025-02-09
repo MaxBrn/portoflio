@@ -8,9 +8,9 @@ export default function Footer() {
       <section className="py-24 text-custom">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
-          <div className="grid md:grid-cols-4 mx-10 grid-cols-2 justify-center gap-20 md:gap-20">
+          <div className="grid md:grid-cols-4 grid-cols-2 justify-center gap-20 md:gap-20 p-4">
             {/* Contact par email */}
-            <div className="text-center">
+            <div className="text-center mx">
               <MdMail className="text-4xl mx-auto mb-2" />
               <p className="font-semibold">E-mail</p>
               <p>maxime_brn@outlook.fr</p>

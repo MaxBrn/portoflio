@@ -18,10 +18,6 @@ html {
   color: #EEEEEE;
 }
 
-header {
-  transition: background-image 1s ease-in-out;
-}
-
 ::-webkit-scrollbar {
   width: 10px; /* Augmentation de la largeur de la scrollbar */
   border-radius: 9999px; /* Arrondir le conteneur de la scrollbar */

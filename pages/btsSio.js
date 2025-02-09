@@ -17,7 +17,7 @@ export default function BtsSio() {
       <section className="py-12 px-4 max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-10">
           {/* Option SISR */}
-          <div className="flex-1 border-4 border-custom-cream2 dark:border-custom-night2 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all">
+          <div className="flex-1 border-4 border-custom-cream2 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all">
             <h2 className="text-3xl mb-4 flex items-center gap-4">
               <span className="text-indigo-500">🔌</span>
               <span>SISR :</span>
@@ -36,7 +36,7 @@ export default function BtsSio() {
           </div>
 
           {/* Option SLAM */}
-          <div className="flex-1 border-4 border-custom-cream2 dark:border-custom-night2 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all">
+          <div className="flex-1 border-4 border-custom-cream2 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all">
             <h2 className="text-3xl mb-4 flex items-center gap-4">
               <span className="text-indigo-500">💻</span>
               <span>SLAM :</span>

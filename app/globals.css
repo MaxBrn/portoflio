@@ -13,19 +13,13 @@ body {
   font-family: 'Consolas', monospace;
   
 }
-
 html {
-  @apply bg-custom-cream text-custom-text; /* Styles par défaut */
-  transition: background-color 1s ease-in-out, color 0.3s ease-in-out;
+  background-color:#11131F ;
+  color: #EEEEEE;
 }
+
 header {
   transition: background-image 1s ease-in-out;
-}
-
-
-html.dark {
-  @apply bg-custom-night text-custom-white; /* Styles en mode sombre */
-  
 }
 
 ::-webkit-scrollbar {

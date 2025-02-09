@@ -5,84 +5,112 @@ import { MdOutlineChildFriendly, MdOutlineQuestionMark } from "react-icons/md";
 import { FaSchool } from "react-icons/fa";
 import { IoSchool } from "react-icons/io5";
 import { FaC, FaCode } from "react-icons/fa6";
+import Image from "next/image";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Index() {
     return (
       <div>  
-        {/* Section A propos */}
-        <section className="py-24">
-          <div className="max-w-5xl mx-auto flex gap-10">
-            <div className="w-2/5 text-center border-r-4 border-black flex items-center justify-center">
-              <h2 className="text-2xl">À propos de moi</h2>
+        <header
+          className="flex flex-col items-center justify-center text-custom-white h-screen bg-cover relative text-center
+          bg-[url('/image/backgroundNew.jpg')]
+          bg-scroll md:bg-fixed px-4"
+        >
+          <div className="w-full sm:w-3/4 md:w-2/4 flex flex-col bg-bgColor rounded-3xl p-6 mx-auto bg-opacity-[70%] items-center">
+            <div className="w-full">
+              <h1 className="text-4xl sm:text-5xl">Maxime Brunin</h1>
             </div>
-            <div className="w-3/5">
-              <p className="text-lg">
-                Actuellement en BTS SIO SLAM (développement), je projette de devenir développeur, avec pour secteur de rêve le développement de jeux vidéo. 
-                Je suis passionné de jeux vidéo depuis l'enfance et rêve d'en faire mon métier. Bien que je considère aussi potentiellement le métier de professeur de développement informatique.
-              </p>
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+              <div className="w-full md:w-3/4 mt-6 md:mt-10 text-center">
+                <p className="text-lg sm:text-xl">
+                  Actuellement étudiant en BTS SIO SLAM, je sais développer des solutions web reliées à une base de données et concevoir des solutions logicielles. Je projette de devenir enseignant en développement informatique ou développeur de jeux vidéo.
+                </p>
+                <div className="pt-6 md:pt-10">
+                  <Link
+                    href="/CV Brunin Maxime.pdf"
+                    download="CV_Brunin_Maxime.pdf"
+                    className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block"
+                  >
+                    Télécharger mon CV
+                  </Link>
+                </div>
+              </div>
+              <div className="w-full md:w-1/4 flex flex-col items-center">
+                <Image
+                  src="/image/pdpcrp.jpg"
+                  width={200}
+                  height={150}
+                  alt="Picture of the author"
+                  className="rounded-full"
+                />
+                <div className="flex gap-5 justify-center pt-5">
+                  <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/">
+                    <FaLinkedin className="text-3xl sm:text-4xl" />
+                  </Link>
+                  <Link href="https://github.com/MaxBrn">
+                    <FaGithub className="text-3xl sm:text-4xl" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-custom-white p-3 rounded-xl">
-              Télécharger mon CV
-            </Link>
+        </header>
+
+        {/* Section Compétences */}
+        <section className="py-24">
+          <div className="max-w-6xl mx-auto text-center bg-bgColor2 border border-border p-10">
+            {/* Langages étudiés */}
+            <h2 className="text-2xl mb-10">Les langages étudiés</h2>
+            <div className="flex flex-wrap justify-center gap-10">
+              {[
+                { src: "image/iconeHTML.png", alt: "HTML", title: "HTML" },
+                { src: "image/iconeCSS.png", alt: "CSS", title: "CSS" },
+                { src: "image/iconeJS.png", alt: "JavaScript", title: "JavaScript" },
+                { src: "image/iconeTS.png", alt: "TypeScript", title: "TypeScript" },
+                { src: "image/iconePHP.png", alt: "PHP", title: "PHP" },
+                { src: "image/logoSQL.png", alt: "SQL", title: "SQL" },
+                { src: "image/iconeJava.png", alt: "Java", title: "Java" },
+                { src: "image/iconePython.png", alt: "Python", title: "Python" },
+                { src: "image/iconeCSharp.png", alt: "C#", title: "C#" },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-20 h-20 object-contain"
+                  />
+                  <h3 className="mt-2">{item.title}</h3>
+                </div>
+              ))}
+            </div>
+
+            {/* Technologies étudiées */}
+            <h2 className="text-2xl mb-10 pt-10">Les technologies étudiées</h2>
+            <div className="flex flex-wrap justify-center gap-10">
+              {[
+                { src: "image/iconeNext.png", alt: "Next.JS", title: "Next.JS" },
+                { src: "image/iconeReact.png", alt: "React", title: "React" },
+                { src: "image/iconeTW.png", alt: "Tailwind", title: "Tailwind" },
+                { src: "image/iconeUnity.png", alt: "Unity", title: "Unity"}
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-20 h-20 object-contain"
+                  />
+                  <h3 className="mt-2">{item.title}</h3>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-  
-        {/* Section Compétences */}
-        <section className="py-14 bg-custom-cream2 dark:bg-custom-night2 transition-bg duration-1000 ease-in-out">
-  <div className="max-w-5xl mx-auto text-center">
-    {/* Langages étudiés */}
-    <h2 className="text-2xl mb-10">Les langages étudiés</h2>
-    <div className="flex flex-wrap justify-center gap-10">
-      {[
-        { src: "image/iconeHTML.png", alt: "HTML", title: "HTML" },
-        { src: "image/iconeCSS.png", alt: "CSS", title: "CSS" },
-        { src: "image/iconeJS.png", alt: "JavaScript", title: "JavaScript" },
-        { src: "image/iconeTS.png", alt: "TypeScript", title: "TypeScript" },
-        { src: "image/iconePHP.png", alt: "PHP", title: "PHP" },
-        { src: "image/logoSQL.png", alt: "SQL", title: "SQL" },
-        { src: "image/iconeJava.png", alt: "Java", title: "Java" },
-        { src: "image/iconePython.png", alt: "Python", title: "Python" },
-        { src: "image/iconeCSharp.png", alt: "C#", title: "C#" },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
-        >
-          <img
-            src={item.src}
-            alt={item.alt}
-            className="w-20 h-20 object-contain"
-          />
-          <h3 className="mt-2">{item.title}</h3>
-        </div>
-      ))}
-    </div>
-
-    {/* Technologies étudiées */}
-    <h2 className="text-2xl mb-10 pt-10">Les technologies étudiées</h2>
-    <div className="flex flex-wrap justify-center gap-10">
-      {[
-        { src: "image/iconeNext.png", alt: "Next.JS", title: "Next.JS" },
-        { src: "image/iconeReact.png", alt: "React", title: "React" },
-        { src: "image/iconeTW.png", alt: "Tailwind", title: "Tailwind" },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="w-40 h-40 rounded-lg p-4 flex flex-col items-center justify-center"
-        >
-          <img
-            src={item.src}
-            alt={item.alt}
-            className="w-20 h-20 object-contain"
-          />
-          <h3 className="mt-2">{item.title}</h3>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
   
         {/* Section Parcours */}
@@ -93,7 +121,7 @@ export default function Index() {
 
           {/* Timeline */}
           <div className="relative">
-            <div className="absolute left-1/2 w-1 bg-custom-button h-full transform -translate-x-1/2 bg-opacity-50"></div>
+            <div className="absolute left-1/2 w-1 bg-border h-full transform -translate-x-1/2 bg-opacity-50"></div>
             
             <div className="space-y-12">
               
@@ -105,7 +133,7 @@ export default function Index() {
                     Depuis toujours passionné par les jeux vidéo, j'ai toujours rêvé d'un jour en faire mon domaine profesionnel.
                   </p>
                 </div>
-                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                   <span className="text-3xl text-custom-white"><MdOutlineChildFriendly/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
@@ -114,7 +142,7 @@ export default function Index() {
               {/* Étape */}
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
-                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                   <span className="text-3xl text-custom-white"><FaSchool/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
@@ -135,7 +163,7 @@ export default function Index() {
                     Une année en LLCER Anglais lv2 Japonais, une année en LLCER Japonais lv2 Anglais et une année en licence d'histoire.
                   </p>
                 </div>
-                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                   <span className="text-3xl text-custom-white"><IoSchool/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
@@ -144,7 +172,7 @@ export default function Index() {
               {/* Étape */}
               <div className="flex items-center justify-between relative">
                 <div className="w-2/5"></div>
-                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                   <span className="text-3xl text-custom-white"><FaCode/></span>
                 </div>
                 <div className="w-2/5 text-left pl-6">
@@ -165,7 +193,7 @@ export default function Index() {
                     en informatique.
                   </p>
                 </div>
-                <div className="w-12 h-12 bg-custom-button rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                   <span className="text-3xl text-custom-white"><MdOutlineQuestionMark/></span>
                 </div>
                 <div className="w-2/5 pl-6"></div>
@@ -174,7 +202,7 @@ export default function Index() {
           </div>
         </div>
         <div className="pt-20 text-center">
-            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-custom-button text-custom-white p-3 rounded-xl">
+            <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-button hover:bg-hover p-3 rounded-xl">
               Télécharger mon CV
             </Link>
           </div>

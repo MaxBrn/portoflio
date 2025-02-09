@@ -60,8 +60,7 @@ export default function Real() {
   return (
     <div className="pb-10">
       {/* Section des réalisations */}
-      <section className="py-24 max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-12 text-center">Réalisations</h1>
+      <section className="py-28 max-w-7xl mx-auto px-4">
         {/* Réalisations en stage */}
         <h1 className="text-center text-xl">Les réalisations en stage</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10">

@@ -24,11 +24,11 @@ export default function VeilleTechno() {
   return (
     <div>
       {/* Section Principale */}
-      <section className="py-24 px-4 max-w-5xl mx-auto">
+      <section className="py-28 px-4 max-w-5xl mx-auto">
       <div className="flex flex-col gap-20 mb-10">
           {/* Bloc 1 */}
           <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-black flex items-center justify-center py-4 md:py-0">
+            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-border flex items-center justify-center py-4 md:py-0">
               <h3 className="text-xl font-bold">Qu'est-ce que la veille technologique ?</h3>
             </div>
             <div className="w-full md:w-3/5 md:ml-10 mt-4 md:mt-0 text-center">
@@ -44,7 +44,7 @@ export default function VeilleTechno() {
 
           {/* Bloc 2 */}
           <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-black flex items-center justify-center py-4 md:py-0">
+            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-border flex items-center justify-center py-4 md:py-0">
               <h3 className="text-xl font-bold">Thème de la veille technologique</h3>
             </div>
             <div className="w-full md:w-3/5 md:ml-10 mt-4 md:mt-0 text-center">
@@ -60,7 +60,7 @@ export default function VeilleTechno() {
 
           {/* Bloc 3 */}
           <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-black flex items-center justify-center py-4 md:py-0">
+            <div className="w-full md:w-2/5 text-center border-b-4 md:border-b-0 md:border-r-4 border-border flex items-center justify-center py-4 md:py-0">
               <h3 className="text-xl font-bold">Ce que j'ai utilisé</h3>
             </div>
             <div className="w-full md:w-3/5 md:ml-10 mt-4 md:mt-0 text-center">
@@ -79,7 +79,7 @@ export default function VeilleTechno() {
               target="_blank"
             >
 
-            <div className="p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite">
+            <div className="p-4 border bg-bgColor2 border-border rounded-2xl hover:bg-button">
               <p className="font-bold">{`Rapport ${file.name}`}</p>
             </div>
             </Link>

@@ -3,10 +3,10 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-bgColor to-button">
       {/* Section "Me Contacter" */}
       <section className="py-24 text-custom">
-        <div className="border-t border-custom-creamLite dark:border-custom-nightLite w-[75%] mx-auto mb-10"></div>
+        <div className="mx-auto mb-10"></div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
           <div className="flex flex-wrap justify-center gap-20 md:gap-20">

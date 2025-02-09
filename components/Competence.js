@@ -36,7 +36,7 @@ export default function CompetenceModal({ folder, description }) {
             {/* Bouton principal */}
             <button
                 onClick={() => setIsOpen(true)}
-                className="w-full h-full p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite"
+                className="w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button"
             >
                 <div>
                     <p className="font-bold">Compétence {folder}</p>
@@ -51,7 +51,7 @@ export default function CompetenceModal({ folder, description }) {
                     onClick={closeModal} // Fermer la modale si on clique en dehors
                 >
                     <div
-                        className="bg-custom-cream2 dark:bg-custom-night2 p-6 rounded-2xl shadow-lg relative border-2 border-custom-creamLite dark:border-custom-nightLite"
+                        className="bg-bgColor p-6 rounded-2xl shadow-lg relative border border-border"
                         onClick={(e) => e.stopPropagation()} // Empêche de fermer si on clique à l'intérieur
                     >
                         {/* Bouton pour fermer */}
@@ -72,7 +72,7 @@ export default function CompetenceModal({ folder, description }) {
                                     key={file.name}
                                     href={file.path}
                                     target="_blank"
-                                    className="w-full h-full p-4 border-2 border-custom-creamLite dark:border-custom-nightLite rounded-2xl hover:bg-custom-creamLite dark:hover:bg-custom-nightLite"
+                                    className="w-full h-full p-4 border-2 border-border bg-bgColor2 rounded-2xl hover:bg-button"
                                 >
                                     {file.name}
                                 </Link>

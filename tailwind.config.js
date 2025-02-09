@@ -12,15 +12,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'custom-cream':'rgb(225, 201, 167)',
-        'custom-cream2':'rgb(215, 185, 142)',
-        'custom-text':'rgb(51 51 51)',
-        'custom-button':'rgb(56, 100, 129)',
-        'custom-night':'rgb(23, 22, 17)',
-        'custom-night2':'rgb(15, 14, 11)',
-        'custom-nightLite':'rgb(167, 159, 139)',
-        'custom-creamLite':'rgb(202, 163, 104)',
-        'custom-white':'rgb(241, 235, 215)'
+       
+        'bgColor':'#11131F',
+        'bgColor2':'#141726',
+        'border':'#304384',
+        'button':'#182449',
+        'hover' : '#1D2E62',
+        'text':'#D6E1FF'
       },
       screens: {
         sm: "640px",

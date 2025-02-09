@@ -6,10 +6,9 @@ export default function Footer() {
     <div className="bg-gradient-to-b from-bgColor to-button">
       {/* Section "Me Contacter" */}
       <section className="py-24 text-custom">
-        <div className="mx-auto mb-10"></div>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
-          <div className="flex flex-wrap justify-center gap-20 md:gap-20">
+          <div className="grid md:grid-cols-4 mx-10 grid-cols-2 justify-center gap-20 md:gap-20">
             {/* Contact par email */}
             <div className="text-center">
               <MdMail className="text-4xl mx-auto mb-2" />
@@ -21,12 +20,6 @@ export default function Footer() {
               <MdPhoneIphone className="text-4xl mx-auto mb-2" />
               <p className="font-semibold">Téléphone</p>
               <p>07 67 44 95 08</p>
-            </div>
-            {/* Localisation */}
-            <div className="text-center">
-              <MdMap className="text-4xl mx-auto mb-2" />
-              <p className="font-semibold">Localisation</p>
-              <p>62138 Douvrin, France</p>
             </div>
             {/* Lien LinkedIn */}
             <div className="text-center">

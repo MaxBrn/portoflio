@@ -64,7 +64,7 @@ export default function Index() {
         {/* Section Compétences */}
         <section className="py-24 flex flex-col gap-8 items-center">
           <div className="mx-10">
-            <div className="text-center bg-bgColor2 border border-border p-6 mb-10 shadow-lg shadow-button">
+            <div className="text-center bg-bgColor2 border border-border p-6 mb-10 shadow-lg shadow-button rounded-xl">
               {/* Langages étudiés */}
               <h2 className="text-2xl">Web</h2>
               <div className="flex flex-wrap justify-center gap-10">
@@ -91,7 +91,7 @@ export default function Index() {
               </div>            
             </div>
             <div className="flex md:flex-row justify-between flex-col gap-10">
-              <div className="max-w-6xl text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button">
+              <div className="max-w-6xl text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button rounded-3xl">
                 {/* Technologies étudiées */}
                 <h2 className="text-2xl">Base de données</h2>
                 <div className="flex flex-wrap justify-center gap-10">
@@ -113,7 +113,7 @@ export default function Index() {
                   ))}
                 </div>
               </div>
-              <div className="max-w-6xl text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button">
+              <div className="max-w-6xl text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button rounded-3xl">
                 {/* Technologies étudiées */}
                 <h2 className="text-2xl">Logiciel</h2>
                 <div className="flex flex-wrap justify-center gap-10">

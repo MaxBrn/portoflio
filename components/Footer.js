@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="bg-gradient-to-b from-bgColor to-button">
       {/* Section "Me Contacter" */}
-      <section className="py-24 text-custom">
+      <section className="py-24">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl mb-10">Me contacter</h2>
           <div className="grid md:grid-cols-4 grid-cols-2 justify-center gap-20 md:gap-20 p-4">

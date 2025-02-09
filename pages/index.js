@@ -7,16 +7,17 @@ import { IoSchool } from "react-icons/io5";
 import { FaC, FaCode } from "react-icons/fa6";
 import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+
 
 export default function Index() {
     return (
       <div>  
-        <header
-          className="flex flex-col items-center justify-center h-screen bg-cover relative text-center 
-          bg-[url('/image/background.jpg')]
-          bg-scroll md:bg-fixed px-4"
-        >
-          <div className="w-full sm:w-3/4 md:w-2/4 flex flex-col bg-bgColor rounded-3xl p-6 mx-auto bg-opacity-[70%] items-center">
+        <header className="flex flex-col items-center justify-center h-screen bg-cover relative text-center bg-[url('/image/background.jpg')] bg-scroll md:bg-fixed px-4">
+
+          <div className="w-full sm:pt-5 sm:w-3/4 md:w-2/4 flex flex-col bg-gradient-to-b from-bgColor/70 to-button/70 rounded-3xl p-6 mx-auto items-center shadow-2xl shadow-border">
+
+
             <div className="w-full">
               <h1 className="text-4xl sm:text-5xl">Maxime Brunin</h1>
             </div>
@@ -41,7 +42,7 @@ export default function Index() {
                   width={200}
                   height={150}
                   alt="Picture of the author"
-                  className="rounded-full"
+                  className="rounded-full border-2 border-border"
                 />
                 <div className="flex gap-5 justify-center pt-5">
                   <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/">
@@ -54,6 +55,10 @@ export default function Index() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-5 animate-bounce text-white text-6xl">
+            <FaChevronDown/>
+          </div>
+
         </header>
 
         {/* Section Compétences */}

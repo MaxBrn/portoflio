@@ -48,7 +48,7 @@ export default function Real() {
         </div>
 
         <p className="mt-20 text-center text-xl flex gap-2 justify-center">Les compétences du cursus <Link href='/competence/synthese.pdf'><IoMdOpen/></Link></p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        <div className="mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {[ 
             { folder: '1.1', description: 'Gestion du patrimoine informatique', files: 
               [
@@ -91,7 +91,7 @@ export default function Real() {
               ] 
             },
           ].map(({ folder, description, files }) => (
-            <button key={folder} onClick={() => handleOpenCompetence(folder,description, files)} className="w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button">
+            <button key={folder} onClick={() => handleOpenCompetence(folder,description, files)} className=" min-h-[150px] w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button">
               <p className="font-bold">Compétence {folder}</p>
               <p className='pt-2'>{description}</p>
             </button>
@@ -103,13 +103,13 @@ export default function Real() {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={handleClose}></div>
       )}
 
-      <div className={`p-4 fixed top-0 right-0 h-full md:w-80 w-full bg-bgColor shadow-lg transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50 text-center`}>
+      <div className={`p-4 fixed top-0 right-0 h-full md:w-80 w-full bg-gradient-to-b from-bgColor to-button transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50 text-center`}>
         <button onClick={handleClose} className="absolute top-4 right-4 text-lg">✖</button>
         <div className="p-4">
           <h2 className="text-xl font-semibold">Compétence {folder}</h2>
           <p className='pt-10'>{description}</p>
           <div className='my-4 border-t border-b border-border'></div>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col gap-4">
             {files.map(({ name, path }, index) => (
               <li key={index}>
                 <Link href={`/competence/${folder}/${path}`} target="_blank" className="block p-2 border border-border bg-bgColor2 rounded-2xl hover:bg-button text-center">{name}</Link>

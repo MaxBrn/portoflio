@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { IoReaderOutline } from "react-icons/io5";
 
 export default function VeilleTechno() {
   // Définir les fichiers manuellement
@@ -42,7 +43,7 @@ export default function VeilleTechno() {
 
         {/* Bloc 1 : Qu'est-ce que la veille technologique et comment la faire ? */}
         <div
-          className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg mb-10 cursor-pointer"
+          className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg mb-10 cursor-pointer shadow-lg shadow-button"
           onClick={() => setIsOpen(!isOpen)} // Basculer l'état au clic
         >
           <div className="flex items-center justify-between">
@@ -138,7 +139,7 @@ export default function VeilleTechno() {
         {/* Grille des blocs d'information (Thème et Outils) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* Bloc 2 : Thème de la veille */}
-          <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg shadow-button">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Thème de ma veille</h3>
               <p className="text-gray-300">
@@ -150,7 +151,7 @@ export default function VeilleTechno() {
           </div>
 
           {/* Bloc 3 : Outils utilisés */}
-          <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg shadow-button">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Outils utilisés</h3>
               <p className="text-gray-300">
@@ -169,7 +170,7 @@ export default function VeilleTechno() {
             {problematics.map((problem, index) => (
               <div
                 key={index}
-                className="flex-1 bg-bgColor2 border border-border p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="flex-1 bg-bgColor2 border border-border p-6 rounded-xl shadow-lg shadow-button"
               >
                 <div className="text-center">
                   <h4 className="text-xl font-bold mb-4">{problem.title}</h4>
@@ -189,8 +190,12 @@ export default function VeilleTechno() {
               href={file.path}
               target="_blank"
             >
-              <div className="p-4 border bg-bgColor2 border-border rounded-2xl hover:bg-button">
-                <p className="font-bold">{`Rapport ${file.name}`}</p>
+              <div className="p-4 border bg-bgColor2 border-border rounded-2xl hover:bg-button transition-all duration-300 group">
+                <div className="flex items-center justify-between">
+                  <p className="font-bold text-lg">{`Rapport ${file.name}`}</p>
+                 
+                  <IoReaderOutline className='text-xl' />
+                </div>
               </div>
             </Link>
           ))}

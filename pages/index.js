@@ -140,98 +140,83 @@ export default function Index() {
           </div>
         </section>
         {/* Section Parcours */}
-        <section className="py-24">
-          <div className="max-w-5xl md:mx-auto mx-10 text-center">
-            <h2 className="text-3xl font-bold mb-12">Mon Parcours</h2>
+        <section className="py-10">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold text-center mb-12">Mon Parcours</h2>
 
             {/* Timeline */}
             <div className="relative">
-              <div className="absolute left-1/2 w-1 bg-border h-full transform -translate-x-1/2 bg-opacity-50"></div>
-              
-              <div className="space-y-12">
+              {/* Ligne centrale */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-border md:block"></div>
+
+              {/* Étapes */}
+              <div className="flex flex-col space-y-12">
+                {/* Étape 1 */}
+                <div className="relative md:flex md:items-center">
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-border rounded-full"></div>
+                  <div className="md:w-1/2 md:pr-8 text-center">
+                    <div className="bg-bgColor2 p-6 border border-border rounded-lg shadow-lg shadow-button">
+                      <h3 className="text-xl font-semibold mb-4">Terminale S</h3>
+                      <p>La spécialité ISN m'a amené mon premier contact avec le développement informatique. Apprentissage des bases du développement web en HTML, JavaScript et CSS. 
+                        Réalisation d’un projet inspiré du Projet Voltaire mais en anglais en HTML, JavaScript et CSS, noté 19/20.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Étape 2 */}
+                <div className="relative md:flex md:items-center md:flex-row-reverse">
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-border rounded-full"></div>
+                  <div className="md:w-1/2 md:pl-8 text-center">
+                    <div className="bg-bgColor2 p-6 border border-border rounded-lg shadow-lg shadow-button">
+                      <h3 className="text-xl font-semibold mb-4">Université</h3>
+                      <p>Du fait de mes meilleurs notes et facilités en langues j'ai décidé de m'orienter vers un cursus universitaire dans les langues. 
+                        Une année en LLCER Anglais lv2 Japonais, une année en LLCER Japonais lv2 Anglais et une année en licence d'histoire.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Étape 3 */}
+                <div className="relative md:flex md:items-center">
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-border rounded-full"></div>
+                  <div className="md:w-1/2 md:pr-8 text-center">
+                    <div className="bg-bgColor2 p-6 border border-border rounded-lg shadow-lg shadow-button">
+                      <h3 className="text-xl font-semibold mb-4">BTS SIO SLAM</h3>
+                      <p>Me décidant d'enfin me tourner vers le secteur qui m'a toujours attiré, j'ai décidé de rejoindre le BTS SIO en spécialité de développement. 
+                        J'y apprends diverses langages de programmation et technologies afin de développer des solutions webs ou logiciels, avec des bases de données.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Étape 4 */}
+                <div className="relative md:flex md:items-center md:flex-row-reverse">
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-border rounded-full"></div>
+                  <div className="md:w-1/2 md:pl-8 text-center">
+                    <div className="bg-bgColor2 p-6 border border-border rounded-lg shadow-lg shadow-button">
+                      <h3 className="text-xl font-semibold mb-4">Et après ?</h3>
+                      <p>Je prévois de continuer mes études en licence d'informatique. 
+                        Pour ce qui est du projet professionnel, je vise en particulier soit à réaliser mon rêve de devenir développeur de jeux vidéo ou alors me tourner vers le métier d'enseignant en informatique.</p>
+                    </div>
+                  </div>
+                </div>
                 
-                {/* Étape */}
-                <div className="flex items-center justify-between relative">
-                  <div className="w-2/5 text-right pr-6">
-                    <h3 className="text-xl font-semibold">Avant</h3>
-                    <p>
-                      Depuis toujours passionné par les jeux vidéo, j'ai toujours rêvé d'un jour en faire mon domaine profesionnel.
-                    </p>
-                  </div>
-                  <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                    <span className="text-3xl text-custom-white"><MdOutlineChildFriendly/></span>
-                  </div>
-                  <div className="w-2/5 pl-6"></div>
-                </div>
-
-                {/* Étape */}
-                <div className="flex items-center justify-between relative">
-                  <div className="w-2/5"></div>
-                  <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                    <span className="text-3xl text-custom-white"><FaSchool/></span>
-                  </div>
-                  <div className="w-2/5 text-left pl-6">
-                    <h3 className="text-xl font-semibold">Terminale S option ISN</h3>
-                    <p>
-                      La spécialité ISN m'a amené mon premier contact avec le développement informatique.
-                      Apprentissage des bases du développement web en HTML, JavaScript et CSS. Réalisation d’un projet inspiré du Projet Voltaire mais en anglais en HTML, JavaScript et CSS, noté 19/20.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Étape */}
-                <div className="flex items-center justify-between relative">
-                  <div className="w-2/5 text-right pr-6">
-                    <h3 className="text-xl font-semibold">Exploration universitaire</h3>
-                    <p>
-                      Du fait de mes meilleurs notes et facilités en langues j'ai décidé de m'orienter vers un cursus universitaire dans les langues.
-                      Une année en LLCER Anglais lv2 Japonais, une année en LLCER Japonais lv2 Anglais et une année en licence d'histoire.
-                    </p>
-                  </div>
-                  <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                    <span className="text-3xl text-custom-white"><IoSchool/></span>
-                  </div>
-                  <div className="w-2/5 pl-6"></div>
-                </div>
-
-                {/* Étape */}
-                <div className="flex items-center justify-between relative">
-                  <div className="w-2/5"></div>
-                  <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                    <span className="text-3xl text-custom-white"><FaCode/></span>
-                  </div>
-                  <div className="w-2/5 text-left pl-6">
-                    <h3 className="text-xl font-semibold">BTS SIO option SLAM</h3>
-                    <p>
-                      Me décidant d'enfin me tourner vers le secteur qui m'a toujours attiré, j'ai décidé de rejoindre le BTS SIO en spécialité de développement. 
-                      J'y apprends diverses langages de programmation et technologies afin de développer des solutions webs ou logiciels, avec des bases de données.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Étape */}
-                <div className="flex items-center justify-between relative">
-                  <div className="w-2/5 text-right pr-6">
-                    <h3 className="text-xl font-semibold">Et après ?</h3>
-                    <p>
-                      Je prévois de continuer mes études en licence d'informatique. Pour ce qui est du projet professionnel, je vise en particulier soit à réaliser mon rêve de devenir développeur de jeux vidéo ou alors me tourner vers le métier d'enseignant
-                      en informatique.
-                    </p>
-                  </div>
-                  <div className="w-12 h-12 bg-border rounded-full shadow-lg flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                    <span className="text-3xl text-custom-white"><MdOutlineQuestionMark/></span>
-                  </div>
-                  <div className="w-2/5 pl-6"></div>
-                </div>
+                
               </div>
             </div>
+            <div className="pt-6 md:pt-10 ">
+                          <Link
+                            href="/CV Brunin Maxime.pdf"
+                            download="CV_Brunin_Maxime.pdf"
+                            className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block"
+                          >
+                            Télécharger mon CV
+                          </Link>
+                        </div>
           </div>
-          <div className="pt-20 text-center">
-              <Link href="/CV Brunin Maxime.pdf" download="CV_Brunin_Maxime.pdf" className="bg-button hover:bg-hover p-3 rounded-xl">
-                Télécharger mon CV
-              </Link>
-            </div>
+          
         </section>
+
+
+
         
       </div>
     );

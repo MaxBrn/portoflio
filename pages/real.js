@@ -71,7 +71,9 @@ export default function Real() {
               <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
               <button 
                 onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
-                  { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' }
+                  { name: 'Rapport Stage', path: 'rapportStage.pdf' },
+                  { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
+                  { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
                 ])} 
                 className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
             </div>

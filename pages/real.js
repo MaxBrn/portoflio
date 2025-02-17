@@ -29,6 +29,12 @@ export default function Real() {
   return (
     <div className="relative pb-10">
       <section className="py-28 max-w-7xl mx-auto px-4">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl font-bold mb-4">Mes réalisations</h1>
+          <p className="text-lg text-gray-300">
+            Certaines de mes réalisations personnelles, en classe, en stage.
+          </p>
+        </div>
         <div className='flex flex-col items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6 mb-10'>
           <div className='text-center mx-auto flex flex-col gap-4'>
             <Image

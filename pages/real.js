@@ -32,13 +32,21 @@ export default function Real() {
         
         <div className='flex flex-col md:flex-row items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6'>
           <div className='w-full md:w-3/5'>
-            <Image
-              src="/image/marieteamPage.png"
-              width={700}
-              height={500}
-              alt="Index Marieteam"
-              className='rounded-xl shadow-md'
-            />
+            <Link href="https://mariteam.vercel.app/" className="relative block w-fit group transition-transform duration-300 hover:scale-105">
+              <div className="relative">
+                <Image
+                  src="/image/marieteamPage.png"
+                  width={700}
+                  height={500}
+                  alt="Index Marieteam"
+                  className="rounded-xl shadow-md cursor-pointer transition"
+                />
+                {/* Icône en haut à droite */}
+                <div className="absolute top-3 right-3 bg-black bg-opacity-70 text-white p-2 rounded-full text-s opacity-80 group-hover:opacity-100 transition">
+                  <IoMdOpen />
+                </div>
+              </div>
+            </Link>
           </div>
           
           <div className='w-full md:w-2/5 flex flex-col gap-6 text-center'>
@@ -54,10 +62,9 @@ export default function Real() {
               <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>TailwindCSS</span>
             </div>
             <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
-              <Link href='https://mariteam.vercel.app/' className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Lien vers le site</Link>
               <button 
                 onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [])} 
-                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Les documents</button>
+                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Documentation</button>
             </div>
           </div>
         </div>

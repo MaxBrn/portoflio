@@ -29,7 +29,51 @@ export default function Real() {
   return (
     <div className="relative pb-10">
       <section className="py-28 max-w-7xl mx-auto px-4">
-        
+        <div className='flex flex-col items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6 mb-10'>
+          <div className='text-center mx-auto flex flex-col gap-4'>
+            <Image
+              src="/image/logoLS.png"
+              width={200}
+              height={500}
+              alt="Logo LocaService"
+              className="rounded-xl shadow-md transition mx-auto"
+            />
+            <p>
+              J'ai réalisé mes deux stages chez LocaService. Loca Service est une entreprise de location de matériel frigorifique,
+               elle fait partie des leaders du secteur. Fondée par Pascal Bouve en 1981 et ensuite reprise par son fils Aurélein Bouve en 2016. 
+               Ce dernier porte énormément d'attention à ce que l'entreprise reste en constante innovation et ne cesse de se réinventer, 
+               d'explorer des projets divers et variés. Les projets qui m'ont été assignés poursuivent cette idée.
+            </p>
+          </div>
+          <div className='w-full flex flex-col md:flex-row gap-10'>
+            <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
+              <h2>Premier stage</h2>
+              <p>
+                J'ai conçu et implémenté une solution pour afficher les données de capteurs (température, eau, gaz) dans le cadre du smart building. 
+                Mon objectif était de proposer une alternative interne pour réduire les coûts d'abonnement. 
+                J'ai assuré le développement en full stack, de la récupération des données à leur affichage, 
+                tout en apprenant les outils nécessaires en autonomie.
+              </p>
+              <div className='flex flex-wrap gap-3 text-xs mx-auto'>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Vue.js</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Kuzzle</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>TypeScript</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>NodeMailer</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Chart.js</span>
+                
+              </div>
+              <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+              <button 
+                onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [])} 
+                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Documentation</button>
+            </div>
+            </div>
+            <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
+              <h2>Deuxième stage</h2>
+              <p>En cours...</p>
+            </div>
+          </div>
+        </div>
         <div className='flex flex-col md:flex-row items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6'>
           <div className='w-full md:w-3/5'>
             <Link href="https://mariteam.vercel.app/" className="relative block w-fit group transition-transform duration-300 hover:scale-105">
@@ -39,7 +83,7 @@ export default function Real() {
                   width={700}
                   height={500}
                   alt="Index Marieteam"
-                  className="rounded-xl shadow-md cursor-pointer transition"
+                  className="rounded-xl shadow-md transition w-full"
                 />
                 {/* Icône en haut à droite */}
                 <div className="absolute top-3 right-3 bg-black bg-opacity-70 text-white p-2 rounded-full text-s opacity-80 group-hover:opacity-100 transition">

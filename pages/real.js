@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { IoMdOpen } from "react-icons/io";
+import Image from 'next/image';
 
 export default function Real() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,24 +29,40 @@ export default function Real() {
   return (
     <div className="relative pb-10">
       <section className="py-28 max-w-7xl mx-auto px-4">
-        <h1 className="text-center text-xl">Les réalisations en stage</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10">
-          <div className="p-6">
-            <img src="/image/logoLS.png" alt="Stage Loca" className="w-52 m-auto" />
+        
+        <div className='flex flex-col md:flex-row items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6'>
+          <div className='w-full md:w-3/5'>
+            <Image
+              src="/image/marieteamPage.png"
+              width={700}
+              height={500}
+              alt="Index Marieteam"
+              className='rounded-xl shadow-md'
+            />
           </div>
-          <div className="p-6 m-auto">
-            <p>Deuxième stage en février</p>
+          
+          <div className='w-full md:w-2/5 flex flex-col gap-6 text-center'>
+            <h2 className='text-2xl text-primary'>Marieteam Web</h2>
+            <p className='text-base'>Marieteam est une simulation de site de réservation de transport maritime. 
+              Connecté à une base de données, il permet aux utilisateurs de réserver des trajets et de consulter leurs réservations. 
+              Un dashboard admin offre la gestion des liaisons, le suivi des places réservées et l'analyse des revenus.
+            </p>
+            <div className='flex flex-wrap gap-3 text-xs mx-auto'>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Next.JS</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Supabase</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>PostgreSQL</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>TailwindCSS</span>
+            </div>
+            <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+              <Link href='https://mariteam.vercel.app/' className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Lien vers le site</Link>
+              <button 
+                onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [])} 
+                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Les documents</button>
+            </div>
           </div>
         </div>
 
-        <p className="text-center mt-20 text-xl">Les réalisations en cours</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10">
-          <div className="p-6">
-            <Link href="https://mariteam.vercel.app/">
-              <img src="/image/logoMarieteam.png" alt="Marieteam" className="w-40 m-auto" />
-            </Link>
-          </div>
-        </div>
+
 
         <p className="mt-20 text-center text-xl flex gap-2 justify-center">Les compétences du cursus <Link href='/competence/synthese.pdf'><IoMdOpen/></Link></p>
         <div className="mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
@@ -91,7 +108,7 @@ export default function Real() {
               ] 
             },
           ].map(({ folder, description, files }) => (
-            <button key={folder} onClick={() => handleOpenCompetence(folder,description, files)} className=" min-h-[150px] w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button">
+            <button key={folder} onClick={() => handleOpenCompetence(folder,description, files)} className=" min-h-[150px] w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button transition">
               <p className="font-bold">Compétence {folder}</p>
               <p className='pt-2'>{description}</p>
             </button>
@@ -112,7 +129,7 @@ export default function Real() {
           <ul className="mt-4 flex flex-col gap-4">
             {files.map(({ name, path }, index) => (
               <li key={index}>
-                <Link href={`/competence/${folder}/${path}`} target="_blank" className="block p-2 border border-border bg-bgColor2 rounded-2xl hover:bg-button text-center">{name}</Link>
+                <Link href={`/competence/${folder}/${path}`} target="_blank" className="block p-2 border border-border bg-bgColor2 rounded-2xl hover:bg-button text-center transition">{name}</Link>
               </li>
             ))}
           </ul>

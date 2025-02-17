@@ -67,7 +67,7 @@ export default function Real() {
                 onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
                   { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' }
                 ])} 
-                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Documentation</button>
+                className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
             </div>
             </div>
             <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
@@ -110,7 +110,7 @@ export default function Real() {
             <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
               <button 
                 onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [])} 
-                className='bg-button p-3 rounded-xl text-center hover:bg-opacity-50 transition'>Documentation</button>
+                className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
             </div>
           </div>
         </div>

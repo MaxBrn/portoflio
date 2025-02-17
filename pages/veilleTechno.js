@@ -190,7 +190,7 @@ export default function VeilleTechno() {
               href={file.path}
               target="_blank"
             >
-              <div className="p-4 border bg-bgColor2 border-border rounded-2xl hover:bg-button transition-all duration-300 group">
+              <div className="p-4 border bg-bgColor2 border-border rounded-2xl hover:bg-button transition">
                 <div className="flex items-center justify-between">
                   <p className="font-bold text-lg">{`Rapport ${file.name}`}</p>
                  

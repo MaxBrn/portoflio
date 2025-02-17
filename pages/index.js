@@ -30,7 +30,7 @@ export default function Index() {
                   <Link
                     href="/CV Brunin Maxime.pdf"
                     download="CV_Brunin_Maxime.pdf"
-                    className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block"
+                    className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block transition"
                   >
                     Télécharger mon CV
                   </Link>
@@ -206,7 +206,7 @@ export default function Index() {
                           <Link
                             href="/CV Brunin Maxime.pdf"
                             download="CV_Brunin_Maxime.pdf"
-                            className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block"
+                            className="bg-button hover:bg-hover text-custom-white p-3 rounded-xl block text-center md:inline-block transition"
                           >
                             Télécharger mon CV
                           </Link>

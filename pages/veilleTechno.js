@@ -5,8 +5,13 @@ import { IoReaderOutline } from "react-icons/io5";
 export default function VeilleTechno() {
   // Définir les fichiers manuellement
   const files = [
-    { name: 'Octobre 2024', path: '/veille/octobre2024.pdf' },
-    { name: 'Novembre 2024', path: '/veille/novembre2024.pdf' },
+    { name: 'Septembre 2024', path: '/veille/Septembre2024.pdf' },
+    { name: 'Octobre 2024', path: '/veille/Octobre2024.pdf' },
+    { name: 'Novembre 2024', path: '/veille/Novembre2024.pdf' },
+    { name: 'Décembre 2024', path: '/veille/Décembre2024.pdf' },
+    { name: 'Janvier 2025', path: '/veille/Janvier2025.pdf' },
+    { name: 'Février 2025', path: '/veille/Février2025.pdf' },
+    { name: 'Mars 2025', path: '/veille/Mars2025.pdf' },
     // Ajoutez autant de fichiers que nécessaire
   ];
 

@@ -132,6 +132,7 @@ export default function Real() {
               [
                 { name: 'Gestion droits Windows', path: 'gestionDroit.pdf' }, 
                 { name: 'Habilitations GLPI', path: 'habilitationGLPI.pdf' },
+                { name: 'Continuité Service HAProxy', path: 'ContinuiteServiceGLPI.pdf'}
 
               ] 
             },
@@ -163,7 +164,7 @@ export default function Real() {
                 { name: 'Formation Unity', path: 'formationUnity.pdf' },
                 { name: 'Certification Azure', path: 'Certif Azure.pdf' },
                 { name: 'Certification Linux', path: 'Certif Linux.png' },
-                { name: 'Commande Linux', path: 'Commande Linux.pdf' },
+                { name: 'Commande Linux', path: 'Commande linux.pdf' },
                 { name: 'MOOC CNIL', path: 'MOOC CNIL.pdf' },
                 { name: 'Certificat PIX', path: 'Pix.pdf' }
               ] 

@@ -48,7 +48,7 @@ export default function VeilleTechno() {
 
         {/* Bloc 1 : Qu'est-ce que la veille technologique et comment la faire ? */}
         <div
-          className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg mb-10 cursor-pointer shadow-lg shadow-button"
+          className="bg-bgColor2 border border-border p-8 rounded-xl mb-10 cursor-pointer shadow-lg shadow-button"
           onClick={() => setIsOpen(!isOpen)} // Basculer l'état au clic
         >
           <div className="flex items-center justify-between">
@@ -142,7 +142,7 @@ export default function VeilleTechno() {
         </div>
 
         {/* Grille des blocs d'information (Thème et Outils) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {/* Bloc 2 : Thème de la veille */}
           <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg shadow-button">
             <div className="text-center">
@@ -167,6 +167,20 @@ export default function VeilleTechno() {
             </div>
           </div>
         </div>
+        
+        <div className="bg-bgColor2 border border-border p-8 rounded-xl shadow-lg shadow-button mb-20">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4">Critères de sélection</h3>
+              <p className="text-gray-300">
+                Pour assurer la qualité et la pertinence des informations traitées, j'ai établi des prérequis dans la sélection
+                de mes articles. D'abord l'article doit venir d'une source fiable, comme par exemple du site Unity ou Unreal directement,
+                ou alors de journaliste ou professionnel. De plus, j'ai paramètré Inoreader pour me communiquer les articles
+                les plus pertinents, en suivant par les flux RSS spécialisé dans le développement Unreal Engine et Unity,
+                et en les triant par mois de publication. De ce fait chaque mois je choisissais les trois articles du mois les
+                plus pertinents pour en faire une analyse individuelle et globales à la fin.
+              </p>
+            </div>
+          </div>
 
         {/* Section des problématiques sous forme de timeline horizontale */}
         <div className="mb-20">

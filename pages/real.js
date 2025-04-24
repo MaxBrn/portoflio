@@ -69,18 +69,39 @@ export default function Real() {
                 
               </div>
               <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
-              <button 
-                onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
-                  { name: 'Rapport Stage', path: 'rapportStage.pdf' },
-                  { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
-                  { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
-                ])} 
-                className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
-            </div>
+                <button 
+                  onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
+                    { name: 'Rapport Stage', path: 'rapportStage.pdf' },
+                    { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
+                    { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
+                  ])} 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
+                </button>
+              </div>
             </div>
             <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
               <h2>Deuxième stage</h2>
-              <p>En cours...</p>
+              <p>
+                J'ai réalisé une application mobile pour créer des prises de devis pour la commande de meuble réfrigéré. 
+                L'objectif était de rendre le processus plus rapide et moins archaïque que d'origine.
+                J'en ai assuré le développmeent en autonomie et en full stack sur Android Studio. J'ai développé en parrallèle une API REST pour l'accès
+                à la base de données que j'ai aussi mise en place.
+              </p>
+              <div className='flex flex-wrap gap-3 text-xs mx-auto'>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Android Studio</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Kotlin</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>API REST</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>PHP</span>
+                <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>MySQL</span>
+                
+              </div>
+              <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+                <button 
+                  onClick={() => handleOpenCompetence('Stage 2', 'Mon deuxième stage', [
+                  ])} 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -138,6 +159,7 @@ export default function Real() {
             },
             { folder: '1.2', description: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', files: 
               [
+                { name: 'Installation GLPI', path: 'installGLPI.pdf' },
                 { name: 'Collecteur GLPI', path: 'glpiCollecteur.pdf' }, 
                 { name: 'HTTPS-SSL-TSL', path: 'HTTPS-SSL-TSL.pdf' },
                 { name: 'RAID', path: 'RAID.pdf' },

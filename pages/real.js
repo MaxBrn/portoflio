@@ -45,10 +45,17 @@ export default function Real() {
               className="rounded-xl shadow-md transition mx-auto"
             />
             <p>
-              J'ai réalisé mes deux stages chez LocaService. Loca Service est une entreprise de location de matériel frigorifique,
-               elle fait partie des leaders du secteur. Fondée par Pascal Bouve en 1981 et ensuite reprise par son fils Aurélein Bouve en 2016. 
-               Ce dernier porte énormément d'attention à ce que l'entreprise reste en constante innovation et ne cesse de se réinventer, 
-               d'explorer des projets divers et variés. Les projets qui m'ont été assignés poursuivent cette idée.
+            Loca Service est une entreprise de location de matériel frigorifique,
+            elle fait partie des leaders du secteur. Fondée par Pascal Bouve en 1981, elle a ensuite été reprise par son fils Aurélien Bouve en 2016.
+            Ce dernier porte énormément d'attention à ce que l'entreprise reste en constante innovation et ne cesse de se réinventer,
+            d'explorer des projets divers et variés. Les projets qui m'ont été assignés poursuivent cette idée. Loca Service accorde une
+            grande importance à son impact écologique et sociétal, ce qui la pousse à toujours tenter de s'améliorer sur ces axes et de
+            faire de la société un endroit où il fait bon vivre pour tous, et respectueux de l'environnement. Ils possèdent plusieurs agences dans
+            toute la France, mais j'ai effectué mon stage à La Bassée, là où se trouve leur siège social.
+            J'ai été intégré au sein de leur équipe informatique, qui s'occupe de toute l'infrastructure réseau et des systèmes informatiques,
+            mais aussi du support des applications métiers développées par des prestataires. Cette dernière ne contenant aucun développeur,
+            j'étais en autonomie sur ce point, mais tout de même encadré et grandement aidé sur certains aspects. Je remercie d'ailleurs toutes
+            les personnes que j'ai pu côtoyer lors de cette merveilleuse expérience.
             </p>
           </div>
           <div className='w-full flex flex-col md:flex-row gap-10'>
@@ -71,9 +78,10 @@ export default function Real() {
               <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
                 <button 
                   onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
-                    { name: 'Rapport Stage', path: 'rapportStage.pdf' },
+                    { name: 'Rapport Stage', path: 'rapport1.pdf' },
                     { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
                     { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
+                    { name: 'Attestation Stage', path:'attestation1.pdf'}
                   ])} 
                   className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
                 </button>
@@ -98,6 +106,8 @@ export default function Real() {
               <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
                 <button 
                   onClick={() => handleOpenCompetence('Stage 2', 'Mon deuxième stage', [
+                    { name: 'Rapport Stage', path: 'rapport2.pdf' },
+                    { name: 'Attestation Stage', path:'attestation2.pdf'}
                   ])} 
                   className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
                 </button>

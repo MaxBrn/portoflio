@@ -108,6 +108,7 @@ export default function Real() {
                 <button 
                   onClick={() => handleOpenCompetence('Stage 2', 'Mon deuxième stage', [
                     { name: 'Rapport Stage', path: 'rapport2.pdf' },
+                    { name: 'Guide Installation', path: 'guideinstall.pdf'},
                     { name: 'Attestation Stage', path:'attestation2.pdf'}
                   ])} 
                   className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
@@ -162,44 +163,47 @@ export default function Real() {
           {[ 
             { folder: '1.1', description: 'Gestion du patrimoine informatique', files: 
               [
-                { name: 'Gestion droits Windows', path: 'gestionDroit.pdf' }, 
-                { name: 'Habilitations GLPI', path: 'habilitationGLPI.pdf' },
-                { name: 'Continuité Service HAProxy', path: 'ContinuiteServiceGLPI.pdf'}
+                { name: 'Habilitations GLPI', path: 'marieteamglpi.pdf' },
+                { name: 'Continuité d\'un Service', path: 'marieteamglpi.pdf'},
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
 
               ] 
             },
             { folder: '1.2', description: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', files: 
               [
-                { name: 'Installation GLPI', path: 'installGLPI.pdf' },
-                { name: 'Collecteur GLPI', path: 'glpiCollecteur.pdf' }, 
-                { name: 'HTTPS-SSL-TSL', path: 'HTTPS-SSL-TSL.pdf' },
-                { name: 'RAID', path: 'RAID.pdf' },
-                { name: 'rsyslog', path: 'rsyslog.pdf' }
+                { name: 'Installation GLPI', path: 'marieteamglpi.pdf' },
+                { name: 'Collecteur GLPI', path: 'marieteamglpi.pdf' }
               ] 
             },
             { folder: '1.3', description: 'Développer la présence en ligne de l\'organisation', files: 
               [
-                
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                {name: 'Portfolio Maxime', path:'../portfolio.pdf'},
               ] 
             },
             { folder: '1.4', description: 'Travailler en mode projet', files: 
               [
-                
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
               ] 
             },
             { folder: '1.5', description: 'Mettre à disposition des utilisateurs un service informatique', files: 
               [
-                { name: 'Installation GLPI', path: 'installGLPI.pdf' },
+                { name: 'Installation GLPI', path: 'marieteamglpi.pdf' },
+                { name: 'Portfolio Maxime', path:'../portfolio.pdf'},
               ] 
             },
             { folder: '1.6', description: 'Organiser son développement personnel', files: 
               [
                 { name: 'Formation Unity', path: 'formationUnity.pdf' },
-                { name: 'Certification Azure', path: 'Certif Azure.pdf' },
-                { name: 'Certification Linux', path: 'Certif Linux.png' },
-                { name: 'Commande Linux', path: 'Commande linux.pdf' },
-                { name: 'MOOC CNIL', path: 'MOOC CNIL.pdf' },
-                { name: 'Certificat PIX', path: 'Pix.pdf' }
+                { name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                { name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                { name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                { name: 'Guide Installation', path: '../Stage 2/guideinstall.pdf'},
+                { name: 'Installation Kuzzle', path: '../Stage 1/installationKuzzle.pdf' },
+                { name: 'Requêtes Kuzzle', path:'../Stage 1/kuzzlerequete.pdf'},
               ] 
             },
           ].map(({ folder, description, files }) => (

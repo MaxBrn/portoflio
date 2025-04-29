@@ -81,6 +81,7 @@ export default function Real() {
                     { name: 'Rapport Stage', path: 'rapport1.pdf' },
                     { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
                     { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
+                    { name: 'Requêtes Kuzzle', path:'kuzzlerequete.pdf'},
                     { name: 'Attestation Stage', path:'attestation1.pdf'}
                   ])} 
                   className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation

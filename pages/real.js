@@ -58,6 +58,12 @@ export default function Real() {
             les personnes que j'ai pu côtoyer lors de cette merveilleuse expérience.
             </p>
           </div>
+          <Link 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'
+                  href={'https://www.canva.com/design/DAGmHG_I9aU/muNAForHSkwgSJdv0r0NwA/view?utm_content=DAGmHG_I9aU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h038924ba23'}
+                >
+                  Présentation
+                </Link>
           <div className='w-full flex flex-col md:flex-row gap-10'>
             <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
               <h2>Premier stage</h2>
@@ -113,6 +119,7 @@ export default function Real() {
                   ])} 
                   className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
                 </button>
+                
               </div>
             </div>
           </div>

@@ -114,6 +114,7 @@ export default function Real() {
                 <button 
                   onClick={() => handleOpenCompetence('Stage 2', 'Mon deuxième stage', [
                     { name: 'Rapport Stage', path: 'rapport2.pdf' },
+                    { name: 'Planning Complet', path: 'planComplet.pdf'},
                     { name: 'Guide Installation', path: 'guideinstall.pdf'},
                     { name: 'Attestation Stage', path:'attestation2.pdf'}
                   ])} 
@@ -157,10 +158,52 @@ export default function Real() {
             </div>
             <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
               <button 
-                onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [])} 
+                onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [
+                  {name: 'Documentation', path:'marieteamWeb.pdf'},
+                  {name: 'Planning Extrait', path:'planExtrait.png'},
+                  {name: 'Planning Export', path:'planningComplet.pdf'},
+                  
+                ])} 
                 className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
             </div>
           </div>
+          
+        </div>
+        <div className='flex flex-col md:flex-row items-center gap-8 bg-bgColor2 p-6 border border-border shadow-lg shadow-button rounded-3xl mx-6 mt-10'>
+          <div className='w-full md:w-3/5'>
+              <div className="relative">
+                <Image
+                  src="/image/javaMarieteam.png"
+                  width={700}
+                  height={500}
+                  alt="Index Marieteam"
+                  className="rounded-xl shadow-md transition w-full"
+                />
+              </div>
+          </div>
+          
+          <div className='w-full md:w-2/5 flex flex-col gap-6 text-center'>
+            <h2 className='text-2xl text-primary'>Marieteam Java</h2>
+            <p className='text-base'>Permet de générer des PDF contenant tous les bateaux de la flotte. Permet aussi de modifier les informations
+              d'un bateau sélectionné. La solution est reliée à la même base de données que le projet Web.
+            </p>
+            <div className='flex flex-wrap gap-3 text-xs mx-auto'>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Java</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Swing</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>PostgreSQL</span>
+              <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>iTextPDF</span>
+            </div>
+            <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+              <button 
+                onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [
+                  {name:'Documentation', path:'marieteamJava.pdf'},
+                  {name: 'Planning Extrait', path:'planExtrait.png'},
+                  {name: 'Planning Export', path:'planningComplet.pdf'},
+                ])} 
+                className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation</button>
+            </div>
+          </div>
+          
         </div>
 
 
@@ -170,36 +213,43 @@ export default function Real() {
           {[ 
             { folder: '1.1', description: 'Gestion du patrimoine informatique', files: 
               [
-                { name: 'Habilitations GLPI', path: 'marieteamglpi.pdf' },
-                { name: 'Continuité d\'un Service', path: 'marieteamglpi.pdf'},
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
                 {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
                 {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                
 
               ] 
             },
             { folder: '1.2', description: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', files: 
               [
-                { name: 'Installation GLPI', path: 'marieteamglpi.pdf' },
-                { name: 'Collecteur GLPI', path: 'marieteamglpi.pdf' }
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
               ] 
             },
             { folder: '1.3', description: 'Développer la présence en ligne de l\'organisation', files: 
               [
                 {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
-                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
                 {name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
               ] 
             },
             { folder: '1.4', description: 'Travailler en mode projet', files: 
               [
-                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
                 {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                {name: 'Planning Complet Stage', path: '../Stage 2/planComplet.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+                {name: 'Marieteam Planning Extrait', path:'../marieteam/planExtrait.png'},
+                {name: 'Marieateam Planning Export', path:'../marieteam/planningComplet.pdf'},
               ] 
             },
             { folder: '1.5', description: 'Mettre à disposition des utilisateurs un service informatique', files: 
               [
-                { name: 'Installation GLPI', path: 'marieteamglpi.pdf' },
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
                 { name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+                {name: 'Marieteam Java', path:'../marieteam/marieteamJava.pdf'}
               ] 
             },
             { folder: '1.6', description: 'Organiser son développement personnel', files: 
@@ -211,6 +261,7 @@ export default function Real() {
                 { name: 'Guide Installation', path: '../Stage 2/guideinstall.pdf'},
                 { name: 'Installation Kuzzle', path: '../Stage 1/installationKuzzle.pdf' },
                 { name: 'Requêtes Kuzzle', path:'../Stage 1/kuzzlerequete.pdf'},
+                { name: 'Veille Technologique', path:'veilleContexte.pdf'},
               ] 
             },
           ].map(({ folder, description, files }) => (

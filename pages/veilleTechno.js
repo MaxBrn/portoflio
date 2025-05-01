@@ -5,13 +5,21 @@ import { IoReaderOutline } from "react-icons/io5";
 export default function VeilleTechno() {
   // Définir les fichiers manuellement
   const files = [
-    { name: 'Septembre 2024', path: '/veille/Septembre2024.pdf' },
-    { name: 'Octobre 2024', path: '/veille/Octobre2024.pdf' },
-    { name: 'Novembre 2024', path: '/veille/Novembre2024.pdf' },
-    { name: 'Décembre 2024', path: '/veille/Décembre2024.pdf' },
-    { name: 'Janvier 2025', path: '/veille/Janvier2025.pdf' },
-    { name: 'Février 2025', path: '/veille/Février2025.pdf' },
-    { name: 'Mars 2025', path: '/veille/Mars2025.pdf' },
+    { name: 'Contexte', path: '/veille/veilleContexte.pdf' },
+    { name: 'Avril 2024', path: '/veille/Avril 2024.pdf' },
+    { name: 'Mai 2024', path: '/veille/Mai 2024.pdf' },
+    { name: 'Juin 2024', path: '/veille/Juin 2024.pdf' },
+    { name: 'Juillet 2024', path: '/veille/Juillet 2024.pdf' },
+    { name: 'Août 2024', path: '/veille/Aout 2024.pdf' },
+    { name: 'Septembre 2024', path: '/veille/Septembre 2024.pdf' },
+    { name: 'Octobre 2024', path: '/veille/Octobre 2024.pdf' },
+    { name: 'Novembre 2024', path: '/veille/Novembre 2024.pdf' },
+    { name: 'Décembre 2024', path: '/veille/Décembre 2024.pdf' },
+    { name: 'Janvier 2025', path: '/veille/Janvier 2025.pdf' },
+    { name: 'Février 2025', path: '/veille/Février 2025.pdf' },
+    { name: 'Mars 2025', path: '/veille/Mars 2025.pdf' },
+    { name: 'Avril 2025', path: '/veille/Avril 2025.pdf' },
+    { name: 'Synthèse', path: '/veille/synthese.pdf' }
     // Ajoutez autant de fichiers que nécessaire
   ];
 

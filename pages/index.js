@@ -193,7 +193,7 @@ export default function Index() {
                   <div className="md:w-1/2 md:pl-8 text-center">
                     <div className="bg-bgColor2 p-6 border border-border rounded-lg shadow-lg shadow-button">
                       <h3 className="text-xl font-semibold mb-4">Et après ?</h3>
-                      <p>Je prévois de continuer mes études en licence d'informatique. 
+                      <p>Je prévois de continuer mes études en alternance en bachelor ou en licence informatique. 
                         Pour ce qui est du projet professionnel, je vise en particulier soit à réaliser mon rêve de devenir développeur de jeux vidéo ou alors me tourner vers le métier d'enseignant en informatique.</p>
                     </div>
                   </div>

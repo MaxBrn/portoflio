@@ -58,6 +58,12 @@ export default function Real() {
             les personnes que j'ai pu côtoyer lors de cette merveilleuse expérience.
             </p>
           </div>
+          <Link 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'
+                  href={'https://www.canva.com/design/DAGmHG_I9aU/muNAForHSkwgSJdv0r0NwA/view?utm_content=DAGmHG_I9aU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h038924ba23'}
+                >
+                  Présentation
+                </Link>
           <div className='w-full flex flex-col md:flex-row gap-10'>
             <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
               <h2>Premier stage</h2>
@@ -75,6 +81,18 @@ export default function Real() {
                 <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>Chart.js</span>
                 
               </div>
+              <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+                <button 
+                  onClick={() => handleOpenCompetence('Stage 1', 'Mon premier stage', [
+                    { name: 'Rapport Stage', path: 'rapport1.pdf' },
+                    { name: 'Fonctionnalitées', path: 'Fonctionnalité du site.pdf' },
+                    { name: 'Installation Kuzzle', path: 'installationKuzzle.pdf' },
+                    { name: 'Requêtes Kuzzle', path:'kuzzlerequete.pdf'},
+                    { name: 'Attestation Stage', path:'attestation1.pdf'}
+                  ])} 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
+                </button>
+              </div>
             </div>
             <div className='md:w-1/2 text-center p-4 border border-border flex flex-col gap-6  rounded-3xl'>
               <h2>Deuxième stage</h2>
@@ -90,6 +108,18 @@ export default function Real() {
                 <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>API REST</span>
                 <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>PHP</span>
                 <span className='border border-border px-4 py-2 rounded-full shadow-sm whitespace-nowrap'>MySQL</span>
+                
+              </div>
+              <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
+                <button 
+                  onClick={() => handleOpenCompetence('Stage 2', 'Mon deuxième stage', [
+                    { name: 'Rapport Stage', path: 'rapport2.pdf' },
+                    { name: 'Planning Complet', path: 'planComplet.pdf'},
+                    { name: 'Guide Installation', path: 'guideinstall.pdf'},
+                    { name: 'Attestation Stage', path:'attestation2.pdf'}
+                  ])} 
+                  className='bg-button p-3 rounded-xl text-center hover:bg-hover transition'>Documentation
+                </button>
                 
               </div>
             </div>
@@ -175,7 +205,69 @@ export default function Real() {
           </div>
           
         </div>
+        <p className="mt-20 text-center text-xl flex gap-2 justify-center">Les compétences du cursus <Link href='/competence/synthese.pdf'><IoMdOpen/></Link></p>
+        <div className="mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+          {[ 
+            { folder: '1.1', description: 'Gestion du patrimoine informatique', files: 
+              [
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                
 
+              ] 
+            },
+            { folder: '1.2', description: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', files: 
+              [
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+              ] 
+            },
+            { folder: '1.3', description: 'Développer la présence en ligne de l\'organisation', files: 
+              [
+                {name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                {name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+              ] 
+            },
+            { folder: '1.4', description: 'Travailler en mode projet', files: 
+              [
+                {name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                {name: 'Planning Complet Stage', path: '../Stage 2/planComplet.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+                {name: 'Marieteam Planning Extrait', path:'../marieteam/planExtrait.png'},
+                {name: 'Marieateam Planning Export', path:'../marieteam/planningComplet.pdf'},
+              ] 
+            },
+            { folder: '1.5', description: 'Mettre à disposition des utilisateurs un service informatique', files: 
+              [
+                { name: 'Marieteam GLPI', path: '../marieteam/marieteamglpi.pdf' },
+                { name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                {name: 'Marieteam Web', path:'../marieteam/marieteamWeb.pdf'},
+                {name: 'Marieteam Java', path:'../marieteam/marieteamJava.pdf'}
+              ] 
+            },
+            { folder: '1.6', description: 'Organiser son développement personnel', files: 
+              [
+                { name: 'Formation Unity', path: 'formationUnity.pdf' },
+                { name: 'Premier stage', path:'../Stage 1/rapport1.pdf'},
+                { name: 'Deuxième stage', path:'../Stage 2/rapport2.pdf'},
+                { name: 'Portfolio Maxime', path:'../portfolio.pdf'},
+                { name: 'Guide Installation', path: '../Stage 2/guideinstall.pdf'},
+                { name: 'Installation Kuzzle', path: '../Stage 1/installationKuzzle.pdf' },
+                { name: 'Requêtes Kuzzle', path:'../Stage 1/kuzzlerequete.pdf'},
+                { name: 'Veille Technologique', path:'veilleContexte.pdf'},
+              ] 
+            },
+          ].map(({ folder, description, files }) => (
+            <button key={folder} onClick={() => handleOpenCompetence(folder,description, files)} className=" min-h-[150px] w-full h-full p-4 bg-bgColor2 border border-border rounded-2xl hover:bg-button transition">
+              <p className="font-bold">Compétence {folder}</p>
+              <p className='pt-2'>{description}</p>
+            </button>
+          ))}
+        </div>
       </section>
       
       {isOpen && (

@@ -159,7 +159,7 @@ export default function Real() {
             <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
               <button 
                 onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [
-                  {name: 'Documentation', path:'marieteamWebDoc.pdf'},
+                  {name: 'Documentation', path:'MarieteamWebDoc.pdf'},
                   {name: 'Planning Extrait', path:'planExtrait.png'},
                   {name: 'Planning Export', path:'planningComplet.pdf'},
                   
@@ -196,7 +196,7 @@ export default function Real() {
             <div className='mx-auto w-3/4 flex flex-col gap-4 mt-4'>
               <button 
                 onClick={() => handleOpenCompetence('marieteam', 'Les documents de Marieteam', [
-                  {name:'Documentation', path:'marieteamJavaDoc.pdf'},
+                  {name:'Documentation', path:'MarieteamJavaDoc.pdf'},
                   {name: 'Planning Extrait', path:'planExtrait.png'},
                   {name: 'Planning Export', path:'planningComplet.pdf'},
                 ])} 

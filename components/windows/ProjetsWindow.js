@@ -6,7 +6,7 @@ import { IoMdOpen } from 'react-icons/io';
 const ProjectCard = ({ title, description, technologies, details,src,link }) => {
   return (
     <div className="border border-border rounded-lg p-6 hover:shadow-md transition flex md:flex-row flex-col items-center gap-10 w-3/4 mx-auto">
-      <div className='md:w-1/3'>
+      <div className='md:w-1/2'>
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="mb-3">{description}</p>
         <div className="flex flex-wrap gap-2 mb-3">
@@ -21,9 +21,9 @@ const ProjectCard = ({ title, description, technologies, details,src,link }) => 
         </div>
         <p className="text-sm">{details}</p>
       </div>
-      <div className="md:w-2/3">
+      <div className="md:w-1/2">
         <div className='w-full'>
-            <Link href={link} className="relative block w-fit group transition-transform duration-300 hover:scale-105">
+            <Link href={link} className="relative block w-fit group transition-transform duration-300 hover:scale-105 mx-auto">
               <div className="relative">
                 <Image
                   src={src}

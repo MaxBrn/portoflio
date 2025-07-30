@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="flex md:flex-col flex-row justify-center items-center gap-5">
+    <div className="flex md:flex-col flex-row justify-center items-center gap-5 md:w-1/4">
 
       <div className="flex flex-col items-center gap-4 w-full">
         <h1 className="md:text-3xl text-xl">Maxime Brunin</h1>

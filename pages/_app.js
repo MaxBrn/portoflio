@@ -14,12 +14,10 @@ export default function MyApp({ Component, pageProps }) {
           <link rel="icon" href="/icon.ico" />
           <meta name="description" content="Bienvenue sur mon portfolio. Découvrez mes compétences et projets en développement web." />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        </Head>
-        <NavBar/>        
+        </Head>        
         <Component {...pageProps} />
         <SpeedInsights/>
         <Analytics/>
-        <Footer />
       </>
     );
   }

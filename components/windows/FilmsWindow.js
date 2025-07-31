@@ -2,14 +2,14 @@ import { filmsData } from "@/data/films";
 import Link from "next/link";
 import { FaSquareLetterboxd } from "react-icons/fa6";
 import { useState } from "react";
-
+import { FaTimes } from "react-icons/fa";
+import WindowButton from '../ui/WindowButton'; // Ajustez le chemin selon votre structure
 const FilmWindow = () => {
 
   const [selectedFilm, setSelectedFilm] = useState(null);
   
   return (
     <div className="bg-bgColor pb-20 md:pt-10">
-      { !selectedFilm ? (
         <div filmsData={filmsData} className="w-3/4 mx-auto pb-30 text-center">
           <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button mb-10">
             <p className=" mb-10">Voici la liste de mes films préférés ! </p>
@@ -42,18 +42,27 @@ const FilmWindow = () => {
                 ))}
             </div>
             <p className="mt-20">D'autres films arriveront par la suite...</p>
-        </div>) : (
-          <div className="w-3/4 mx-auto">
-            {/* Bouton retour */}
-            <div className="mb-6">
-              <button
-                onClick={() => setSelectedFilm(null)}
-                className="flex items-center gap-2 text-blue-500 hover:text-blue-700 transition-colors font-medium"
-              >
-                ← Retour à la liste
-              </button>
-            </div>
-
+        </div>:
+          {selectedFilm && (
+            <div className="fixed inset-0 z-50 md:bg-black/60">
+              <div className='absolute bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 md:top-20 md:left-20 md:right-20 md:bottom-20 top-1 left-1 right-1 bottom-1'>
+                {/* Barre de titre */}
+                <div className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none'>
+                  <div className="flex items-center gap-2">
+                    <span className="font-medium">{selectedFilm.title}</span>
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <WindowButton
+                      color="red"
+                      icon={<FaTimes className="w-2 h-2 m-auto text-red-800" />}
+                      onClick={() => setSelectedFilm(null)}
+                      onMouseDown={(e) => e.stopPropagation()}
+                    />
+                  </div>
+                </div>
+                <div className="p-6 h-full overflow-y-auto bg-bgColor">
+                <div className="w-3/4 mx-auto">
             {/* Contenu du film */}
             <div className="">
               <div className="flex flex-col gap-8 items-center text-center">
@@ -83,8 +92,11 @@ const FilmWindow = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
-        )}
+              </div>
+            </div>
+            )}
     </div>
   );
 };

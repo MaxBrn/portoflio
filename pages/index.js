@@ -15,7 +15,7 @@ export default function Index() {
       <div className="min-h-screen flex items-center justify-center p-4">
         
         {/* Fenêtre principale avec le même style que vos autres fenêtres */}
-        <div className={`bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 md:w-1/2 w-full`}>
+        <div className={`bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 md:w-3/4 w-full`}>
           
           {/* Barre de titre identique à vos autres fenêtres */}
           <div className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none'>

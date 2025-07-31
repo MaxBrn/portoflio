@@ -60,7 +60,7 @@ const NavigationCards = ({ onOpenWindow }) => {
   ];
 
   return (
-    <div className="md:w-3/4 mx-auto grid grid-cols-3 md:grid-cols-3 gap-6">
+    <div className="md:w-3/4 mx-auto grid grid-cols-3 md:grid-cols-3 gap-6 text-center">
         {cards.map(card => (
         <NavigationCard
           key={card.id}

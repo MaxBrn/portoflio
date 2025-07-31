@@ -15,10 +15,10 @@ const FilmWindow = () => {
             <p className=" mb-10">Voici la liste de mes films préférés ! </p>
             <p> Bon pas très longue me diriez vous, 
               mais justement cette liste contient les films qui m'ont réellement marqué, voir même fait réfléchir
-              sur ma vie. Ils ont clairement eu un impact sur moi et ont une place très forte dans mon cœur.
+              sur ma vie. Ils ont clairement eu un impact sur moi et ont une place très forte dans mon cœur. J'aime énormément d'autres films, mais ils ne m'ont pas forcément plus marqué que ceux présents dans cette liste.
             </p><br/>
             <p>
-              Si vous voulez voir tous les films que j'ai vu alors je peux vous rediriger vers mon compte Letterboxd, qui lui contient 
+              Si vous voulez voir tous les films que j'ai vu et que j'aime, alors je peux vous rediriger vers mon compte Letterboxd, qui lui contient 
               tous les films que j'ai vu, même les plus mauvais (oui oui je parle de toi Dragon Ball Evolution).
             </p>
             <Link href="https://boxd.it/b85TV" target="_blank" className="flex items-center justify-center gap-2 text-lg font-semibold text-blue-500 hover:text-blue-700 mt-4">
@@ -41,6 +41,7 @@ const FilmWindow = () => {
                     </div>
                 ))}
             </div>
+            <p className="mt-20">D'autres films arriveront par la suite...</p>
         </div>) : (
           <div className="w-3/4 mx-auto">
             {/* Bouton retour */}

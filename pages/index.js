@@ -49,7 +49,7 @@ export default function Index() {
 
           {/* Contenu de la fenêtre - scrollable */}
           <div className="flex-1 overflow-y-auto bg-bgColor">
-            <div className="p-4 md:p-6 min-h-full">
+            <div className="p-4 md:p-6 min-h-full item-center justify-center flex">
               <header className="flex items-center justify-center min-h-full">
                 <div className="flex lg:flex-row flex-col lg:w-full w-full items-center justify-center gap-6 md:gap-12">
                   

@@ -3,9 +3,9 @@ import Image from "next/image";
 const InfoWindow = () => {
   return (
     <div className="bg-bgColor">
-      <div className="md:w-2/3 mx-auto pb-20 text-center">
-        <Image src="/image/hello.gif" alt="Hello GIF" width={500} height={500} className="mx-auto pb-10" />
-        <h1 className="text-center text-2xl">Moi c'est Maxime</h1><br/>
+      <div className="md:w-2/3 mx-auto mb-10 text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button rounded-3xl">
+        <Image src="/image/hello.gif" alt="Hello GIF" width={500} height={500} className="mx-auto rounded-3xl shadow-lg shadow-black" />
+        <h1 className="text-center text-2xl mt-10">Moi c'est Maxime</h1><br/>
         <p className="text-left leading-relaxed md:leading-loose">Je suis un étudiant développeur en L3 MIAGE qui veut devenir enseignant
           de développement informatique. J'ai toujours rêvé de devenir professeur et transmettre ma passion. 
           J'aime partager mes connaissances et aider les autres à apprendre. On apprend mieux en partageant, n'est-ce pas ?

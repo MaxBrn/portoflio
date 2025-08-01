@@ -13,27 +13,39 @@ export default function Index() {
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
 
-    // Fix pour la hauteur mobile
+    // Fix pour la hauteur mobile - utilise la hauteur visuelle
     const setVH = () => {
-      let vh = window.innerHeight * 0.01;
+      // Utilise visualViewport si disponible, sinon innerHeight
+      const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+      let vh = height * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
     setVH();
-    window.addEventListener('resize', setVH);
+    
+    // Écoute les changements de taille du viewport visuel
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setVH);
+    } else {
+      window.addEventListener('resize', setVH);
+    }
 
     // Cleanup au démontage du composant
     return () => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-      window.removeEventListener('resize', setVH);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', setVH);
+      } else {
+        window.removeEventListener('resize', setVH);
+      }
     };
   }, []);
 
   return (
     <div 
-      className="bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden"
-      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
+      className="bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden min-h-screen"
+      style={{ height: 'calc(var(--vh, 1vh) * 100)', minHeight: '-webkit-fill-available' }}
     >
       
       <div className="h-full flex items-center justify-center p-2 md:p-4">

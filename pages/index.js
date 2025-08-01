@@ -13,20 +13,33 @@ export default function Index() {
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
 
+    // Fix pour la hauteur mobile
+    const setVH = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    setVH();
+    window.addEventListener('resize', setVH);
+
     // Cleanup au démontage du composant
     return () => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
+      window.removeEventListener('resize', setVH);
     };
   }, []);
 
   return (
-    <div className="h-screen bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden">
+    <div 
+      className="bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden"
+      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
+    >
       
       <div className="h-full flex items-center justify-center p-2 md:p-4">
         
         {/* Fenêtre principale avec le même style que vos autres fenêtres */}
-        <div className="bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 w-full h-5/6 md:h-auto md:w-3/4 md:max-w-screen-md flex flex-col">
+        <div className="bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 w-full h-full md:h-auto md:w-3/4 md:max-w-screen-md flex flex-col">
           
           {/* Barre de titre identique à vos autres fenêtres */}
           <div className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none flex-shrink-0'>

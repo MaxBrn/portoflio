@@ -60,13 +60,6 @@ export const filmsData = [
         description: "Mon préféré de la saga, quand bien même George Lucas n'est pas le meilleur des réalisateurs, il apporte un vrai spectacle visuel avec cet opus. Les combats sont haletants, les effets visuels sont à couper le souffle, la bande son de John Williams est comme à son habitude parfaite. Le combat final entre Anakin et Obiwan reste à ce jour l'une des scènes les plus mémorables de la saga, avec des adieux en mauvais termes poignants. Peut-être pas le meilleur film du monde, mais il a une place très importante dans mon coeur pour diverses raisons. La saga au complet fait partie intégrante de ma vie et de ma personne, mais j'ai choisi de plutôt faire figurer celui-ci pour l'affection que je lui porte.",
         year: 2005,
         director: "George Lucas",
-    },    
-    {
-        title:"Wall-E",
-        image: "/image/films/walle.jpg",
-        description: "Le dessin animé le plus marquant que j'ai vu de ma vie, le message qu'envoi ce film est puissant. On y suit les aventures d'un petit robot nommé Wall-E qui doit nettoyer la Terre pour les humains détruite par les humains. Ces derniers pendant ce temps s'engraissent dans un vaisseau loin dans l'espace jusqu'à ne plus pouvoir marcher par eux-mêmes. L'animation est belle, l'histoire est belle, la bande son est belle, la morale est belle, bref un dessin animé à voir au moins une fois et surtout à ne pas oublier en tant qu'avertissement à l'humanité concernant son mode de vie.",
-        year: 2008,
-        director: "Andrew Stanton",
     },
     
     

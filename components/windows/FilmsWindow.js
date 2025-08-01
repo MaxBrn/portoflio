@@ -42,7 +42,7 @@ const FilmWindow = () => {
                 ))}
             </div>
             <p className="mt-20">D'autres films arriveront par la suite...</p>
-        </div>:
+        </div>
           {selectedFilm && (
             <div className="fixed inset-0 z-50 md:bg-black/60">
               <div className='absolute bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 md:top-20 md:left-20 md:right-20 md:bottom-20 top-1 left-1 right-1 bottom-1'>

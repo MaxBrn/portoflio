@@ -21,7 +21,7 @@ const NavigationCards = ({ onOpenWindow }) => {
     {
       id: 'info',
       icon: <HiQuestionMarkCircle className="md:text-3xl text-2xl" />,
-      title: 'A propos de moi'
+      title: 'Présentation'
     },
     {
       id: 'competences',
@@ -38,7 +38,7 @@ const NavigationCards = ({ onOpenWindow }) => {
     {
       id: 'parcours',
       icon: <FaGraduationCap className="md:text-3xl text-2xl" />,
-      title: 'Mon Parcours',
+      title: 'Parcours',
     },
     {
       id: 'cv',

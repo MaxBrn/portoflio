@@ -3,7 +3,7 @@ import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
 
 const NavigationCard = ({ icon, title, description, onClick }) => (
-  <div className="  flex flex-col items-center m-6">
+  <div className="  flex flex-col items-center m-6 mb-0">
   <div 
       onClick={onClick}
       className="bg-button rounded-3xl p-4 text-center flex flex-col items-center cursor-pointer hover:bg-hover transition-all duration-300"
@@ -11,7 +11,7 @@ const NavigationCard = ({ icon, title, description, onClick }) => (
         {icon}
         
     </div>
-  <h2 className="md:text-xl text-l  font-semibold">{title}</h2>
+  <h2 className="md:text-xl text-l mt-3 font-semibold">{title}</h2>
   </div>
  
 );

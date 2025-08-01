@@ -10,14 +10,14 @@ const FilmWindow = () => {
   
   return (
     <div className="bg-bgColor pb-20 md:pt-10">
-        <div filmsData={filmsData} className="w-3/4 mx-auto pb-30 text-center">
+        <div filmsData={filmsData} className="md:w-3/4 mx-auto pb-30 text-center">
           <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button mb-10">
             <p className=" mb-10">Voici la liste de mes films préférés ! </p>
-            <p> Bon pas très longue me diriez vous, 
+           <p className="text-left leading-relaxed md:leading-loose"> Bon pas très longue me diriez vous, 
               mais justement cette liste contient les films qui m'ont réellement marqué, voir même fait réfléchir
               sur ma vie. Ils ont clairement eu un impact sur moi et ont une place très forte dans mon cœur. J'aime énormément d'autres films, mais ils ne m'ont pas forcément plus marqué que ceux présents dans cette liste.
             </p><br/>
-            <p>
+            <p className="text-left leading-relaxed md:leading-loose">
               Si vous voulez voir tous les films que j'ai vu et que j'aime, alors je peux vous rediriger vers mon compte Letterboxd, qui lui contient 
               tous les films que j'ai vu, même les plus mauvais (oui oui je parle de toi Dragon Ball Evolution).
             </p>
@@ -62,7 +62,7 @@ const FilmWindow = () => {
                   </div>
                 </div>
                 <div className="p-6 h-full overflow-y-auto bg-bgColor">
-                <div className="w-3/4 mx-auto">
+                <div className="md:w-3/4 mx-auto mb-10">
             {/* Contenu du film */}
             <div className="">
               <div className="flex flex-col gap-8 items-center text-center">
@@ -79,12 +79,12 @@ const FilmWindow = () => {
                   </div>
                 </div>
                 
-                <div className="w-3/4 space-y-6">
+                <div className="md:w-3/4 space-y-6">
                   
                   
                   <div className="space-y-4">
                     <h2 className="text-xl font-semibold">Mon avis</h2>
-                    <p className="text-base leading-relaxed text-gray-200">
+                    <p className="text-left leading-relaxed md:leading-loose">
                       {selectedFilm.description}
                     </p>
                   </div>

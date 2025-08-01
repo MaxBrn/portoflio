@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 
 export default function Index() {
   const { openWindows, openWindow, closeWindow } = useWindowManager();
-  const [isMinimized, setIsMinimized] = useState(false);
 
   // Désactiver le scroll de la page en permanence
   useEffect(() => {
@@ -22,12 +21,12 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="h-screen bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden flex item-center justify-center">
+    <div className="h-screen bg-cover bg-center bg-[url('/image/background.jpg')] overflow-hidden">
       
-      <div className="flex items-center justify-center p-2 md:p-4">
+      <div className="h-full flex items-center justify-center p-2 md:p-4">
         
         {/* Fenêtre principale avec le même style que vos autres fenêtres */}
-        <div className="bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden h-full md:h-auto transition-all duration-300 flex flex-col">
+        <div className="bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 w-full h-full md:w-3/4 md:h-5/6 flex flex-col">
           
           {/* Barre de titre identique à vos autres fenêtres */}
           <div className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none flex-shrink-0'>

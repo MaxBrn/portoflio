@@ -40,7 +40,7 @@ export default function Index() {
             <div className="flex gap-2">
               <button 
                 className="w-4 h-4 bg-red-400 rounded-full hover:bg-red-500 transition"
-                onClick={() => {/* Optionnel: action de fermeture */}}
+                onClick={() => {alert("Erreur fatale impossible de fermer ce beau portfolio, enfin si vous pouvez mais pas comme ça je l'ai pas codé.")}}
               >
                 <FaTimes className="w-2 h-2 m-auto text-red-800" />
               </button>

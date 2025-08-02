@@ -1,27 +1,25 @@
 export const competencesData = {
-  programmation: {
-    title: "Web",
+  langages: {
+    title: "Langages",
     items: [
-      {title: "JavaScript", alt: "JavaScript Icon", src: "image/iconeJS.png" },
-      { src: "image/iconePHP.png", alt: "PHP", title: "PHP" },
-      {src: "image/iconeNext.png", alt: "Next.js", title:"Next.js"},
-      { src: "image/iconeTW.png", alt: "Tailwind", title:"Tailwind"},
-      { src: "image/iconeReact.png", alt: "React", title:"React"},
+      { title: "JavaScript", alt: "JavaScript Icon", src: "image/iconeJS.png" },
+      { title: "PHP", alt: "PHP Icon", src: "image/iconePHP.png" },
+      { title: "Java", alt: "Java Icon", src: "image/iconeJava.png" }
     ]
   },
-  logiciel: {
-    title: "Logiciel", 
+  techno: {
+    title: "Technologies",
     items: [
-      { src: "image/iconeJava.png", alt: "Java", title: "Java" },
-      { src: "image/iconeCSharp.png", alt: "C#", title: "C#" },
-      { src: "image/iconeUnity.png", alt: "Unity", title: "Unity"},
+      { title: "React", alt: "React Icon", src: "image/iconeReact.png" },
+      { title: "Next.js", alt: "Next.js Icon", src: "image/iconeNext.png" },
+      { title: "Tailwind", alt: "Tailwind Icon", src: "image/iconeTW.png" }
     ]
   },
   database: {
     title: "Base de données",
     items: [
-      { src: "image/logoSQL.png", alt: "SQL", title: "SQL" },
-      { src: "image/iconePostGreSQL.png", alt: "PostgreSQL", title: "PostgreSQL" }
+      { title: "SQL", alt: "SQL Icon", src: "image/logoSQL.png" },
+      { title: "PostgreSQL", alt: "PostgreSQL Icon", src: "image/iconePostGreSQL.png" }
     ]
   },
 };

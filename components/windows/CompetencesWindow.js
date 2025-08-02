@@ -19,7 +19,7 @@ const CompetenceCard = ({ title, color, items }) => {
 
 const CompetencesWindow = () => {
   return (
-    <div className="md:py-24 mb-10">
+    <div className="mb-10">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-3/4 mx-auto text-center ">
         {Object.entries(competencesData).map(([key, competence]) => (

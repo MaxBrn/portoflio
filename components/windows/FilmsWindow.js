@@ -1,21 +1,20 @@
-'use client'
 import Link from "next/link";
 import { FaSquareLetterboxd } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import WindowButton from '../ui/WindowButton';
 import { supabase } from '../../utils/supabase';
+import { LuRefreshCw } from "react-icons/lu";
 
 const FilmWindow = () => {
   const [filmsData, setFilmsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   const [selectedFilm, setSelectedFilm] = useState(null);
 
-  useEffect(() => {
-    async function getFilmsData() {
+  async function getFilmsData() {
       setIsLoading(true);
-      setError(null);
+      setError(false);
       
       try {
         const { data: films, error } = await supabase
@@ -38,7 +37,8 @@ const FilmWindow = () => {
         setIsLoading(false);
       }
     }
-    
+
+  useEffect(() => {
     getFilmsData();
   }, []);
 
@@ -59,8 +59,28 @@ const FilmWindow = () => {
     );
   }
 
+  // État d'erreur
+      if (error) {
+        return (
+          <div className="bg-bgColor pb-20 md:pt-10">
+            <div className="md:w-3/4 mx-auto text-center">
+              <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button">
+                <p className="text-red-500">Oops on dirait qu'il y a eu un problème dans la récupération des données. </p>
+                <button 
+                  onClick={() => getFilmsData()} 
+                  className="mt-4 p-2 bg-button rounded-full hover:bg-hover hover:rotate-180 transition-transform duration-300"
+                >
+                  <LuRefreshCw className="text-xl " />
+                </button>
+  
+              </div>
+            </div>
+          </div>
+        );
+      }
+
   return (
-    <div className="bg-bgColor pb-20 md:pt-10">
+    <div className="bg-bgColor pb-20">
       <div className="md:w-3/4 mx-auto pb-30 text-center">
         <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button mb-10">
           <p className="mb-10">Voici la liste de mes films préférés ! </p>

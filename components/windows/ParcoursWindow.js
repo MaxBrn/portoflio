@@ -27,7 +27,7 @@ const ParcoursWindow = () => {
   return (
     <div className="bg-bgColor">
         {/* Section Parcours */}
-        <section className="py-10">
+        <section className="mb-10">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-center mb-12">Mon Parcours</h2>
 

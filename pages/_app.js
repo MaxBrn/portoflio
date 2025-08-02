@@ -1,6 +1,4 @@
 import '@/app/globals.css';
-import Footer from '@/components/Footer';
-import NavBar from '@/components/NavBar';
 import Head from 'next/head';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"

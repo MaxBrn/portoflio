@@ -36,9 +36,7 @@ const CategorySection = ({ title, items }) => {
           <div className="h-px bg-gradient-to-r from-button/50 to-transparent w-full mt-1"></div>
         </div>
         <div className="flex-1 h-px bg-gradient-to-r from-border/30 to-transparent"></div>
-        <div className="text-xs text-button/60 font-medium px-2 sm:px-3 py-1 rounded-full bg-button/5">
-          {items.length}
-        </div>
+        
       </div>
 
       {/* Grille responsive des compétences */}
@@ -57,7 +55,7 @@ const CategorySection = ({ title, items }) => {
 
 const CompetencesWindow = () => {
   return (
-    <div className="mb-12 sm:mb-16 md:mb-20">
+    <div className="mb-12 sm:mb-16 md:mb-20 md:w-3/4 mx-auto">
       {/* Container principal */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Sections de compétences */}

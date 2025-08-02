@@ -62,8 +62,8 @@ const FilmWindow = () => {
   // État d'erreur
       if (error) {
         return (
-          <div className="bg-bgColor pb-20 md:pt-10">
-            <div className="md:w-3/4 mx-auto text-center">
+          <div className="bg-bgColor pb-20 md:pt-10 flex">
+            <div className="w-auto mx-auto text-center">
               <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button">
                 <p className="text-red-500">Oops on dirait qu'il y a eu un problème dans la récupération des données. </p>
                 <button 

@@ -18,7 +18,13 @@ const GamesWindow = () => {
         try {
           const { data: games, error } = await supabase
             .from('games')
-            .select();
+            .select(`
+              *,
+              studios (
+                name
+              )
+            `)
+            .order('id', { ascending: true });
           
           if (error) {
             console.error('Erreur lors du chargement des jeux');
@@ -104,7 +110,7 @@ const GamesWindow = () => {
                           className="w-full object-fit rounded-lg mb-4 border border-border shadow-lg shadow-button cursor-pointer hover:opacity-80 transition-opacity" 
                         />
                         <h2 className="text-l font-semibold mb-2">{game.title}</h2>
-                        <p className="text-l"> {game.studio}</p>
+                        <p className="text-l"> {game.studios?.name}</p>
                     </div>
                 ))}
             </div>
@@ -136,13 +142,13 @@ const GamesWindow = () => {
                 {/* Image du film */}
                 <div className="md:w-1/2 flex flex-row items-center gap-10">
                   <img 
-                    src={selectedGame.image} 
+                    src={selectedGame.image}  
                     alt={selectedGame.title} 
                     className="w-1/3 rounded-lg border border-border shadow-lg shadow-button"
                   />
 <div>
                     <h1 className="text-3xl font-bold mb-2">{selectedGame.title} ({selectedGame.year})</h1>
-                    <p className="text-xlmb-4"> par {selectedGame.studio}</p>
+                    <p className="text-xlmb-4"> par {selectedGame.studios?.name}</p>
                   </div>
                 </div>
                 

@@ -2,18 +2,13 @@ import { competencesData } from '../../data/competences';
 
 const SkillBadge = ({ item, index }) => {
   return (
-    <div 
-      className="cursor-default"
-      style={{ 
-        animationDelay: `${index * 50}ms`,
-      }}
-    >
-      <div className="flex flex-col items-center text-center p-2 sm:p-3 md:p-4">
+    <div className="cursor-default flex-shrink-0">
+      <div className="flex flex-col items-center text-center p-2 sm:p-3 md:p-4 w-20 sm:w-24 md:w-28">
         <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 sm:mb-3 rounded-lg sm:rounded-xl flex items-center justify-center bg-white/5">
-          <img 
-            src={item.src} 
-            alt={item.alt} 
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" 
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
           />
         </div>
         <span className="font-medium text-xs sm:text-sm text-center leading-tight select-none px-1">
@@ -28,19 +23,17 @@ const CategorySection = ({ title, items }) => {
   return (
     <div className="mb-8 sm:mb-10 md:mb-12">
       {/* En-tête de catégorie */}
-      <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6">
+      <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6">
+        <div className="flex-1 h-px bg-gradient-to-r from-transparent to-border"></div>
         <div className="flex-shrink-0">
-          <h3 className="text-base sm:text-lg font-semibold text-button/90">
+          <h3 className="text-base sm:text-lg font-semibold text-center">
             {title}
           </h3>
-          <div className="h-px bg-gradient-to-r from-button/50 to-transparent w-full mt-1"></div>
         </div>
-        <div className="flex-1 h-px bg-gradient-to-r from-border/30 to-transparent"></div>
-        
+        <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
       </div>
-
-      {/* Grille responsive des compétences */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 sm:gap-3">
+      {/* Grille responsive des compétences centrée */}
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {items.map((item, index) => (
           <SkillBadge
             key={index}
@@ -55,7 +48,7 @@ const CategorySection = ({ title, items }) => {
 
 const CompetencesWindow = () => {
   return (
-    <div className="mb-12 sm:mb-16 md:mb-20 md:w-3/4 mx-auto">
+    <div className="md:w-3/4 mx-auto cursor-default">
       {/* Container principal */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Sections de compétences */}

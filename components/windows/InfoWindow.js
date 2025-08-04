@@ -21,10 +21,6 @@ const InfoWindow = () => {
           Vous pouvez par ailleurs retrouver sur ce site mes jeux et films préférés ainsi que quelques commentaires à leur sujet, parfois pas très objectifs, même jamais en fait.
         </p>
         <br/>
-        <p className="text-left leading-relaxed md:leading-loose">J'en ai récemment eu ras le bol des réseaux sociaux et des informations anxiogènes et compagnies,
-          alors j'ai décidé de mettre en place mon propre flux d'informations. J'utilise des flux RSS pour les afficher sur ce site et les consulter chaques jours.
-          Vous trouverez tout ça dans la section "Actualités", n'hésitez pas à y jeter un oeil. L'information c'est le pouvoir comme on dit.. On le dit ?
-        </p><br/>
         <p className="text-left leading-relaxed md:leading-loose">Mais assez de blabla, je vous propose de quitter cette page et de cliquer sur les autres boutons, découvrir ce site et en apprendre
           plus sur moi, et si vous souhaitez discuter ou me poser des questions, n'hésitez pas à me contacter ! 
         </p>

@@ -53,11 +53,6 @@ const NavigationCards = ({ onOpenWindow }) => {
       id: 'games',
       icon: <FaGamepad className="md:text-3xl text-2xl" />,
       title: 'Jeux Vidéo'
-    },
-    {
-      id: 'actus',
-      icon: <IoNewspaper className="md:text-3xl text-2xl" />,
-      title: 'Actualités'
     }
     
     

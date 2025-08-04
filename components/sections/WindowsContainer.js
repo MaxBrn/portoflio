@@ -6,11 +6,9 @@ import CVWindow from '../windows/CVWindow';
 import InfoWindow from '../windows/InfoWindow';
 import FilmsWindow from '../windows/FilmsWindow';
 import GamesWindow from '../windows/GamesWindow';
-import ActusWindow from '../windows/ActusWindow'
 import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad   } from "react-icons/fa";
 import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
-import { IoNewspaper } from "react-icons/io5";
 
 const WindowsContainer = ({ openWindows, onCloseWindow }) => {
   return (
@@ -83,16 +81,6 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         windowId="games"
       >
         <GamesWindow />
-      </Window>
-
-      <Window
-        isOpen={openWindows.actus}
-        onClose={() => onCloseWindow('actus')}
-        title="Les actualités"
-        icon={<IoNewspaper />}
-        windowId="actus"
-      >
-        <ActusWindow />
       </Window>
     </>
   );

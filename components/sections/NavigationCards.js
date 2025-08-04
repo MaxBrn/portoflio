@@ -1,6 +1,7 @@
 import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad   } from "react-icons/fa";
 import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
+import { IoNewspaper } from "react-icons/io5";
 
 const NavigationCard = ({ icon, title, onClick }) => (
   <div className="  flex flex-col items-center m-6 mb-0">
@@ -53,6 +54,11 @@ const NavigationCards = ({ onOpenWindow }) => {
       icon: <FaGamepad className="md:text-3xl text-2xl" />,
       title: 'Jeux Vidéo'
     },
+    {
+      id: 'actus',
+      icon: <IoNewspaper className="md:text-3xl text-2xl" />,
+      title: 'Actualités'
+    }
     
     
   ];

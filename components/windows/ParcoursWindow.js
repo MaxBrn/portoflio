@@ -211,8 +211,8 @@ const ParcoursWindow = () => {
   
 
   return (
-    <div className="bg-bgColor min-h-screen">
-      <section className="mb-10">
+    <div className="bg-bgColor mb-10">
+      <section className="">
         <div className="md:w-3/4 w-full mx-auto">
           
           {/* En-tête */}
@@ -255,8 +255,8 @@ const ParcoursWindow = () => {
                   onClick={() => setActiveFilter('Expérience')}
                   className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
                     activeFilter === 'Expérience'
-                      ? 'bg-button text-white shadow-inner'
-                      : 'bg-bgColor2 text-textColor hover:bg-button/10 hover:text-button'
+                     ? 'bg-button '
+                    : 'bg-bgColor2  hover:bg-button'
                   }`}
                 >
                   Expériences

@@ -29,13 +29,12 @@ const ParcoursWindow = () => {
       }
       
       if (parcours && parcours.length > 0) {
-        console.log(parcours)
         setParcoursData(parcours);
       } else {
         console.log('Aucune donnée trouvée');
       }
     } catch (err) {
-      console.error('Erreur:', err);
+      console.error('Erreur');
       setError(true);
     } finally {
       setIsLoading(false);

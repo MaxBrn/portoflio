@@ -132,6 +132,13 @@ const ParcoursWindow = () => {
                 {dateDisplay}
               </span>
             </div>
+
+            {/* Sous-titre */}
+            {item.subtitle && (
+              <h4 className="text-sm text-textColor/80 italic">
+                {item.subtitle}
+              </h4>
+            )}
             
             {/* Badges */}
             <div className="flex gap-2 flex-wrap">
@@ -150,12 +157,7 @@ const ParcoursWindow = () => {
               </span>
             </div>
             
-            {/* Sous-titre */}
-            {item.subtitle && (
-              <h4 className="text-sm text-textColor/80 italic">
-                {item.subtitle}
-              </h4>
-            )}
+            
           </div>
           
           {/* Description */}

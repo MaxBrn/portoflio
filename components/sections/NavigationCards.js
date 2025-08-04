@@ -2,7 +2,7 @@ import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad   } from "react-icons/
 import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
 
-const NavigationCard = ({ icon, title, description, onClick }) => (
+const NavigationCard = ({ icon, title, onClick }) => (
   <div className="  flex flex-col items-center m-6 mb-0">
   <div 
       onClick={onClick}
@@ -26,14 +26,12 @@ const NavigationCards = ({ onOpenWindow }) => {
     {
       id: 'competences',
       icon: <FaCode className="md:text-3xl text-2xl" />,
-      title: 'Compétences',
-      description: 'Les compétences que j\'ai acquises durant mes études et projets'
+      title: 'Compétences'
     },
     {
       id: 'projets',
       icon: <FaLaptopCode className="md:text-3xl text-2xl" />,
-      title: 'Projets',
-      description: 'Les différents projets que j\'ai réalisé en classe ou en stage'
+      title: 'Projets'
     },
     {
       id: 'parcours',

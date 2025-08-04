@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from "next/image";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -31,6 +31,10 @@ const Hero = () => {
             <Link href="https://github.com/MaxBrn">
               <FaGithub className="text-3xl sm:text-4xl" />
             </Link>
+            <Link href="mailto:maxime.brunin@email.com">
+              <FaEnvelope className="text-3xl sm:text-4xl" />
+            </Link>
+            
           </div>
         </div>
       </div>

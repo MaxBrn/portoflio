@@ -157,7 +157,7 @@ const GamesWindow = () => {
                   
                   <div className="space-y-4">
                     <h2 className="text-xl font-semibold">Mon avis</h2>
-                    <p className="text-left leading-relaxed md:leading-loose">
+                    <p className="text-left leading-relaxed md:leading-loose whitespace-pre-line">
                       {selectedGame.description}
                     </p>
                   </div>

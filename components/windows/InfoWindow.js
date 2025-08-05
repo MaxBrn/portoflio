@@ -16,9 +16,10 @@ const InfoWindow = () => {
           Déjà cette apparence est assez nouvelle, le fait d'avoir une base de données aussi, il va falloir que je m'y fasse moi-même, quelle idée de tout refaire, bravo
           monsieur le développeur... 
         </p><br/>
-        <p className="text-left leading-relaxed md:leading-loose">Bon même si j'aime beaucoup la programmation qui me permet d'exprimer ma créativité et mon envie de créer des projets 
-          stimulants (il se la raconte là non ?), mes plus grandes passions restent les jeux vidéo et le cinéma. 
+        <p className="text-left leading-relaxed md:leading-loose">Même si j'aime beaucoup la programmation qui me permet d'exprimer ma créativité et mon envie de créer des projets 
+          stimulants (il se la raconte là non ?), mes plus grandes passions restent les jeux vidéo, le cinéma et le voyage (visites, randonnées). J'aime aussi lire, la musique et faire du sport.
           Vous pouvez par ailleurs retrouver sur ce site mes jeux et films préférés ainsi que quelques commentaires à leur sujet, parfois pas très objectifs, même jamais en fait.
+          Je prévois d'ajouter certainement une section sur mes destinations avec quelques photos et autre, aussi potentiellement de partager mes lectures ou les musiques j'aime.
         </p>
         <br/>
         <p className="text-left leading-relaxed md:leading-loose">Mais assez de blabla, je vous propose de quitter cette page et de cliquer sur les autres boutons, découvrir ce site et en apprendre

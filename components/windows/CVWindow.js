@@ -15,7 +15,7 @@ const CVWindow = () => {
       </div>
 
       {/* Image du CV avec conteneur responsive */}
-      <div className=" max-w-5xl overflow-hidden rounded-lg shadow-xl shadow-shadow">
+      <div className="overflow-hidden rounded-lg">
         <img 
           src="/image/cv.png" 
           alt="CV Brunin Maxime - Version visuelle"

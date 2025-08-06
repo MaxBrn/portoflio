@@ -1,29 +1,32 @@
-import { useState, useRef, useEffect } from 'react';
-import { FaTimes, FaExpand } from "react-icons/fa";
+import {useRef } from 'react';
+import { FaTimes } from "react-icons/fa";
 import WindowButton from './WindowButton';
 
+// Composant Window - Fenêtre modale avec barre de titre et bouton fermer
 const Window = ({ isOpen, onClose, title, icon, children, windowId }) => {
   const windowRef = useRef(null);
   
-  
+  // Si la fenêtre n'est pas ouverte, ne rien afficher
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50">
       <div 
         ref={windowRef}
-        className='absolute bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300  md:top-10 md:left-10 md:right-10 md:bottom-10 top-1 left-1 right-1 bottom-1'>
-        {/* Barre de titre */}
+        className='absolute bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 md:top-10 md:left-10 md:right-10 md:bottom-10 top-1 left-1 right-1 bottom-1'
+      >
+        {/* Barre de titre avec icône et boutons */}
         <div 
-          className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none '>
-        
+          className='bg-border px-4 py-2 flex items-center justify-between border-b border-border select-none'
+        >
+          {/* Titre avec icône */}
           <div className="flex items-center gap-2">
             {icon}
             <span className="font-medium">{title}</span>
           </div>
           
+          {/* Boutons de contrôle */}
           <div className="flex gap-2">
-            
             <WindowButton
               color="red"
               icon={<FaTimes className="w-2 h-2 m-auto text-red-800" />}
@@ -33,6 +36,7 @@ const Window = ({ isOpen, onClose, title, icon, children, windowId }) => {
           </div>
         </div>
         
+        {/* Contenu de la fenêtre */}
         <div className="p-6 h-full overflow-y-auto bg-bgColor">
           {children}
         </div>

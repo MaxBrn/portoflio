@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../utils/supabase';
 import { LuRefreshCw } from "react-icons/lu";
 
+// Badge individuel pour chaque compétence
 const SkillBadge = ({ item, index }) => {
   return (
     <div className="cursor-default flex-shrink-0">
       <div className="flex flex-col items-center text-center p-2 sm:p-3 md:p-4 w-20 sm:w-24 md:w-28">
+        {/* Icône de la compétence */}
         <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2 sm:mb-3 rounded-lg sm:rounded-xl flex items-center justify-center bg-white/5">
           <img
             src={item.icon}
@@ -13,6 +15,7 @@ const SkillBadge = ({ item, index }) => {
             className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
           />
         </div>
+        {/* Nom de la compétence */}
         <span className="font-medium text-xs sm:text-sm text-center leading-tight select-none px-1">
           {item.name}
         </span>
@@ -21,10 +24,11 @@ const SkillBadge = ({ item, index }) => {
   );
 };
 
+// Section pour une catégorie de compétences
 const CategorySection = ({ title, items }) => {
   return (
     <div className="mb-8 sm:mb-10 md:mb-12">
-      {/* En-tête de catégorie */}
+      {/* Titre de la catégorie avec ligne de séparation */}
       <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6">
         <div className="flex-1 h-px bg-gradient-to-r from-transparent to-border"></div>
         <div className="flex-shrink-0">
@@ -34,7 +38,8 @@ const CategorySection = ({ title, items }) => {
         </div>
         <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
       </div>
-      {/* Grille responsive des compétences centrée */}
+      
+      {/* Liste des compétences de cette catégorie */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {items.map((item, index) => (
           <SkillBadge
@@ -48,16 +53,18 @@ const CategorySection = ({ title, items }) => {
   );
 };
 
+// Fenêtre principale des compétences
 const CompetencesWindow = () => {
   const [competencesData, setCompetencesData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // Récupération des données depuis Supabase
   async function getCompetencesData() {
     setIsLoading(true);
     setError(false);
     try {
-      // Requête pour récupérer les technologies avec leurs catégories
+      // Récupération des technologies avec leurs catégories
       const { data: technologies, error } = await supabase
         .from('technologies')
         .select(`
@@ -70,7 +77,7 @@ const CompetencesWindow = () => {
             name
           )
         `)
-        .not('icon', 'is', null) // Filtre pour ne prendre que les technologies avec une icône
+        .not('icon', 'is', null) // Seulement les techs avec icône
         .order('id', { ascending: true });
 
       if (error) {
@@ -80,7 +87,7 @@ const CompetencesWindow = () => {
       }
 
       if (technologies && technologies.length > 0) {
-        // Grouper les technologies par catégorie
+        // Regroupement par catégorie
         const groupedData = technologies.reduce((acc, tech) => {
           const categoryName = tech.techCategories?.name || 'Autres';
           
@@ -116,7 +123,7 @@ const CompetencesWindow = () => {
     getCompetencesData();
   }, []);
 
-  // État de chargement
+  // Affichage pendant le chargement
   if (isLoading) {
     return (
       <div className="bg-bgColor pb-20 flex md:pt-10">
@@ -133,18 +140,18 @@ const CompetencesWindow = () => {
     );
   }
 
-  // État d'erreur
+  // Affichage en cas d'erreur
   if (error) {
     return (
       <div className="bg-bgColor pb-20 md:pt-10 flex">
         <div className="w-auto mx-auto text-center">
           <div className="border border-border rounded-3xl p-6 bg-bgColor2 shadow-lg shadow-button">
-            <p className="text-red-500">Oops on dirait qu'il y a eu un problème dans la récupération des données. </p>
+            <p className="text-red-500">Oops on dirait qu'il y a eu un problème dans la récupération des données.</p>
             <button
               onClick={() => getCompetencesData()}
               className="mt-4 p-2 bg-button rounded-full hover:bg-hover hover:rotate-180 transition-transform duration-300"
             >
-              <LuRefreshCw className="text-xl " />
+              <LuRefreshCw className="text-xl" />
             </button>
           </div>
         </div>
@@ -154,9 +161,8 @@ const CompetencesWindow = () => {
 
   return (
     <div className="md:w-3/4 mx-auto cursor-default">
-      {/* Container principal */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Sections de compétences */}
+        {/* Affichage de toutes les catégories de compétences */}
         <div className="space-y-6 sm:space-y-8">
           {Object.entries(competencesData).map(([key, competence]) => (
             <CategorySection

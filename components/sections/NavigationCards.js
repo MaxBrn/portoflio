@@ -1,23 +1,25 @@
-import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad   } from "react-icons/fa";
-import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
+import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad } from "react-icons/fa";
+import { HiQuestionMarkCircle, HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
-import { IoNewspaper } from "react-icons/io5";
 
+// Carte individuelle de navigation
 const NavigationCard = ({ icon, title, onClick }) => (
-  <div className="  flex flex-col items-center m-6 mb-0">
-  <div 
+  <div className="flex flex-col items-center m-6 mb-0">
+    {/* Bouton cliquable avec icône */}
+    <div 
       onClick={onClick}
       className="bg-button rounded-3xl p-4 text-center flex flex-col items-center cursor-pointer hover:bg-hover transition-all duration-300"
     >
-        {icon}
-        
+      {icon}
     </div>
-  <h2 className="md:text-xl text-l mt-3 font-semibold">{title}</h2>
+    {/* Titre de la carte */}
+    <h2 className="md:text-xl text-l mt-3 font-semibold">{title}</h2>
   </div>
- 
 );
 
+// Grille de toutes les cartes de navigation
 const NavigationCards = ({ onOpenWindow }) => {
+  // Liste des cartes avec leurs infos
   const cards = [
     {
       id: 'info',
@@ -37,7 +39,7 @@ const NavigationCards = ({ onOpenWindow }) => {
     {
       id: 'parcours',
       icon: <FaGraduationCap className="md:text-3xl text-2xl" />,
-      title: 'Parcours',
+      title: 'Parcours'
     },
     {
       id: 'cv',
@@ -54,22 +56,19 @@ const NavigationCards = ({ onOpenWindow }) => {
       icon: <FaGamepad className="md:text-3xl text-2xl" />,
       title: 'Jeux Vidéo'
     }
-    
-    
   ];
 
   return (
     <div className="md:w-3/4 mx-auto grid grid-cols-3 md:grid-cols-3 gap-6 text-center">
-        {cards.map(card => (
+      {/* Affichage de toutes les cartes */}
+      {cards.map(card => (
         <NavigationCard
           key={card.id}
           icon={card.icon}
           title={card.title}
-          description={card.description}
           onClick={() => onOpenWindow(card.id)}
         />
       ))}
-      
     </div>
   );
 };

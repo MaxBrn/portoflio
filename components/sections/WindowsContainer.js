@@ -6,13 +6,15 @@ import CVWindow from '../windows/CVWindow';
 import InfoWindow from '../windows/InfoWindow';
 import FilmsWindow from '../windows/FilmsWindow';
 import GamesWindow from '../windows/GamesWindow';
-import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad   } from "react-icons/fa";
-import { HiQuestionMarkCircle,HiDocumentText } from "react-icons/hi";
+import { FaCode, FaLaptopCode, FaGraduationCap, FaGamepad } from "react-icons/fa";
+import { HiQuestionMarkCircle, HiDocumentText } from "react-icons/hi";
 import { PiFilmSlateFill } from "react-icons/pi";
 
+// Container pour toutes les fenêtres du site
 const WindowsContainer = ({ openWindows, onCloseWindow }) => {
   return (
     <>
+      {/* Fenêtre Compétences */}
       <Window
         isOpen={openWindows.competences}
         onClose={() => onCloseWindow('competences')}
@@ -23,6 +25,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <CompetencesWindow />
       </Window>
 
+      {/* Fenêtre Projets */}
       <Window
         isOpen={openWindows.projets}
         onClose={() => onCloseWindow('projets')}
@@ -33,6 +36,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <ProjetsWindow />
       </Window>
 
+      {/* Fenêtre Parcours */}
       <Window
         isOpen={openWindows.parcours}
         onClose={() => onCloseWindow('parcours')}
@@ -43,6 +47,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <ParcoursWindow />
       </Window>
 
+      {/* Fenêtre CV */}
       <Window
         isOpen={openWindows.cv}
         onClose={() => onCloseWindow('cv')}
@@ -53,6 +58,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <CVWindow />
       </Window>
 
+      {/* Fenêtre Présentation */}
       <Window
         isOpen={openWindows.info}
         onClose={() => onCloseWindow('info')}
@@ -63,6 +69,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <InfoWindow />
       </Window>
 
+      {/* Fenêtre Films */}
       <Window
         isOpen={openWindows.films}
         onClose={() => onCloseWindow('films')}
@@ -73,6 +80,7 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         <FilmsWindow />
       </Window>
 
+      {/* Fenêtre Jeux Vidéo */}
       <Window
         isOpen={openWindows.games}
         onClose={() => onCloseWindow('games')}

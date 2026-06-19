@@ -6,8 +6,9 @@ const InfoWindow = () => {
       <div className="md:w-2/3 mx-auto mb-10 text-center bg-bgColor2 border border-border p-6 shadow-lg shadow-button rounded-3xl">
         <Image src="/image/hello.gif" alt="Hello GIF" width={500} height={500} className="mx-auto rounded-3xl shadow-lg shadow-black" />
         <h1 className="text-center text-2xl mt-10">Moi c'est Maxime</h1><br/>
-        <p className="text-left leading-relaxed md:leading-loose">Je suis un étudiant développeur en L3 MIAGE.
-        </p><br/>
+        <p className="text-left leading-relaxed md:leading-loose"> Un étudiant développeur en L3 MIAGE à l'université de Lille, qui aimerait faire carrière dans le développement en COBOL, oui oui vous avez bien lu.
+        </p>
+        <br/>
         <p className="text-left leading-relaxed md:leading-loose">J'ai réalisé ce portfolio avec l'idée d'en faire une sorte d'hub inspiré d'un OS pour mieux me connaître (un poil mégalo sur les bords). 
           Vous y retrouvez différentes informations
           sur mon parcours, mes projets, mes passions...

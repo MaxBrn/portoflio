@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="jclBgBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748B" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="jclBgFront" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadowJcl" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.4" />
+    </filter>
+  </defs>
+  
+  <rect x="70" y="30" width="130" height="180" rx="12" fill="url(#jclBgBack)" filter="url(#shadowJcl)" transform="rotate(12 135 120)" />
+  
+  <path d="M 70 50 L 168 50 Q 180 50 180 62 L 180 214 Q 180 226 168 226 L 52 226 Q 40 226 40 214 L 40 80 Z" fill="url(#jclBgFront)" filter="url(#shadowJcl)" />
+  
+  <circle cx="60" cy="70" r="4" fill="#3B82F6" />
+  <circle cx="80" cy="70" r="4" fill="#475569" />
+  <circle cx="100" cy="70" r="4" fill="#475569" />
+  
+  <line x1="60" y1="110" x2="150" y2="110" stroke="#94A3B8" stroke-width="8" stroke-linecap="round" />
+  <line x1="60" y1="134" x2="120" y2="134" stroke="#94A3B8" stroke-width="8" stroke-linecap="round" />
+  <line x1="60" y1="158" x2="160" y2="158" stroke="#3B82F6" stroke-width="8" stroke-linecap="round" />
+  
+  <text x="110" y="204" font-family="Consolas, monospace" font-size="38" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">JCL</text>
+</svg>

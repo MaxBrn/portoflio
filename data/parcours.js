@@ -1,5 +1,15 @@
 export const parcoursData = [
   {
+    id: 10,
+    title: "Stage Développeur COBOL",
+    subtitle: "IBM CIC - Lille",
+    description: "Développement en COBOL sur Mainframe z/OS, avec utilisation d'une base DB2 et de JCL pour le Batch. Travail sur la maintenance et l'évolution d'applications existantes, ainsi que sur la création de nouvelles fonctionnalités.",
+    startDate: "2026-04-01",
+    endDate: null,
+    current: true,
+    typeParcours: { name: "Expérience" }
+  },
+  {
     id: 1,
     title: "L3 MIAGE",
     subtitle: "Université de Lille - Campus Scientifique",

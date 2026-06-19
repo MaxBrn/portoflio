@@ -19,7 +19,7 @@ const Hero = () => {
           
           {/* Photo de profil */}
           <Image
-            src="/image/pdpcrp.png"
+            src="/image/pdpcrp.jpg"
             width={200}
             height={150}
             alt="Picture of the author"

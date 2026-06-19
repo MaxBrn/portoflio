@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="cobolBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <filter id="shadowCobol" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <rect x="40" y="24" width="176" height="208" rx="16" fill="url(#cobolBg)" filter="url(#shadowCobol)" />
+  
+  <rect x="60" y="50" width="136" height="90" rx="8" fill="#0F172A" />
+  
+  <rect x="76" y="66" width="104" height="6" rx="3" fill="#3B82F6" />
+  <rect x="76" y="86" width="104" height="6" rx="3" fill="#3B82F6" />
+  <rect x="76" y="106" width="76" height="6" rx="3" fill="#3B82F6" />
+  <circle cx="168" cy="109" r="4" fill="#34D399" />
+  
+  <circle cx="76" cy="164" r="8" fill="#34D399" />
+  <circle cx="104" cy="164" r="8" fill="#F87171" />
+  <rect x="132" y="160" width="48" height="8" rx="4" fill="#94A3B8" />
+  
+  <line x1="40" y1="190" x2="216" y2="190" stroke="#1E40AF" stroke-width="4" />
+  
+  <text x="128" y="218" font-family="Consolas, monospace" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">COBOL</text>
+</svg>

@@ -40,7 +40,7 @@ const Hero = () => {
             </Link>
             
             {/* Email */}
-            <Link href="mailto:maxime.brunin@email.com">
+            <Link href="mailto:maxime.brunin@hotmail.fr">
               <FaEnvelope className="text-3xl sm:text-4xl" />
             </Link>
             

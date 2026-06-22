@@ -31,17 +31,17 @@ const Hero = () => {
             
             {/* LinkedIn */}
             <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/">
-              <FaLinkedin className="text-3xl sm:text-4xl hover:text-border transition-all duration-300" />
+              <FaLinkedin className="text-3xl sm:text-4xl hover:-translate-y-1.5 hover:shadow-xl hover:shadow-button/30 transition duration-300 ease-out" />
             </Link>
             
             {/* GitHub */}
             <Link href="https://github.com/MaxBrn">
-              <FaGithub className="text-3xl sm:text-4xl hover:text-border transition-all duration-300" />
+              <FaGithub className="text-3xl sm:text-4xl hover:-translate-y-1.5 hover:shadow-xl hover:shadow-button/30 transition duration-300 ease-out" />
             </Link>
 
             {/* Email */}
             <Link href="mailto:maxime.brunin@hotmail.fr">
-              <FaEnvelope className="ttext-3xl sm:text-4xl hover:text-border transition-all duration-300" />
+              <FaEnvelope className="ttext-3xl sm:text-4xl hover:-translate-y-1.5 hover:shadow-xl hover:shadow-button/30 transition duration-300 ease-out" />
             </Link>
 
           </div>

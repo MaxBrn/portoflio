@@ -132,7 +132,7 @@ const ParcoursWindow = () => {
             {/* En-tête avec navigation */}
             <div className="text-center mb-8 sm:mb-12">
               <div className="flex flex-col sm:flex-row justify-center">
-                <div className="inline-flex flex-col sm:flex-row border border-hover rounded-lg overflow-hidden bg-bgColor2 shadow-sm">
+                <div className="inline-flex flex-col sm:flex-row  rounded-lg overflow-hidden bg-bgColor2 shadow-sm">
                   <button
                       onClick={() => setActiveFilter('tout')}
                       className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base ${

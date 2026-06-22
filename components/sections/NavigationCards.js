@@ -34,11 +34,6 @@ const NavigationCards = ({ onOpenWindow }) => {
       title: 'Compétences'
     },
     {
-      id: 'projets',
-      icon: <FaLaptopCode className="md:text-3xl text-2xl" />,
-      title: 'Projets'
-    },
-    {
       id: 'parcours',
       icon: <FaGraduationCap className="md:text-3xl text-2xl" />,
       title: 'Parcours'

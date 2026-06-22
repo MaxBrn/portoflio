@@ -48,7 +48,7 @@ export default function Index() {
       style={{ height: 'calc(var(--vh, 1vh) * 100)', minHeight: '-webkit-fill-available' }}
     >
       
-      <div className="h-full flex items-center justify-center p-2 md:p-4">
+      <div className="h-full flex items-center justify-center p-2 md:p-4 ">
         
         <div className="bg-border rounded-lg shadow-xl border-4 border-border overflow-hidden transition-all duration-300 w-full h-full md:h-auto md:w-3/4 md:max-w-screen-md flex flex-col">
           
@@ -69,10 +69,10 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto bg-bgColor">
+          <div className="flex-1 overflow-y-auto bg-bgColor2">
             <div className="p-4 md:p-6 min-h-full item-center justify-center flex">
               <header className="flex items-center justify-center min-h-full">
-                <div className="flex lg:flex-row flex-col lg:w-full w-full items-center justify-center gap-6 md:gap-12">
+                <div className="flex lg:flex-row flex-col lg:w-full w-full items-center justify-center gap-6 md:gap-12 bgColor2">
                   
                   <Hero />
                   

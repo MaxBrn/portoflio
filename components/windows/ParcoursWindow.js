@@ -65,137 +65,144 @@ const ParcoursWindow = () => {
   const renderItem = (item, index) => {
     const typeName = item.typeParcours?.name || 'experience';
     const dateDisplay = formatDate(item.startDate, item.endDate, typeName);
+    const isFormation = typeName === 'Formation';
 
     return (
-      <div
-        key={index}
-        className={`bg-bgColor2 border border-border rounded-lg p-6 transition-shadow hover:shadow-lg ${
-          item.current ? 'border-l-4 border-l-button' : ''
-        }`}
-      >
-        <div className="space-y-4">
-          <div className="flex flex-col gap-3">
-            <div className="flex md:flex-row flex-col items-start justify-between gap-4">
-              <h3 className="md:text-xl text-l font-semibold text-textColor flex-1">
-                {item.title}
-              </h3>
-              <span className="bg-button text-text px-3 py-1 rounded text-sm font-medium whitespace-nowrap">
+        <div
+            key={index}
+            className={`bg-bgColor2 border border-border rounded-lg p-6 transition-shadow hover:shadow-lg ${
+                item.current ? 'border-l-4 border-border' : ''
+            }`}
+        >
+          <div className="space-y-4">
+            <div className="flex flex-col gap-3">
+              <div className="flex md:flex-row flex-col items-start justify-between gap-4">
+                <h3 className="md:text-xl text-l font-semibold text-textColor flex-1">
+                  {item.title}
+                </h3>
+
+                {/* Bulle date : neutre, discrète — c'est une métadonnée, pas un statut */}
+                <span className="bg-bgColor border border-border text-textColor/70 px-3 py-1 rounded-md text-sm font-medium whitespace-nowrap">
                 {dateDisplay}
               </span>
-            </div>
+              </div>
 
-            {item.subtitle && (
-              <h4 className="text-sm text-textColor/80 italic">
-                {item.subtitle}
-              </h4>
-            )}
+              {item.subtitle && (
+                  <h4 className="text-sm text-textColor/80 italic">
+                    {item.subtitle}
+                  </h4>
+              )}
 
-            <div className="flex gap-2 flex-wrap">
-              {item.current && (
-                <span className="bg-button text-text text-xs px-2 py-1 rounded-full font-medium">
+              <div className="flex gap-2 flex-wrap">
+                {item.current && (
+                    <span className="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs px-2.5 py-1 rounded-full font-medium ring-1 ring-inset ring-emerald-500/30">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75 animate-ping"></span>
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  </span>
                   En cours
                 </span>
-              )}
-              <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                typeName === 'Formation'
-                  ? 'bg-text text-border'
-                  : 'bg-orange-100 text-orange-700'
-              }`}>
-                {typeName === 'Formation' ? 'Formation' : 'Expérience'}
+                )}
+                <span className={`text-xs px-2.5 py-1 rounded-full font-medium ring-1 ring-inset ${
+                    isFormation
+                        ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 ring-indigo-500/30'
+                        : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 ring-amber-500/30'
+                }`}>
+                {isFormation ? 'Formation' : 'Expérience'}
               </span>
+              </div>
             </div>
-          </div>
 
-          {item.description && (
-            <div className="pt-2 border-t border-border/30">
-              <p className="text-textColor leading-relaxed text-sm">
-                {item.description}
-              </p>
-            </div>
-          )}
+            {item.description && (
+                <div className="pt-2 border-t border-border/30">
+                  <p className="text-textColor leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                </div>
+            )}
+          </div>
         </div>
-      </div>
     );
   };
 
   return (
-    <div className="bg-bgColor mb-10">
-      <section>
-        <div className="md:w-3/4 w-full mx-auto">
-          {/* En-tête avec navigation */}
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="flex flex-col sm:flex-row justify-center">
-              <div className="inline-flex flex-col sm:flex-row border border-border rounded-lg overflow-hidden bg-bgColor2 shadow-sm">
-                <button
-                  onClick={() => setActiveFilter('tout')}
-                  className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base ${
-                    activeFilter === 'tout'
-                      ? 'bg-button shadow-inner'
-                      : 'bg-bgColor2  hover:bg-hover'
-                  }`}
-                >
-                  Tout
-                </button>
-                <button
-                  onClick={() => setActiveFilter('en-cours')}
-                  className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
-                    activeFilter === 'en-cours'
-                     ? 'bg-button shadow-inner'
-                      : 'bg-bgColor2  hover:bg-hover'
-                  }`}
-                >
-                  En cours
-                </button>
-                <button
-                  onClick={() => setActiveFilter('Formation')}
-                  className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
-                    activeFilter === 'Formation'
-                      ? 'bg-button shadow-inner'
-                      : 'bg-bgColor2  hover:bg-hover'
-                  }`}
-                >
-                  Formations
-                </button>
-                <button
-                  onClick={() => setActiveFilter('Expérience')}
-                  className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
-                    activeFilter === 'Expérience'
-                     ? 'bg-button shadow-inner'
-                      : 'bg-bgColor2  hover:bg-hover'
-                  }`}
-                >
-                  Expériences
-                </button>
+      <div className="bg-bgColor mb-10">
+        <section>
+          <div className="md:w-3/4 w-full mx-auto">
+            {/* En-tête avec navigation */}
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="flex flex-col sm:flex-row justify-center">
+                <div className="inline-flex flex-col sm:flex-row border border-hover rounded-lg overflow-hidden bg-bgColor2 shadow-sm">
+                  <button
+                      onClick={() => setActiveFilter('tout')}
+                      className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base ${
+                          activeFilter === 'tout'
+                              ? 'bg-button shadow-inner'
+                              : 'bg-bgColor2 hover:bg-hover'
+                      }`}
+                  >
+                    Tout
+                  </button>
+                  <button
+                      onClick={() => setActiveFilter('en-cours')}
+                      className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
+                          activeFilter === 'en-cours'
+                              ? 'bg-button shadow-inner'
+                              : 'bg-bgColor2 hover:bg-hover'
+                      }`}
+                  >
+                    En cours
+                  </button>
+                  <button
+                      onClick={() => setActiveFilter('Formation')}
+                      className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
+                          activeFilter === 'Formation'
+                              ? 'bg-button shadow-inner'
+                              : 'bg-bgColor2 hover:bg-hover'
+                      }`}
+                  >
+                    Formations
+                  </button>
+                  <button
+                      onClick={() => setActiveFilter('Expérience')}
+                      className={`px-4 sm:px-6 py-3 font-medium transition-all duration-200 text-sm sm:text-base border-t sm:border-t-0 sm:border-l border-border/50 ${
+                          activeFilter === 'Expérience'
+                              ? 'bg-button shadow-inner'
+                              : 'bg-bgColor2 hover:bg-hover'
+                      }`}
+                  >
+                    Expériences
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
-          {displayData.grouped ? (
-            <div className="space-y-8 sm:space-y-12">
-              {displayData.sections.map((section, sectionIndex) => (
-                <div key={sectionIndex}>
-                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                    <h3 className="text-2xl font-semibold text-textColor">
-                      {section.title}
-                    </h3>
-                    <span className="text-xs sm:text-sm bg-border text-textColor px-2 sm:px-3 py-1 rounded-full font-medium">
+            {displayData.grouped ? (
+                <div className="space-y-8 sm:space-y-12">
+                  {displayData.sections.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                          <h3 className="text-2xl font-semibold text-textColor">
+                            {section.title}
+                          </h3>
+                          <span className="text-xs sm:text-sm bg-border text-textColor px-2 sm:px-3 py-1 rounded-full font-medium">
                       {section.count}
                     </span>
-                  </div>
-                  <div className="space-y-6">
-                    {section.items.map((item, index) => renderItem(item, `${sectionIndex}-${index}`))}
-                  </div>
+                        </div>
+                        <div className="space-y-6">
+                          {section.items.map((item, index) => renderItem(item, `${sectionIndex}-${index}`))}
+                        </div>
+                      </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {displayData.items.map((item, index) => renderItem(item, index))}
-            </div>
-          )}
-        </div>
-      </section>
-    </div>
+            ) : (
+                <div className="space-y-6">
+                  {displayData.items.map((item, index) => renderItem(item, index))}
+                </div>
+            )}
+          </div>
+        </section>
+      </div>
   );
 };
 

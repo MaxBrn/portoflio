@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @font-face {
   font-family: 'Consolas';
   src: url('/fonts/consolas.ttf') format('truetype');
@@ -9,13 +12,19 @@
   font-style: normal;
 }
 
-body {
-  font-family: 'Consolas', monospace;
-}
-
 html {
   background-color: #F3F7FF;
   color: #1A2640;
+}
+
+body {
+  /* IBM Plex Sans par défaut pour tout le site */
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Classe utilitaire pour forcer l'usage de Consolas (exemple: code, datas) */
+.font-mono {
+  font-family: 'Consolas', monospace;
 }
 
 ::-webkit-scrollbar {
@@ -24,16 +33,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #E8F0FE; /* Piste légèrement plus foncée que le fond pour la visibilité */
+  background-color: #E8F0FE;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #A3C5FF; /* Assorti aux bordures */
+  background-color: #A3C5FF;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #82AFFE; /* Assorti aux boutons au survol */
+  background-color: #82AFFE;
 }
 
 .text-stroke {

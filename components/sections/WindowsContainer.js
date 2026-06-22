@@ -1,6 +1,5 @@
 import Window from '../ui/Window';
 import CompetencesWindow from '../windows/CompetencesWindow';
-import ProjetsWindow from '../windows/ProjetsWindow';
 import ParcoursWindow from '../windows/ParcoursWindow';
 import CVWindow from '../windows/CVWindow';
 import InfoWindow from '../windows/InfoWindow';
@@ -23,17 +22,6 @@ const WindowsContainer = ({ openWindows, onCloseWindow }) => {
         windowId="competences"
       >
         <CompetencesWindow />
-      </Window>
-
-      {/* Fenêtre Projets */}
-      <Window
-        isOpen={openWindows.projets}
-        onClose={() => onCloseWindow('projets')}
-        title="Projets"
-        icon={<FaLaptopCode />}
-        windowId="projets"
-      >
-        <ProjetsWindow />
       </Window>
 
       {/* Fenêtre Parcours */}

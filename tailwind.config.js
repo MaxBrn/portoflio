@@ -8,26 +8,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-       
-        'bgColor':'#11131F',
-        'bgColor2':'#141726',
-        'border':'#304384',
-        'button':'#182449',
-        'hover' : '#1D2E62',
-        'text':'#D6E1FF'
+
+        // Palette "Soft Periwinkle" basée sur #a3c5ff
+        'bgColor': '#F3F7FF',    // Fond très léger, nuance glacée pour détacher les fenêtres
+        'bgColor2': '#FFFFFF',   // Blanc pur pour l'intérieur des fenêtres
+        'border': '#A3C5FF',     // Ta couleur de base : doux et lisible
+        'button': '#F3F7FF',     // Un ton plus saturé que la bordure pour appeler au clic
+        'hover': 'rgba(163,197,255,0.13)',      // Plus foncé au survol pour valider l'interaction
+        'text': '#1A2640'        // Bleu ardoise très sombre, contraste maximal pour la lecture
       },
       screens: {
         sm: "640px",
-        md: "900px", // Augmenté à 900px
+        md: "900px",
       },
       fontFamily: {
         sans: ['Consolas', 'ui-sans-serif', 'system-ui'],
-        // Autres polices que tu souhaites ajouter
-    },
+      },
     },
   },
   plugins: [],

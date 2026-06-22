@@ -31,19 +31,19 @@ const Hero = () => {
             
             {/* LinkedIn */}
             <Link href="https://www.linkedin.com/in/maxime-brunin-860094216/">
-              <FaLinkedin className="text-3xl sm:text-4xl" />
+              <FaLinkedin className="text-3xl sm:text-4xl hover:text-border transition-all duration-300" />
             </Link>
             
             {/* GitHub */}
             <Link href="https://github.com/MaxBrn">
-              <FaGithub className="text-3xl sm:text-4xl" />
+              <FaGithub className="text-3xl sm:text-4xl hover:text-border transition-all duration-300" />
             </Link>
-            
+
             {/* Email */}
             <Link href="mailto:maxime.brunin@hotmail.fr">
-              <FaEnvelope className="text-3xl sm:text-4xl" />
+              <FaEnvelope className="ttext-3xl sm:text-4xl hover:text-border transition-all duration-300" />
             </Link>
-            
+
           </div>
         </div>
       </div>

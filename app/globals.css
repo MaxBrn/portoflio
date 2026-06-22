@@ -9,35 +9,33 @@
   font-style: normal;
 }
 
-
 body {
   font-family: 'Consolas', monospace;
-  
-  
 }
+
 html {
-  background-color:#11131F ;
-  color: #EEEEEE;
+  background-color: #F3F7FF;
+  color: #1A2640;
 }
 
 ::-webkit-scrollbar {
-  width: 10px; /* Augmentation de la largeur de la scrollbar */
-  border-radius: 9999px; /* Arrondir le conteneur de la scrollbar */
+  width: 10px;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #e0e0e0; /* Fond de la piste plus visible */
+  background-color: #E8F0FE; /* Piste légèrement plus foncée que le fond pour la visibilité */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #a0a0a0; /* Pouce plus visible */
+  background-color: #A3C5FF; /* Assorti aux bordures */
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #777; /* Couleur du pouce au survol */
+  background-color: #82AFFE; /* Assorti aux boutons au survol */
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1.3px black;
+  -webkit-text-stroke: 1.3px white;
 }
-

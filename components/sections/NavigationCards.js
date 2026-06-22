@@ -4,11 +4,13 @@ import { PiFilmSlateFill } from "react-icons/pi";
 
 // Carte individuelle de navigation
 const NavigationCard = ({ icon, title, onClick }) => (
-  <div className="flex flex-col items-center m-6 mb-0">
+  <div
+      onClick={onClick}
+      className="flex flex-col items-center p-3 mb-0 hover:bg-hover rounded-2xl transition-all duration-300 cursor-pointer">
     {/* Bouton cliquable avec icône */}
     <div 
       onClick={onClick}
-      className="bg-button rounded-3xl p-4 text-center flex flex-col items-center cursor-pointer hover:bg-hover transition-all duration-300"
+      className="p-4 pb-3 text-center flex flex-col items-center"
     >
       {icon}
     </div>

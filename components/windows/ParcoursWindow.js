@@ -79,7 +79,7 @@ const ParcoursWindow = () => {
               <h3 className="md:text-xl text-l font-semibold text-textColor flex-1">
                 {item.title}
               </h3>
-              <span className="bg-button text-white px-3 py-1 rounded text-sm font-medium whitespace-nowrap">
+              <span className="bg-button text-text px-3 py-1 rounded text-sm font-medium whitespace-nowrap">
                 {dateDisplay}
               </span>
             </div>
@@ -92,7 +92,7 @@ const ParcoursWindow = () => {
 
             <div className="flex gap-2 flex-wrap">
               {item.current && (
-                <span className="bg-button text-white text-xs px-2 py-1 rounded-full font-medium">
+                <span className="bg-button text-text text-xs px-2 py-1 rounded-full font-medium">
                   En cours
                 </span>
               )}

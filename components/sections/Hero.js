@@ -40,8 +40,8 @@ const Hero = () => {
             </Link>
 
             {/* Email */}
-            <Link href="mailto:maxime.brunin@hotmail.fr">
-              <FaEnvelope className="ttext-3xl sm:text-4xl hover:-translate-y-1.5 hover:shadow-xl hover:shadow-button/30 transition duration-300 ease-out" />
+            <Link href="mailto:maxime_brn@hotmail.fr">
+              <FaEnvelope className="text-3xl sm:text-4xl hover:-translate-y-1.5 hover:shadow-xl hover:shadow-button/30 transition duration-300 ease-out" />
             </Link>
 
           </div>

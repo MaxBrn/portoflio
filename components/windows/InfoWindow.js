@@ -24,7 +24,7 @@ const InfoWindow = () => {
           <div className="space-y-8 text-left text-base md:text-lg leading-relaxed text-text/90">
 
             <p>
-              Un étudiant développeur en L3 MIAGE à l'Université de Lille, qui aimerait faire carrière dans le développement en <span className="font-bold text-text">COBOL</span>, oui oui vous avez bien lu.
+              Développeur diplômé de la licence MIAGE à l'Université de Lille, qui aimerait faire carrière dans le développement en <span className="font-bold text-text">COBOL</span>, oui oui vous avez bien lu et m'orienter vers l'analyse et la gestion de projet à terme.
             </p>
 
             <p>

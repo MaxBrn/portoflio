@@ -13,10 +13,13 @@ export const parcoursData = [
     id: 1,
     title: "L3 MIAGE",
     subtitle: "Université de Lille - Campus Scientifique",
-    description: "Poursuite d’études prévue dans le cursus MIAGE, avec une orientation vers le master MEEF pour devenir enseignant.",
+    description: "Formation axée sur l’ingénierie des systèmes d’information et la gestion d’entreprise.\n" +
+        "Apprentissage des bases solides en informatique (développement, bases de données,\n" +
+        "systèmes) tout en intégrant des notions de management, économie et organisation des\n" +
+        "entreprises.",
     startDate: "2025-09-01",
-    endDate: "2026-07-31",
-    current: true,
+    endDate: "2026-06-24",
+    current: false,
     typeParcours: { name: "Formation" }
   },
   {

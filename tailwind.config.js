@@ -11,8 +11,6 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-
-        // Palette "Soft Periwinkle"
         'bgColor': '#eff4ff',
         'bgColor2': '#FFFFFF',
         'border': '#A3C5FF',
@@ -25,10 +23,7 @@ module.exports = {
         md: "900px",
       },
       fontFamily: {
-        // Défaut pour tout le site
-        sans: ['"IBM Plex Sans"', 'sans-serif'],
-        // Utiliser via la classe 'font-mono'
-        mono: ['Consolas', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'sans-serif']
       },
     },
   },
